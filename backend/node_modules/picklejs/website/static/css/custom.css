@@ -1,0 +1,14 @@
+.blockContent h2 {
+    text-align: center;
+}
+
+.blockImage {
+    max-height: 100px;
+    max-width: 100% !important;
+    text-align: center;
+}
+
+.blockImage img {
+    height: 100px;
+    padding: 10px 0;
+}

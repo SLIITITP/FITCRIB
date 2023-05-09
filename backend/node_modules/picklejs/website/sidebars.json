@@ -1,0 +1,19 @@
+{
+  "docs": {
+    "Basics": [
+      "getting-started",
+      "phrases",
+      "functions",
+      "router"
+    ],
+    "Resources": [
+      "example-app",
+      "recommended-cypress-setup"
+    ],
+    "Developing": [
+      "extending",
+      "developing",
+      "this-website"
+    ]
+  }
+}
