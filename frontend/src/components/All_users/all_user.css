@@ -1,0 +1,184 @@
+.background_viewalluser_page{
+    background-color: #1F1F1F;
+    height: 100%;
+    
+}
+
+.ViewUsersHeading{
+    color: #CCFF00;
+    font-size: 45px;
+    font-weight: bold;
+    margin-left: 15px;
+}
+
+.ViewUsersTable{
+    border-collapse: collapse;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    max-width: 1600px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    border: 5px solid white;
+    /* margin:auto; */
+    border-radius: 10px;
+
+    /* margin-top: -90px; */
+    margin-left: 130px;
+}
+
+.ViewUsersTable thead tr{
+    background-color: black;
+    color: #CCFF00;
+    text-align: left;
+    
+}
+
+.ViewUsersTable  th, .ViewUsersTable  td{
+    padding: 12px 15px;
+}
+
+.ViewUsersTable  tbody tr{
+    border-bottom: 5px solid white;
+}
+
+.ViewUsersTable  tbody tr:nth-of-type(odd){
+    background-color: #2B302A;
+    color: white;
+    font-weight: bold;
+}
+
+.ViewUsersTable  tbody tr:nth-of-type(even){
+    background-color: #CCFF00;
+    color: #1F1F1F;
+    font-weight: bold;
+}
+
+.ViewUsersTable  tbody tr:last-of-type{
+    border-bottom: 2px solid white;
+}
+
+.DeleteViewallbtn{
+    border: none;
+    color: white;
+    padding: 5px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.DeleteViewallbtn-delete{
+    background-color: #F44336;
+    color: #1F1F1F;
+    border: 3px solid black;
+    width: 80px;
+    font-weight: bold;
+}
+
+.reportUserbtn{
+    background-color: #CCFF00;
+    color: #1F1F1F;
+    border-radius: 10px;
+    width: 200px;
+    height: 50px;
+    transition: 1s;
+    font-weight: bold;
+    font-size: 20px;
+}
+.reportUserbtn:hover{
+    background-color: #1F1F1F;
+    color: #CCFF00;
+}
+
+.ViewalluserSearch{
+    border-radius: 15px;
+    margin-top: 30px;
+    width: 400px;
+    height: 40px;
+    text-align: center;
+    border: 5px solid #CCFF00;
+    margin-left: 250px;
+}
+
+/* .FNSearchIcon{
+    color:#2B302A;
+    margin-left: -380px;
+    
+} */
+
+
+ /* Admin Footer css */
+ .FNExactFooter{
+    background-color: #333333;
+    height: 300px;
+ }
+ 
+ .FNFooterPic{
+    width: 300px;
+    height: 250px;
+    margin-left: -1050px;
+    cursor: pointer;
+ }
+ 
+ .FNFooterHeading{
+    color: white;
+    font-size: 40px;
+    margin-left: 350px;
+    margin-top: -220px;
+    text-align: left;
+ }
+ 
+ .FNFooterHead1{
+    color: white;
+    font-size: 20px;
+    margin-left: 690px;
+    margin-top: -130px;
+    cursor: pointer;
+    text-align: left;
+ }
+ 
+ .FNFooterHead2{
+    color: white;
+    font-size: 20px;
+    margin-left: 780px;
+    margin-top: -46px;
+    cursor: pointer;
+    text-align: left;
+ }
+ 
+ .FNFooterHead3{
+    color: white;
+    font-size: 20px;
+    margin-left: 910px;
+    margin-top: -46px;
+    cursor: pointer;
+    text-align: left;
+ }
+ 
+ .FNFooterHead4{
+    color: white;
+    font-size: 20px;
+    margin-left: 1190px;
+    margin-top: -46px;
+    cursor: pointer;
+    text-align: left;
+ }
+ 
+ .FNFooterHead5{
+    color: white;
+    font-size: 20px;
+    margin-left: 1280px;
+    margin-top: -46px;
+    cursor: pointer;
+    text-align: left;
+ }
+ 
+ .FNHr{
+    margin-top: 120px;
+    border: 2px solid white;
+ }
+ 
+ .FNFooterBottom{
+    text-align: center;
+ }

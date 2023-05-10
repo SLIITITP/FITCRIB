@@ -8,6 +8,10 @@ const app = express();
 const { DataFrame } = require('pandas-js');
 const request = require('request');
 const fs = require('fs');
+const bcrypt = require("bcryptjs");
+
+const jwt=require("jsonwebtoken");
+const JWT_SECRET= "kjjhjif565g5955dgdg()gsfsfsgdgh444545[][]47g"
 
 const port = process.env.PORT || 8070;
 
@@ -50,3 +54,27 @@ app.use("/workoutPlan", workoutPlanRouter)
 
 const workoutSessionRouter = require('./routes/workoutSessionRoutes')
 app.use("/workoutSession", workoutSessionRouter)
+
+
+//user management
+const userRouter = require("./routes/user.js");
+app.use("/user",userRouter);
+
+const paymentRouter = require("./routes/payment.js");
+const User = require("./models/user.js");
+app.use("/payment",paymentRouter);
+
+//login
+app.post("/login", async(req,res)=>{
+
+if(req.body.Password && req.body.Email){
+    let user = await User.findOne(req.body)
+    if(user){
+        res.send(user)
+    }else{
+        res.send({result:"User not found"})
+    }
+}else{
+    res.send({result:"User not found"})
+}
+})
