@@ -1,0 +1,77 @@
+.container-fluid{
+    background-color: black;
+    height: 70px;
+}
+.home_page{
+    margin: 0;
+    padding: 0;
+ }
+ .navbar-brand{
+    color: white;
+    font-size: 50px ;
+    font-weight: 500;
+ }
+ .navbar-brand:hover{
+    color: #CCFF00;
+ }
+ .navbar-nav{
+    margin-left: 63px;
+ }
+ .nav-item{
+    padding: 8px;
+ }
+ .background_Report_page{
+    background-color: #1F1F1F;
+    height: 100%;
+    
+}
+/* .chart{
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+} */
+.ReportHeading{
+    color: #CCFF00;
+    font-size: 45px;
+    font-weight: bold;
+    /* margin-left: 15px; */
+}
+.UserBarChart{
+    margin-left: 400px;
+    background-color: white;
+    width: 700px;
+    height: 550px;
+    border-radius: 5px;
+    border: 5px solid #CCFF00;
+    margin-bottom: 70px;
+}
+.UserPieChart{
+    margin-left: 550px;
+    background-color: white;
+    width: 400px;
+    height: 300px;
+    border-radius: 5px;
+    border: 5px solid #CCFF00;
+}
+.Userpie{
+    margin-top: -70px;
+}
+.generateReport_page{
+    height: auto;
+}
+.Rbox{
+    margin-top: -80px;
+    margin-left: -240px;
+    color: #230be7;
+}
+.Sbox{
+    margin-top: -40px;
+    margin-left: 50px;
+    color: #d50fbc;
+}
+.Tbox{
+    margin-top: -40px;
+    margin-left: 300px;
+    color: #22fa07;
+}

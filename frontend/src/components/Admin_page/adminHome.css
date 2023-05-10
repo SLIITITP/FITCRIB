@@ -1,0 +1,166 @@
+
+.AdminHome{
+   background-image: url("../Admin_page/adminHomeImage.png");
+   height: auto;
+}
+
+.AdminHomeHeading{
+   font-size: 70px;
+   color: white;
+   font-weight: bold;
+   text-align: left;
+   margin-left: 30px;
+   
+}
+
+.AdminHomePara{
+   font-size: 25px;
+   color: white;
+   margin-left: 30px;
+   text-align: left;
+}
+
+.AdminHomeSecondPart{
+   background-color: #1F1F1F;
+   height: auto;
+}
+
+.AdminDivDesc1{
+   background-color: #2B302A;
+   height: 350px;
+   width: 400px;
+   margin-left: 50px;
+   border-radius: 15px;
+   border: 5px solid #99FF33;
+}
+
+.AdminDivHeading{
+   font-weight: bold;
+   color: white;
+   font-size: 40px;
+   text-align: center;
+}
+
+.AdminDivPara{
+   text-align: center;
+   color: white;
+   font-size: 20px;
+   padding: 10px;
+}
+
+.AdminDivIcon{
+   height: 50px;
+   width: 50px;
+   margin-top: 10px;
+}
+
+.AdminDivDesc2{
+   background-color: #2B302A;
+   height: 350px;
+   width: 400px;
+   margin-left: 540px;
+   border-radius: 15px;
+   border: 5px solid #99FF33;
+   margin-top: -348px;
+}
+
+.AdminDivDesc3{
+   background-color: #2B302A;
+   height: 350px;
+   width: 400px;
+   margin-left: 1030px;
+   border-radius: 15px;
+   border: 5px solid #99FF33;
+   margin-top: -347px;
+   
+}
+
+.AdminButton{
+   background-color: #1F1F1F;
+   color: #99FF33;
+   border-radius: 10px;
+   width: 100px;
+   transition: 1s;
+}
+
+.AdminButton:hover {
+   background-color: #99FF33;
+   color: #1F1F1F;
+   transform: scale(1.6);
+  
+ }
+
+ /* Admin Footer css */
+ .FNExactFooter{
+   background-color: #333333;
+   height: 300px;
+}
+
+.FNFooterPic{
+   width: 300px;
+   height: 250px;
+   margin-left: -1050px;
+   cursor: pointer;
+}
+
+.FNFooterHeading{
+   color: white;
+   font-size: 40px;
+   margin-left: 350px;
+   margin-top: -220px;
+   text-align: left;
+}
+
+.FNFooterHead1{
+   color: white;
+   font-size: 20px;
+   margin-left: 690px;
+   margin-top: -130px;
+   cursor: pointer;
+   text-align: left;
+}
+
+.FNFooterHead2{
+   color: white;
+   font-size: 20px;
+   margin-left: 780px;
+   margin-top: -46px;
+   cursor: pointer;
+   text-align: left;
+}
+
+.FNFooterHead3{
+   color: white;
+   font-size: 20px;
+   margin-left: 910px;
+   margin-top: -46px;
+   cursor: pointer;
+   text-align: left;
+}
+
+.FNFooterHead4{
+   color: white;
+   font-size: 20px;
+   margin-left: 1190px;
+   margin-top: -46px;
+   cursor: pointer;
+   text-align: left;
+}
+
+.FNFooterHead5{
+   color: white;
+   font-size: 20px;
+   margin-left: 1280px;
+   margin-top: -46px;
+   cursor: pointer;
+   text-align: left;
+}
+
+.FNHr{
+   margin-top: 120px;
+   border: 2px solid white;
+}
+
+.FNFooterBottom{
+   text-align: center;
+}
