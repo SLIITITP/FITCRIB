@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300&display=swap');
+
+
+.FNViewPage{
+    background-color: #1F1F1F;
+    height: auto;
+    
+}
+
+.FNViewHeading{
+    color: #99FF33;
+    font-size: 45px;
+    font-weight: bold;
+    margin-left: 15px;
+    font-family: 'Secular One', sans-serif;
+}
+
+.FNViewTable{
+    border-collapse: collapse;
+    font-size: 25px;
+    
+    max-width: 1200px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    border: 5px solid white;
+    /* margin:auto; */
+    border-radius: 10px;
+    margin-top: -90px;
+    margin-left: 50px;
+    font-family: 'Jost', sans-serif;
+}
+
+.FNViewTable thead tr{
+    background-color: black;
+    color: #99FF33;
+    text-align: left;
+    
+}
+
+.FNViewTable th, .FNViewTable td{
+    padding: 12px 15px;
+}
+
+.FNViewTable tbody tr{
+    border-bottom: 5px solid white;
+}
+
+.FNViewTable tbody tr:nth-of-type(odd){
+    background-color: #2B302A;
+    color: white;
+    font-weight: bold;
+}
+
+.FNViewTable tbody tr:nth-of-type(even){
+    background-color: #99FF33;
+    color: #1F1F1F;
+    font-weight: bold;
+}
+
+.FNViewTable tbody tr:last-of-type{
+    border-bottom: 2px solid white;
+}
+
+.FNButton{
+    border: none;
+    color: white;
+    padding: 5px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.FNButton-update{
+    background-color: #66CC33;
+    color: #1F1F1F;
+    border: 3px solid black;
+    width: 80px;
+    font-weight: bold;
+}
+
+.FNButton-delete{
+    background-color: #F44336;
+    color: #1F1F1F;
+    border: 3px solid black;
+    width: 80px;
+    font-weight: bold;
+}
+
+.FNViewCreateBtn{
+    background-color: #99FF33;
+    color: #1F1F1F;
+    border-radius: 10px;
+    width: 150px;
+    height: 70px;
+    transition: 1s;
+    font-weight: bold;
+    font-size: 15px;
+    margin-left: 1280px;
+    font-family: 'Secular One', sans-serif;
+}
+
+.FNViewCreateBtn:hover{
+    background-color: #1F1F1F;
+    color: #99FF33;
+    transform: scale(1.4);
+}
+
+.FNViewSearch{
+    border-radius: 15px;
+    margin-left: 480px;
+    margin-top: 30px;
+    width: 400px;
+    text-align: center;
+    border: 5px solid #99FF33;
+    font-family: 'Jost', sans-serif;
+}
+
+.FNSearchIcon{
+    color:#2B302A;
+    margin-left: -380px;
+    
+}
