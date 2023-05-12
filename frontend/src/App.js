@@ -1,5 +1,4 @@
 import './App.css';
-import NavBarTop from './components/NavBarTop/NavBarTop';
 // import CreateWorkoutMain from './components/CreateWorkoutMain/CreateWorkoutMain';
 import MyWorkouts from './components/MyWorkouts/MyWorkouts';
 import SingleWorkout from './components/SingleWorkout/singleWorkout';
@@ -24,15 +23,15 @@ import AdminHome from './components/Admin_page/adminHome';
 import All_users from './components/All_users/all_user';
 import Generate_Report from './components/Generate Report/generate_report';
 
-import Navbar from './components/NavBarTop/Navbar'
+
 import NavigationBarB from './components/NavigationBarB/NavigationBarB'
 
 function App() {
   return (
     <Router>
       <div className="App">
-        <NavigationBarB />
-        {/* <NavBarTop/> */}
+        {/* <NavigationBarB />
+        <NavBarTop/> */}
         <Routes>
           {/* <Route path="/" /> */}
           {/* <Route path = "/CreateWorkout" element = {<CreateWorkoutMain/>}/> */}
