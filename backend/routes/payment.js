@@ -26,4 +26,14 @@ router.route("/addpayment").post((req,res)=>{
     })
 })
 
+//read all
+router.route("/readallpayments").get((req, res) => {
+
+    Payment.find().then((payment) => {
+        res.json(payment)
+    }).catch((error) => {
+        console.log(error);
+    })
+})
+
 module.exports = router;

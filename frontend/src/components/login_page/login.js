@@ -47,7 +47,7 @@ export default function Login(){
                 history(`/trainer_home/${result._id}`, { state: { id:result.Fullname } })
                 // window.location.href = `/trainer_home/${result._id}`;
             }else if (result.UserType === "Admin") {
-                history(`/admin_home`)
+                history(`/adminHome`)
                 // window.location.href = `/adminHome`;
             }
         } else {
