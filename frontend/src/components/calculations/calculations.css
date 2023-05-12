@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300&display=swap');
+
+.FNCalcPage{
+    background-color: #1F1F1F;
+    height: auto;
+}
+
+.FNCalcHeading{
+    color: #99FF33;
+    font-size: 45px;
+    font-weight: bold;
+    margin-left: 15px;
+    font-family: 'Secular One', sans-serif;
+}
+
+.FNCalcTable{
+    background-color: #99FF33;
+}
+
+.FNCalcIconDiv{
+    border: 3px solid blue;
+    width: 100px;
+    height: auto;
+    margin-left: 1367px;
+    margin-top: -60px;
+    border-radius: 5px;
+    background-color: black;
+}
+
+.FNCalcListIcon{
+    margin-left: 10px;
+    margin-bottom: 8px;
+    color: #99FF33;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.FNCalcAnalyIcon{
+    margin-bottom: 8px;
+    margin-left: 15px;
+    color: #99FF33;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.FNCalcTableHeading{
+    margin-left: 30px;
+    font-weight: bold;
+    font-family: 'Secular One', sans-serif;
+    font-size: 20px;
+}
+
+.FNCalcSelect{
+    margin-left: 40px;
+}
+
+.FNCalcRealTable{
+    margin-left: 30px;
+    margin-right: 30px;
+    
+}

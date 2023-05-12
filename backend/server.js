@@ -78,3 +78,10 @@ if(req.body.Password && req.body.Email){
     res.send({result:"User not found"})
 }
 })
+
+//financial management
+const transactionRouter = require("./routes/transactions.js");
+const transactRouter = require("./routes/transactionRoutes.js");
+
+app.use("/transaction", transactionRouter); // loads the js file connected with the transactionRouter
+app.use("/transact", transactRouter);
