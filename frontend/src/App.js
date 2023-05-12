@@ -25,10 +25,18 @@ import Generate_Report from './components/Generate Report/generate_report';
 
 
 import NavigationBarB from './components/NavigationBarB/NavigationBarB'
+import React, { useState } from "react";
+import UserContext from "./components/ContextComponent/ContextComponent";
 
 function App() {
+
+  const [user, setUser] = useState(null);
+
+
   return (
+    
     <Router>
+      <UserContext.Provider value={{ user, setUser }}>
       <div className="App">
         {/* <NavigationBarB />
         <NavBarTop/> */}
@@ -58,6 +66,7 @@ function App() {
           <Route path='/report' element={<Generate_Report />} />
         </Routes>
       </div>
+      </UserContext.Provider>
     </Router>
   );
 }
