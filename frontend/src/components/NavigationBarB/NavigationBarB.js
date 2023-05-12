@@ -3,13 +3,13 @@ import { Link } from 'react-router-dom';
 import './NavigationBarB.css';
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 
-export default function NavigationBarB() {
+export default function NavigationBarB(props) {
 
     const location = useLocation()
     const navigate = useNavigate()
     const params = useParams();
+    const id = props.id
 
-    //     const navigate = new useNavigate();
     //   const MyWorkouts = () => {
     //     let path = `/MyWorkouts`;
     //     navigate(path);
@@ -37,7 +37,10 @@ export default function NavigationBarB() {
                         <div class="collapse navbar-collapse" id="navbarNavDropdown">
                             <ul class="navbar-nav">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">WORKOUT PLANS</a>
+                                    <a class="nav-link" onClick={(e) => {
+                                                e.preventDefault();
+                                                window.location.href = `/MyWorkouts`
+                                            }}>MY WORKOUTS</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">EXERCISES</a>
@@ -57,14 +60,14 @@ export default function NavigationBarB() {
 
                                 <li>
                                     <div class="dropdown">
-                                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                            {location.state.id}
-                                        </a>
+                                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            {props.name}
+                                        </button>
 
                                         <ul class="dropdown-menu dropdown-menu-dark">
                                             <li><a className="dropdown-item" onClick={(e) => {
                                                 e.preventDefault();
-                                                window.location.href = `/profile/${params.id}`
+                                                window.location.href = `/profile/${id}`
                                             }}>My Profile</a></li>
                                             <li><a class="dropdown-item" href="/login">Log out</a></li>
                                         </ul>
