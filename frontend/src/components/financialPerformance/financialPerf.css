@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300&display=swap');
+
+.FNFinancialPage{
+    background-color: #252525;
+    height: auto;
+    /* margin-bottom: -200px; */
+}
+
+.FNFinancialHeading{
+    color: #99FF33;
+    font-size: 45px;
+    font-weight: bold;
+    margin-left: 15px;
+    font-family: 'Secular One', sans-serif;
+}
+
+.FNFinancialIncome{
+    background-color: black;
+    width: 400px;
+    height: 190px;
+    border-radius: 20px;
+    color: #99FF33;
+    border: 5px solid #99FF33;
+    margin-left: 60px;
+}
+
+.FNFinancialDivHeading{
+    color: white;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-top: 10px;
+    font-family: 'Secular One', sans-serif;
+}
+
+.FNFinancialExpenses{
+    background-color: black;
+    width: 400px;
+    height: 190px;
+    border-radius: 20px;
+    color: #99FF33;
+    border: 5px solid #99FF33;
+    margin-left: 550px;
+    margin-top: -235px;
+}
+
+.FNFinancialProfit{
+    background-color: black;
+    width: 400px;
+    height: 190px;
+    border-radius: 20px;
+    color: #99FF33;
+    border: 5px solid #99FF33;
+    margin-left: 1040px;
+    margin-top: -235px;
+
+}
+
+.FNFinancialPerfP{
+    color: #99FF33;
+    text-align: center;
+    font-size: 70px;
+    margin-top: -20px;
+    font-family: 'Secular One', sans-serif;
+}
+
+.FNFinancialChart{
+    background-color: white;
+    width: 400px;
+    height: 300px;
+    border-radius: 20px;
+    color: #99FF33;
+    border: 5px solid #99FF33;
+    margin-left: 60px;
+}
+
+.FNFinancialChartHeading{
+    color: black;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-top: 10px;
+    font-family: 'Secular One', sans-serif;
+}
+
+.FNFinancialChart2{
+    background-color: white;
+    width: 400px;
+    height: 300px;
+    border-radius: 20px;
+    color: #99FF33;
+    border: 5px solid #99FF33;
+    margin-left: 550px;
+    margin-top: -348px;
+}
+
+.FNFinancialP{
+    font-size: 180px;
+    color: black;
+    text-align: center;
+    margin-top: -30px;
+    font-family: 'Secular One', sans-serif;
+}
+
+.FNFinancialChart3{
+    background-color: white;
+    width: 400px;
+    height: 300px;
+    border-radius: 20px;
+    color: #99FF33;
+    border: 5px solid #99FF33;
+    margin-left: 1040px;
+    margin-top: -393px;
+    
+}
+
+.FNFinanicalChart{
+    background-color: white;
+    border-radius: 20px;
+    border: 5px solid #99FF33;
+    width: 700px;
+    height: 400px;
+    margin-left: 150px;
+    
+}
+
+.FNFinancialChartP{
+    font-weight: bold;
+    text-align: center;
+}
+
+.FNFinancialPara{
+    color: #99FF33;
+    text-align: center;
+    font-family: 'Jost', sans-serif;
+    font-size: 20px;
+}
+
+.FNLink{
+    text-align: center;
+    margin-left: 700px;
+    font-family: 'Jost', sans-serif;
+}
+
+.FNFinancialChartPara2{
+    font-size: 15px;
+    color: black;
+    margin-bottom: -30px;
+    margin-left: 25px;
+    font-family: 'Secular One', sans-serif;
+}
+
+.FNChartDiv{
+    border-radius: 10px;
+    border: 5px solid #99FF33;
+    width: 1000px;
+    margin-left: 230px;
+    background-color: #d6edbb;
+}
+
+.FNFinancialChartHeading2{
+    color: black;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-top: 10px;
+    font-family: 'Secular One', sans-serif;
+}
+
+.FNFinancialChartHeading3{
+    color: black;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-top: 10px;
+    font-family: 'Secular One', sans-serif;
+}
+
+.FNFinancialChartHeading4{
+    color: black;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-top: 10px;
+    font-family: 'Secular One', sans-serif;
+}
+
+.FNPdfButton{
+    background-color: #99FF33;
+    color: #1F1F1F;
+    border-radius: 10px;
+    width: 150px;
+    height: 30px;
+    transition: 1s;
+    margin-left: 650px;
+    font-size: 17px;
+    font-family: 'Secular One', sans-serif;
+}
+
+

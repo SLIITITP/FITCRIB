@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import "./MyWorkouts.css";
 import "bootstrap/dist/css/bootstrap.css";
 import DeleteButton from "../DeleteButton/DeleteButton";
 import { Button, Card, Col, Container, Form, Row } from "react-bootstrap";
+import UserContext from '../ContextComponent/ContextComponent';
 
 import axios from "axios";
 import UpdateButton from "../UpdateButton/UpdateButton";
@@ -14,6 +15,8 @@ export default function MyWorkouts() {
   const [selectedWorkoutId, setSelectedWorkoutId] = useState(null);
   const [searchQuery, setSearchQuery] = useState("");
   
+  const { user } = useContext(UserContext);
+  console.log(user)
 
   function fetchWorkouts() {
     axios

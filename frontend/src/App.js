@@ -19,10 +19,22 @@ import Trainer_home from './components/Trainer_home_page/trainer_page';
 import Update from './components/Update_user/Update_user';
 import ViewProfile from './components/View_user/view_user';
 import Other_users from './components/Other_users/other_users';
-import AdminHome from './components/Admin_page/adminHome';
+
 import All_users from './components/All_users/all_user';
 import Generate_Report from './components/Generate Report/generate_report';
+import AdminHome from "./components/adminHome/adminHome";
 
+//financial management
+import AdminHeader from "./components/FNHeader/FNheader";
+import FNDashboard from "./components/FNDashboard/dashboard";
+import CreateTransaction from "./components/createTransaction/createTransaction";
+import ViewAllTransaction from "./components/readAllTransaction/readAllTransaction";
+import UpdateTransaction from "./components/updateTransaction/updateTransaction";
+import AdminFooter from "./components/FNFooter/FNfooter";
+import FinancialP from "./components/financialPerformance/financialPerf";
+import Calculate from "./components/calculations/calculations";
+import UserPaymentsViewAll from "./components/ReadAlluserPayments/readAllUserPayments"
+import FNFaq from "./components/FNFaqPage/FNFaq"
 
 import NavigationBarB from './components/NavigationBarB/NavigationBarB'
 import React, { useState } from "react";
@@ -36,8 +48,11 @@ function App() {
   return (
     
     <Router>
-      <UserContext.Provider value={{ user, setUser }}>
+      
       <div className="App">
+      
+        {user?.UserType ==='Registered User' ? <NavigationBarB/> : <AdminHeader/>}
+        <UserContext.Provider value={{ user, setUser }}>
         {/* <NavigationBarB />
         <NavBarTop/> */}
         <Routes>
@@ -61,12 +76,23 @@ function App() {
           <Route path='/update/:id' element={<Update />} />
           <Route path='/seller_home/:id' element={<Seller_home />} />
           <Route path='/trainer_home/:id' element={<Trainer_home />} />
-          <Route path='/adminHome' element={<AdminHome />} />
+          <Route path='/adminHome' element={<AdminHome/>}/>
           <Route path='/allusers' element={<All_users />} />
           <Route path='/report' element={<Generate_Report />} />
+
+          {/* financial management */}
+            <Route path='/finance' element={<FNDashboard/>}/>
+            <Route path='/addTransaction' element={<CreateTransaction/>}/>
+            <Route path='/viewTransaction' element={<ViewAllTransaction/>}/>
+            <Route path='/updateTransaction/:id' element={<UpdateTransaction/>}/>
+            <Route path='/financialperformance' element={<FinancialP/>}/>
+            <Route path='/calculate' element={<Calculate/>}/>
+            <Route path="/alluserpaymentsFN" element={<UserPaymentsViewAll/>}/>
+            <Route path="/fnfaq" element={<FNFaq/>}/>
         </Routes>
+        </UserContext.Provider>
       </div>
-      </UserContext.Provider>
+      
     </Router>
   );
 }
