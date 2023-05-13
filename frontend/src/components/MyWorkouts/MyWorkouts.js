@@ -4,7 +4,7 @@ import "./MyWorkouts.css";
 import "bootstrap/dist/css/bootstrap.css";
 import DeleteButton from "../DeleteButton/DeleteButton";
 import { Button, Card, Col, Container, Form, Row } from "react-bootstrap";
-import UserContext from '../ContextComponent/ContextComponent';
+import UserContext from "../ContextComponent/ContextComponent";
 
 import axios from "axios";
 import UpdateButton from "../UpdateButton/UpdateButton";
@@ -24,7 +24,6 @@ export default function MyWorkouts() {
       .then((res) => {
         console.log(res.data)
         setWorkouts(res.data);
-        console.log(allWorkouts);
       })
       .catch((err) => {
         alert(err.message);
@@ -79,7 +78,7 @@ export default function MyWorkouts() {
           <Col>
             <div className="d-flex justify-content-between align-items-left mb-4">
               <h3 className="fw-normal mb-0 text-black text-white">
-                My Workouts
+              My Workouts
               </h3>
               <div className="d-flex justify-content-end">
                 <Form className="d-flex">

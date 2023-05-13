@@ -4,14 +4,14 @@ import { useNavigate, Link } from "react-router-dom";
 import '../login_page/login.css';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import UserContext from '../ContextComponent/ContextComponent';
+import AuthContext from '../ContextComponent/ContextComponent';
 
 
 export default function Login(){
 
     const history = useNavigate();
     const navigate = useNavigate();
-    const { setUser } = useContext(UserContext);
+    const { setUser } = useContext(AuthContext);
 
     const [Email, setEmail] = useState("");
     const [Password, setPassword] = useState("");
@@ -63,39 +63,6 @@ export default function Login(){
                 });
             console.log(e);
         }
-
-        // const credentials = {
-        //     Email,
-        //     Password,
-        //     UserType
-        // };
-        // console.warn(credentials);
-
-        // try{
-        //     await axios.post("http://localhost:8070/login", credentials).then((res)=>{
-        //         console.log(res.data);
-        //         if(res.data === "exist" && credentials.UserType === "Seller"){
-        //             history("/seller_home",{state:{id:Email}})
-        //             window.location.href=`/seller_home`;
-        //         }
-        //         else if(res.data === "exist" && credentials.UserType === "Registered User"){
-        //             history("/home",{state:{id:Email}})
-        //             window.location.href=`/home`;
-        //         }
-        //         else if(res.data === "exist" && credentials.UserType === "Trainer"){
-        //             history("/trainer_home",{state:{id:Email}})
-        //             window.location.href=`/trainer_home`;
-        //         }
-        //         else if(res.data === "not exist"){
-        //             alert("User have not sign up")
-        //         }
-        //     }).catch(e=>{
-        //         alert("worng details")
-        //         console.log(e);
-        //     })
-        // }catch(e){
-        //     console.log(e);
-        // }
 
     }
 
