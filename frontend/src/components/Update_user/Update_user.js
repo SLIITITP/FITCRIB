@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { useParams, useLocation, useNavigate } from "react-router-dom";
 import '../Update_user/update_user.css';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import UserContext from '../ContextComponent/ContextComponent';
 
 
 export default function Update() {
@@ -51,6 +52,7 @@ export default function Update() {
 
         result = await result.json();
 
+
         if (result) {
             toast.success('User updated successfully..!', {
                 position: "top-center",
@@ -62,9 +64,33 @@ export default function Update() {
                 progress: undefined,
                 theme: "light",
             });
+
+            setUser({
+                ...user,
+                Fullname,
+                Email,
+                Address,
+                TelephoneNumber,
+                UserType,
+                Gender,
+                Username,
+                Password
+              });
             window.location.href = `/profile/${params.id}`;
         }
     }
+
+    // Retrieve the user and setUser from the context
+    const { user, setUser } = useContext(UserContext);
+
+    // Update the local storage user details whenever the user object changes
+    useEffect(() => {
+        if (user) {
+            localStorage.setItem("user", JSON.stringify(user));
+        } else {
+            localStorage.removeItem("user");
+        }
+    }, [user]);
 
     //Home pages Control
     const HomepagesHandle = async () => {
@@ -88,7 +114,7 @@ export default function Update() {
 
     return (
         <div className="update_page">
-           
+
             <br />
             <div className="rectangle">
                 <h1 className="updateprofile">User Profile</h1>
@@ -148,45 +174,9 @@ export default function Update() {
             </div>
             <ToastContainer />
 
-            <br/><br/>
-
-            {/* footer */}
-
-            <footer className="footer">
-                <div class="foot_info">
-                    <div class="footer_logo">
-                        {/* <!--logo here--> */}
-                        {/* <a href="#"><img src="images/logo.png" alt=""></a> */}
-                        <h2 className="footer_name">FitCrib</h2>
-                    </div>
-
-                </div>
+            <br /><br />
 
 
-                <div class="bottom_nav">
-                    <ul>
-                        <li><a href="#">ABOUT US</a></li>
-                        <li><a href="#">CONTACT US</a></li>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">PRIVACY POLICY</a></li>
-                    </ul>
-                </div>
-                <div class="wrapper">
-                    <div class="icon">
-                        <span><i class="fa-brands fa-facebook"></i></span>
-                    </div>
-                    <div class="icon">
-                        <span><i class="fa-brands fa-instagram"></i></span>
-                    </div>
-                    <div class="icon">
-                        <span><i class="fa-brands fa-twitter"></i></span>
-                    </div>
-                    <div class="icon">
-                        <span><i class="fa-brands fa-linkedin-in"></i></span>
-                    </div>
-                </div>
-                <hr />
-            </footer>
         </div>
     )
 }
