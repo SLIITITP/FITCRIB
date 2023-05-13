@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import './NavigationBarB.css';
 import { useLocation, useNavigate, useParams } from "react-router-dom";
+import UserContext from "../ContextComponent/ContextComponent";
 
 export default function NavigationBarB(props) {
 
@@ -9,6 +10,9 @@ export default function NavigationBarB(props) {
     const navigate = useNavigate()
     const params = useParams();
     const id = props.id
+
+    const { user } = useContext(UserContext);
+    console.log(user)
 
     //   const MyWorkouts = () => {
     //     let path = `/MyWorkouts`;
@@ -61,7 +65,7 @@ export default function NavigationBarB(props) {
                                 <li>
                                     <div class="dropdown">
                                         <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                            {props.name}
+                                            {user.Fullname}
                                         </button>
 
                                         <ul class="dropdown-menu dropdown-menu-dark">

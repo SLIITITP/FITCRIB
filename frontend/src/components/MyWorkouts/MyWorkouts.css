@@ -1,50 +1,50 @@
 /* Set the background color of the body element */
-body {
+.MyWorkouts .body {
     background-color: black;
   }
   
   /* Set the text color for all elements */
-  .text-white {
+  .MyWorkouts .text-white {
     color: white;
   }
   
-  .text-black {
+  .MyWorkouts .text-black {
     color: black;
   }
   
   /* Set the color of the "Create Workout Plan" button */
-  .btn-outline-success {
+  .MyWorkouts .btn-outline-success {
     color: white;
     background-color: limegreen;
     border-color: limegreen;
   }
   
   /* Set the color of the "Delete Plan" button */
-  .btn-outline-danger {
+  .MyWorkouts .btn-outline-danger {
     color: white;
     background-color: black;
     border-color: black;
   }
   
   /* Set the color of the search button */
-  .btn-outline-success.btn-ms-3 {
+  .MyWorkouts .btn-outline-success.btn-ms-3 {
     color: white;
     background-color: limegreen;
     border-color: limegreen;
   }
   
   /* Set the background color of the workout cards */
-  .card.rounded-3 {
+  .MyWorkouts .card.rounded-3 {
     background-color: white;
   }
   
   /* Set the font size and color of the workout names and descriptions */
-  .lead {
+  .MyWorkouts .lead {
     font-size: 24px;
     color: black;
   }
   
-  .text-muted {
+  .MyWorkouts .text-muted {
     color: black;
   }
   
