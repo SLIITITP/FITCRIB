@@ -4,20 +4,20 @@
   }
   
   /* General styles */
-  body {
+  .NewWorkoutPlan .body {
     margin: 10;
     padding: 0;
     font-family: sans-serif;
   }
   
   /* Colors */
-  .black {
+  .NewWorkoutPlan .black {
     color: #000;
   }
-  .white {
+  .NewWorkoutPlan .white {
     color: #fff;
   }
-  .lime-green {
+  .NewWorkoutPlan .lime-green {
     color: #c7ea46;
   }
   
@@ -28,7 +28,7 @@
   }
   
   /* Header */
-  header {
+  .NewWorkoutPlan .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -36,43 +36,43 @@
     background-color: lime-green;
   }
   
-  header h1 {
+  .NewWorkoutPlan .header .h1 {
     margin: 0;
     font-size: 24px;
   }
   
   /* Navigation */
-  nav {
+  .NewWorkoutPlan .nav {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #222;
   }
   
-  nav ul {
+  .NewWorkoutPlan .nav .ul {
     display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
   }
   
-  nav ul li {
+  .NewWorkoutPlan .nav .ul .li {
     margin-right: 20px;
   }
   
-  nav ul li a {
+  .NewWorkoutPlan .nav .ul .li .a {
     color: white;
     text-decoration: none;
     padding: 10px;
   }
   
-  nav ul li a:hover {
+  .NewWorkoutPlan .nav .ul .li .a:hover {
     background-color: lime-green;
     color: black;
   }
   
   /* Main content */
-  main {
+  .NewWorkoutPlan .main {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -80,26 +80,26 @@
     background-color: #333;
   }
   
-  article {
+  .NewWorkoutPlan .article {
     flex-basis: 45%;
     margin-bottom: 20px;
     background-color: white;
   }
   
-  article img {
+  .NewWorkoutPlan .article .img {
     width: 100%;
   }
   
-  article h2 {
+  .NewWorkoutPlan .article .h2 {
     margin: 10px;
   }
   
-  article p {
+  .NewWorkoutPlan .article .p {
     margin: 10px;
   }
   
   /* Footer */
-  footer {
+  .NewWorkoutPlan .footer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -107,36 +107,36 @@
     background-color: #222;
   }
   
-  footer p {
+  .NewWorkoutPlan .footer .p {
     margin: 0;
   }
   
-  .container-md {
+  .NewWorkoutPlan .container-md {
       margin-top: 50px;
       margin-bottom: 50px
   }
   
-  .card {
+  .NewWorkoutPlan .card {
       background-color: #fff;
       color: #000;
       border: none;
       border-radius: 0;
     }
     
-    .card-title {
+    .NewWorkoutPlan .card-title {
       font-size: 2.5rem;
       font-weight: bold;
       color: #000;
       margin-bottom: 1rem;
     }
     
-    .card-text {
+    .NewWorkoutPlan .card-text {
       font-size: 1.5rem;
       color: #000;
       margin-bottom: 2rem;
     }
     
-    .list-group-item {
+    .NewWorkoutPlan .list-group-item {
       font-size: 1.2rem;
       color: #000;
       background-color: #fff;
@@ -144,7 +144,7 @@
       border-bottom: 1px solid #000;
     }
     
-    .list-group-item:last-child {
+    .NewWorkoutPlan .list-group-item:last-child {
       border-bottom: none;
     }
     

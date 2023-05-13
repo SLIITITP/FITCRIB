@@ -52,12 +52,12 @@
     cursor: pointer;
   }
 
-  .sessionContainer{
+  .SingleWorkout .sessionContainer{
     background-color: white;
     padding-right: 1%;
   }
 
-  .workoutPlanContainer{
+  .SingleWorkout .workoutPlanContainer{
     padding-left: 5%;
     padding-right: 5%;
   }
