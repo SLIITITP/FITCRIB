@@ -37,24 +37,33 @@ import UserPaymentsViewAll from "./components/ReadAlluserPayments/readAllUserPay
 import FNFaq from "./components/FNFaqPage/FNFaq"
 
 import NavigationBarB from './components/NavigationBarB/NavigationBarB'
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import UserContext from "./components/ContextComponent/ContextComponent";
 
 function App() {
 
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState(() => {
+    const storedUser = localStorage.getItem("user");
+    return storedUser ? JSON.parse(storedUser) : null;
+  });
+
+  useEffect(() => {
+    if (user) {
+      localStorage.setItem("user", JSON.stringify(user));
+    } else {
+      localStorage.removeItem("user");
+    }
+  }, [user]);
+  console.log(user);
 
 
   return (
     
     <Router>
-      
+      <UserContext.Provider value={{ user, setUser }}>
       <div className="App">
       
         {user?.UserType ==='Registered User' ? <NavigationBarB/> : <AdminHeader/>}
-        <UserContext.Provider value={{ user, setUser }}>
-        {/* <NavigationBarB />
-        <NavBarTop/> */}
         <Routes>
           {/* <Route path="/" /> */}
           {/* <Route path = "/CreateWorkout" element = {<CreateWorkoutMain/>}/> */}
@@ -90,9 +99,9 @@ function App() {
             <Route path="/alluserpaymentsFN" element={<UserPaymentsViewAll/>}/>
             <Route path="/fnfaq" element={<FNFaq/>}/>
         </Routes>
-        </UserContext.Provider>
+        
       </div>
-      
+      </UserContext.Provider>
     </Router>
   );
 }
