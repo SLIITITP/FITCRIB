@@ -22,7 +22,7 @@ export default function Home() {
     
     return (
         <div className="home_page">
-            <NavigationBarB id = {params.id} name = {user?.Email}/>
+            <NavigationBarB id = {params.id} name = {user?.Fullname}/>
 
             <img src={img1} alt="" className="img1" />
 

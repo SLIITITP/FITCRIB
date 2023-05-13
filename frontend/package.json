@@ -24,6 +24,7 @@
     "fs": "^0.0.1-security",
     "jspdf": "^2.5.1",
     "mdb-react-ui-kit": "^5.1.0",
+    "moment": "^2.29.4",
     "pandas-js": "^0.2.4",
     "picklejs": "^0.101.0",
     "react": "^18.2.0",
