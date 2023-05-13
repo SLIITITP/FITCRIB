@@ -6,6 +6,7 @@ import '../View_user/view_user.css';
 import Usericon from '../View_user/usericon.jpg';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import UserContext from '../ContextComponent/ContextComponent';
 // import M from 'materialize-css'
 
 export default function ViewProfile() {
@@ -14,6 +15,9 @@ export default function ViewProfile() {
     const params = useParams();
     const location = useLocation()
     const history = useNavigate();
+
+    const { user } = useContext(UserContext);
+    console.log(user)
 
     // const Details = async()=>{
     //     let Valid = localStorage.getItem("newUser")
@@ -189,8 +193,8 @@ export default function ViewProfile() {
                                     <div class="card-body text-center">
                                         <img src={Usericon} alt="avatar"
                                             class="rounded-circle img-fluid" />
-                                        <h3 class="my-3">{data.user?.Fullname}</h3>
-                                        <p class="text-muted mb-4">{data.user?.UserType}</p>
+                                        <h3 class="my-3">{user?.Fullname}</h3>
+                                        <p class="text-muted mb-4">{user?.UserType}</p>
                                     </div>
                                 </div>
 
@@ -203,7 +207,7 @@ export default function ViewProfile() {
                                                 <p class="mb-0" id="view_heading">Full Name</p>
                                             </div>
                                             <div class="col-sm-9">
-                                                <p class="text-muted mb-0">{data.user?.Fullname}</p>
+                                                <p class="text-muted mb-0">{user?.Fullname}</p>
                                             </div>
                                         </div>
                                         <hr />
@@ -212,7 +216,7 @@ export default function ViewProfile() {
                                                 <p class="mb-0" id="view_heading">Email</p>
                                             </div>
                                             <div class="col-sm-9">
-                                                <p class="text-muted mb-0">{data.user?.Email}</p>
+                                                <p class="text-muted mb-0">{user?.Email}</p>
                                             </div>
                                         </div>
                                         <hr />
@@ -221,7 +225,7 @@ export default function ViewProfile() {
                                                 <p class="mb-0" id="view_heading">Address</p>
                                             </div>
                                             <div class="col-sm-9">
-                                                <p class="text-muted mb-0">{data.user?.Address}</p>
+                                                <p class="text-muted mb-0">{user?.Address}</p>
                                             </div>
                                         </div>
                                         <hr />
@@ -230,7 +234,7 @@ export default function ViewProfile() {
                                                 <p class="mb-0" id="view_heading">Telephone Number</p>
                                             </div>
                                             <div class="col-sm-9">
-                                                <p class="text-muted mb-0">{data.user?.TelephoneNumber}</p>
+                                                <p class="text-muted mb-0">{user?.TelephoneNumber}</p>
                                             </div>
                                         </div>
                                         <hr />
@@ -239,7 +243,7 @@ export default function ViewProfile() {
                                                 <p class="mb-0" id="view_heading">User Type</p>
                                             </div>
                                             <div class="col-sm-9">
-                                                <p class="text-muted mb-0">{data.user?.UserType}</p>
+                                                <p class="text-muted mb-0">{user?.UserType}</p>
                                             </div>
                                         </div>
                                         <hr />
@@ -248,7 +252,7 @@ export default function ViewProfile() {
                                                 <p class="mb-0" id="view_heading">Gender</p>
                                             </div>
                                             <div class="col-sm-9">
-                                                <p class="text-muted mb-0">{data.user?.Gender}</p>
+                                                <p class="text-muted mb-0">{user?.Gender}</p>
                                             </div>
                                         </div>
                                         <hr />
@@ -257,7 +261,7 @@ export default function ViewProfile() {
                                                 <p class="mb-0" id="view_heading">Username</p>
                                             </div>
                                             <div class="col-sm-9">
-                                                <p class="text-muted mb-0">{data.user?.Username}</p>
+                                                <p class="text-muted mb-0">{user?.Username}</p>
                                             </div>
                                         </div>
                                     </div>
