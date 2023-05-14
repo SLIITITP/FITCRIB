@@ -12,6 +12,8 @@ export default function Update() {
     const history = useNavigate();
     const { user, setUser } = useContext(UserContext);
 
+    let navigate = useNavigate();
+
     const [Fullname, setName] = useState("");
     const [Email, setEmail] = useState("");
     const [Address, setAddress] = useState("");
@@ -54,38 +56,34 @@ export default function Update() {
     
         result = await result.json();
         console.log(result.user);
+        navigate(`/profile/${user._id}`);
+
+        // window.location.href = `/profile/${user._id}`;
         
+        // const user = {
+        //     ...JSON.parse(localStorage.getItem('user')),
+        //     Fullname,
+        //     Email,
+        //     Address,
+        //     TelephoneNumber,
+        //     UserType,
+        //     Gender,
+        //     Username,
+        //     Password,
+        //   };
+        //   localStorage.setItem('user', JSON.stringify(user));
+
+        // // window.location.href = `/profile/${user._id}`;
+
+        // let path = `/profile/${user._id}`;
+        // navigate(path);
 
 
-        if (result) {
+        // // if (result) {
 
-            const user = {
-                ...JSON.parse(localStorage.getItem('user')),
-                Fullname,
-                Email,
-                Address,
-                TelephoneNumber,
-                UserType,
-                Gender,
-                Username,
-                Password,
-              };
-              localStorage.setItem('user', JSON.stringify(user));
-
-              
-            toast.success('User updated successfully..!', {
-                position: "top-center",
-                autoClose: 5000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "light",
-            });
-            window.location.href = `/profile/${params.id}`;
             
-        }
+            
+        // // }
     }
 
     //Home pages Control
@@ -151,7 +149,7 @@ export default function Update() {
                     <label for="username" className="viewheading">Username: </label><br />
                     <input type="text" className="viewforminput" value={Username} onChange={(e) => {
                         setUsername(e.target.value)
-                    }} /><br />
+                    }} readOnly/><br />
 
                     <label for="password" className="viewheading">Password: </label><br />
                     <input type="password" className="viewforminput" value={Password} onChange={(e) => {

@@ -1,9 +1,9 @@
-import React, {useEffect, useState, useContext} from "react";
-import { useLocation, useNavigate, useParams} from "react-router-dom";
+import React, { useEffect, useState, useContext } from "react";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import '../Home_page/home.css';
-import img1 from '../index/index5.jpg';
 import NavigationBarB from '../NavigationBarB/NavigationBarB'
 import UserContext from '../ContextComponent/ContextComponent';
+import workouticon from '../Home_page/workouticon.jpg'
 
 
 export default function Home() {
@@ -19,51 +19,90 @@ export default function Home() {
     function logOut() {
         localStorage.clear();
     }
-    
+
     return (
-        <div className="home_page">
+        <div className="ReHomePage">
             {/* <NavigationBarB id = {params.id} name = {user?.Fullname}/> */}
+            <br /><br /><br />
+            <h1 className="ReUserHomeHeading">Don't Stop Till <br /> You Drop</h1>
+            <br /><br />
+            <p className="ReUserHomePara1">The best way to</p>
+            <p className="ReUserHomePara2">make sure your body and mind</p>
+            <p className="ReUserHomePara3">are ready for</p>
+            <p className="ReUserHomePara4">work is to wake them up with a good workout.</p>
+            <br />
+            <p className="ReUserHomeDescription">Welcome to our fitness website! Discover a wide range <br /> of resources, including workout plans, nutrition advice, and <br />expert tips, to help you achieve your health and wellness goals. <br /><b style={{ color: "rgb(242, 121, 8)" }}>Join our community and start your fitness journey today!</b></p>
+            <br /><br /><br />
 
-            <img src={img1} alt="" className="img1" />
-
-            <footer className="footer">
-                <div className="foot_info">
-                    <div className="footer_logo">
-                        {/* <!--logo here--> */}
-                        {/* <a href="#"><img src="images/logo.png" alt=""></a> */}
-                        <h2 className="footer_name">FitCrib</h2>
-                    </div>
+            <div className="ReHomePageSecondPart">
+                <br /><br />
+                <div className="ReUserDiv1">
+                    <img src={workouticon} className="ReUserDivIcon" />
+                    <h2 className="ReUserDivHeading">My Workout</h2>
+                    <p className="ReUserDivPara">All Registered Users, Trainers, Sellers and Administrators are listed here. All of the data related to them can be viewed by an administrator at any time.</p>
+                    <button className="ReUserHomeButton" onClick={(e) => {
+                        e.preventDefault();
+                        window.location.href = `#`;
+                    }}>MY WORKOUTS</button>
 
                 </div>
 
+                <div className="ReUserDiv2">
+                    <img src={workouticon} className="ReUserDivIcon" />
+                    <h2 className="ReUserDivHeading">Exercises</h2>
+                    <p className="ReUserDivPara">All Registered Users, Trainers, Sellers and Administrators are listed here. All of the data related to them can be viewed by an administrator at any time.</p>
+                    <button className="ReUserHomeButton" onClick={(e) => {
+                        e.preventDefault();
+                        window.location.href = `#`;
+                    }}>EXERCISES</button>
 
-                <div className="bottom_nav">
-                    <ul>
-                        <li><a href="#">ABOUT US</a></li>
-                        <li><a href="#">CONTACT US</a></li>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">PRIVACY POLICY</a></li>
-                    </ul>
                 </div>
-                <div className="wrapper">
-                    <div className="icon">
-                        <span><i className="fa-brands fa-facebook"></i></span>
-                    </div>
-                    <div className="icon">
-                        <span><i className="fa-brands fa-instagram"></i></span>
-                    </div>
-                    <div className="icon">
-                        <span><i className="fa-brands fa-twitter"></i></span>
-                    </div>
-                    <div className="icon">
-                        <span><i className="fa-brands fa-linkedin-in"></i></span>
-                    </div>
+
+                <div className="ReUserDiv3">
+                    <img src={workouticon} className="ReUserDivIcon" />
+                    <h2 className="ReUserDivHeading">MarketPlace</h2>
+                    <p className="ReUserDivPara">All Registered Users, Trainers, Sellers and Administrators are listed here. All of the data related to them can be viewed by an administrator at any time.</p>
+                    <button className="ReUserHomeButton" onClick={(e) => {
+                        e.preventDefault();
+                        window.location.href = `#`;
+                    }}>MARKETPLACE</button>
+
                 </div>
-                <hr />
-            </footer>
 
+                <div className="ReUserDiv4">
+                    <img src={workouticon} className="ReUserDivIcon" />
+                    <h2 className="ReUserDivHeading">Educational Content</h2>
+                    <p className="ReUserDivPara">All Registered Users, Trainers, Sellers and Administrators are listed here. All of the data related to them can be viewed by an administrator at any time.</p>
+                    <button className="ReUserHomeButton" onClick={(e) => {
+                        e.preventDefault();
+                        window.location.href = `#`;
+                    }}>EDUCATIONAL CONTENT</button>
 
+                </div>
 
+                <div className="ReUserDiv5">
+                    <img src={workouticon} className="ReUserDivIcon" />
+                    <h2 className="ReUserDivHeading">Nutrition Plans</h2>
+                    <p className="ReUserDivPara">All Registered Users, Trainers, Sellers and Administrators are listed here. All of the data related to them can be viewed by an administrator at any time.</p>
+                    <button className="ReUserHomeButton" onClick={(e) => {
+                        e.preventDefault();
+                        window.location.href = `#`;
+                    }}>NUTRITION PLANS</button>
+
+                </div>
+
+                <div className="ReUserDiv6">
+                    <img src={workouticon} className="ReUserDivIcon" />
+                    <h2 className="ReUserDivHeading">Recipes</h2>
+                    <p className="ReUserDivPara">All Registered Users, Trainers, Sellers and Administrators are listed here. All of the data related to them can be viewed by an administrator at any time.</p>
+                    <button className="ReUserHomeButton" onClick={(e) => {
+                        e.preventDefault();
+                        window.location.href = `#`;
+                    }}>RECIPES</button>
+
+                </div>
+                <br /><br />
+            </div>
         </div>
     )
 }
