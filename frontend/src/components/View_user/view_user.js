@@ -19,11 +19,6 @@ export default function ViewProfile() {
     const { user } = useContext(UserContext);
     console.log(user)
 
-    // const Details = async()=>{
-    //     let Valid = localStorage.getItem("newUser")
-
-    // }
-
     useEffect(() => {
         getData();
     }, [])
@@ -33,7 +28,7 @@ export default function ViewProfile() {
 
         if (result.status === 200) {
             setData(result.data);
-            // console.log(data);
+
         }
 
     }
@@ -78,106 +73,12 @@ export default function ViewProfile() {
 
     }
 
-    //get all users
-
-    // useEffect(() => {
-    //     getUsers();
-    // }, [])
-
-    // const getUsers = async () => {
-    //     const response = await axios.get("http://localhost:8070/user");
-
-    //     if (response.status === 200) {
-    //         setData(response.data);
-    //         console.log(data);
-    //     }
-    // }
-
-    //search
-
-    // const searchModal = async(event) =>{
-    //     let key = event.target.value;
-    //     if(key){
-    //         let result = await fetch(`http://localhost:8070/user/search/${key}`);
-    //         result = await result.json()
-
-    //         if(result){
-    //             setData(result)
-    //         }
-    //     }else{
-    //         getData();
-    //     }
-    // }
-
-    // const searchModal = useRef(null);
-    // const [search, setSearch] = useState('');
-    // const [userDetails, setUserDetails] = useState([]);
-    // useEffect(()=>{
-    //     M.Modal.init(searchModal.current)
-    // },[])
-
-    // const fetchUsers =(query)=>{
-    //     setSearch(query)
-    //     fetch('/search-users',{
-    //         method: "post",
-    //         headers:{
-    //             "Content-Type": "application/json"
-    //         },
-    //         body: JSON.stringify({query})
-    //     }).then(res=>res.json())
-    //     .then(result=>{
-    //         setUserDetails(result.user)
-    //     })
-    // }
 
     return (
         <div className="view_page">
 
-            {/* data map */}
-            {/* {data && data.map((item, index) => {
-                        return (
-                            <tr key={index}>
-                                <th scope="row">{index + 1}</th>
-                                <td>{item.subject}</td>
-                                <td>{item.type}</td>
-                            </tr>
-                        );
-                    })}
-               */}
-
-
-
-
-
-            {/* search body */}
-
-            {/* <div id="modal1" class="modal" ref={searchModal}>
-                <div className="modal-content">
-                    <input type="text" className="signupforminput" placeholder="search users"  onChange={(e) => {
-                        searchModal(e.target.value);
-                    }} />
-                    <ul className="collection">
-                        {data && [data].map((item, index) => {
-                            return (
-                                <tr key={index}>
-                                    <th scope="row">{index + 1}</th>
-                                    <td>{item.Fullname}</td>
-                                    <td>{item.Username}</td>
-                                </tr>
-                            );
-                        })}
-                    </ul>
-                </div>
-                <div className="modal-footer">
-                    <button className="modal-close waves-effect waves-green btn-flat">Agree</button>
-                </div>
-            </div> */}
-
             {/* view body */}
             <div className="view_body">
-
-                {/* search bar */}
-                {/* <input type="" placeholder="Search user" className="usersearch modal-trigger" data-target="modal1" /> */}
 
                 <br /><br />
                 <div className="rectangle">
@@ -277,7 +178,7 @@ export default function ViewProfile() {
                         <button type="submit" className="updatebtn" onClick={(e) => {
                             e.preventDefault();
                             window.location.href = `/update/${params.id}`
-                        }}>Update Details</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                        }}>Update Details</button>
                         <button type="submit" className="deletebtn" onClick={() => deleteUser(params.id)}>Delete My Account</button>
                     </div>
                 </div>
@@ -285,16 +186,6 @@ export default function ViewProfile() {
             </div>
             <ToastContainer />
 
-
-            {/* <div>
-                <h3>Full name : {data.user?.Fullname}</h3>
-                <h3>Email : {data.user?.Email}</h3>
-                <h3>Address : {data.user?.Address}</h3>
-                <h3>TelephoneNumber : {data.user?.TelephoneNumber}</h3>
-                <h3>UserType : {data.user?.UserType}</h3>
-                <h3>Gender : {data.user?.Gender}</h3>
-                <h3>Username : {data.user?.Username}</h3>
-            </div> */}
 
             {/* footer */}
 
