@@ -76,7 +76,7 @@ export default function All_users() {
             <div className="background_viewalluser_page">
                 <br />
 
-                <h1 className="ViewUsersHeading">ALL USERS</h1>
+                <h1 className="ViewAllUsersHeading">ALL USERS</h1>
                 <input type="" placeholder="Search User" className="ViewalluserSearch" onChange={searchUsers} />
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <button type="submit" className="reportUserbtn" onClick={(e) => {
