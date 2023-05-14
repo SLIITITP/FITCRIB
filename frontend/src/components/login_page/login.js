@@ -4,14 +4,14 @@ import { useNavigate, Link } from "react-router-dom";
 import '../login_page/login.css';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import AuthContext from '../ContextComponent/ContextComponent';
+import UserContext from '../ContextComponent/ContextComponent';
 
 
 export default function Login(){
 
     const history = useNavigate();
     const navigate = useNavigate();
-    const { setUser } = useContext(AuthContext);
+    const { setUser } = useContext(UserContext);
 
     const [Email, setEmail] = useState("");
     const [Password, setPassword] = useState("");

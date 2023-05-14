@@ -10,6 +10,9 @@ export default function Update() {
 
     const location = useLocation()
     const history = useNavigate();
+    const { user, setUser } = useContext(UserContext);
+
+    let navigate = useNavigate();
 
     const [Fullname, setName] = useState("");
     const [Email, setEmail] = useState("");
@@ -48,49 +51,37 @@ export default function Update() {
             headers: {
                 'Content-Type': 'Application/json'
             }
+            
         });
-
+    
         result = await result.json();
+        console.log(result.user);
+        
+        const user = {
+            ...JSON.parse(localStorage.getItem('user')),
+            Fullname,
+            Email,
+            Address,
+            TelephoneNumber,
+            UserType,
+            Gender,
+            Username,
+            Password,
+          };
+          localStorage.setItem('user', JSON.stringify(user));
+
+        // window.location.href = `/profile/${user._id}`;
+
+        let path = `/profile/${user._id}`;
+        navigate(path);
 
 
-        if (result) {
-            toast.success('User updated successfully..!', {
-                position: "top-center",
-                autoClose: 5000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "light",
-            });
+        // if (result) {
 
-            setUser({
-                ...user,
-                Fullname,
-                Email,
-                Address,
-                TelephoneNumber,
-                UserType,
-                Gender,
-                Username,
-                Password
-              });
-            window.location.href = `/profile/${params.id}`;
-        }
+            
+            
+        // }
     }
-
-    // Retrieve the user and setUser from the context
-    const { user, setUser } = useContext(UserContext);
-
-    // Update the local storage user details whenever the user object changes
-    useEffect(() => {
-        if (user) {
-            localStorage.setItem("user", JSON.stringify(user));
-        } else {
-            localStorage.removeItem("user");
-        }
-    }, [user]);
 
     //Home pages Control
     const HomepagesHandle = async () => {
@@ -162,7 +153,7 @@ export default function Update() {
                         setPassword(e.target.value)
                     }} /><br /><br />
 
-                    <button className="userupdatebtn" onClick={updateUser}>Update</button>&nbsp;&nbsp;&nbsp;
+                    <button className="userupdatebtn" onClick={updateUser}>Update</button>
                     <button className="userupdatecancelbtn" onClick={(e) => {
                         e.preventDefault();
                         window.location.href = `/profile/${params.id}`;
