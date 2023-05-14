@@ -64,6 +64,7 @@ function App() {
       <div className="App">
       
         {user?.UserType ==='Registered User' ? <NavigationBarB/> : <AdminHeader/>}
+        <p>The name of the user is : {user.Fullname}</p>
         <Routes>
           {/* <Route path="/" /> */}
           {/* <Route path = "/CreateWorkout" element = {<CreateWorkoutMain/>}/> */}
