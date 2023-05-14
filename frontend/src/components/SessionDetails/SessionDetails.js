@@ -54,22 +54,22 @@ export default function SessionDetails() {
             <Card.Header>Session Information</Card.Header>
             <Card.Body>
               <Card.Text>
-                <strong>Day: {day}</strong>
+                <strong>Day: {session[0].day+1}</strong>
               </Card.Text>
               <Card.Text>
                 <strong>Sentiment: {session[0].sentiment}</strong>
               </Card.Text>
               <Card.Text>
-                <strong>Comment:</strong> {session.sessionComment}
+                <strong>Comment:</strong> {session[0].sessionComment}
               </Card.Text>
               <Card.Text>
-                <strong>Session Number:</strong> {session.sessionNumber}
+                <strong>Session Number:</strong> {session[0].sessionNumber}
               </Card.Text>
               <Card.Text>
-                <strong>Workout ID:</strong> {session.workoutId}
+                <strong>Workout ID:</strong> {session[0].workoutId}
               </Card.Text>
               <Card.Text>
-                <strong>Workout Name:</strong> {session.workoutName}
+                <strong>Workout Name:</strong> {session[0].workoutName}
               </Card.Text>
             </Card.Body>
           </Card>

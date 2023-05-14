@@ -175,11 +175,11 @@ export default function ViewProfile() {
                             e.preventDefault();
                             window.location.href = `/users`
                         }} >View Other Users</button>
-                        <button type="submit" className="updatebtn" onClick={(e) => {
+                        <button type="submit" className="Userupdatebtn" onClick={(e) => {
                             e.preventDefault();
                             window.location.href = `/update/${params.id}`
-                        }}>Update Details</button>
-                        <button type="submit" className="deletebtn" onClick={() => deleteUser(params.id)}>Delete My Account</button>
+                        }}>Update Details</button> &nbsp;&nbsp;&nbsp;&nbsp;
+                        <button type="submit" className="Userdeletebtn" onClick={() => deleteUser(params.id)}>Delete My Account</button>
                     </div>
                 </div>
 

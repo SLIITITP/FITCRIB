@@ -4,11 +4,11 @@
     
 }
 
-.ViewUsersHeading{
+.ViewAllUsersHeading{
     color: #CCFF00;
     font-size: 45px;
     font-weight: bold;
-    margin-left: 15px;
+    margin-left: 40%;
 }
 
 .ViewUsersTable{
@@ -98,7 +98,7 @@
     height: 40px;
     text-align: center;
     border: 5px solid #CCFF00;
-    margin-left: 250px;
+    margin-left: 30%;
 }
 
 /* .FNSearchIcon{
