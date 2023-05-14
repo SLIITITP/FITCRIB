@@ -89,8 +89,8 @@ export default function NavigationBarB(props) {
 
                                 <li>
                                     <div className="dropdown">
-                                        <button className="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                            {user.Fullname}
+                                        <button className="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" >
+                                            {user.Username}
                                         </button>
 
                                         <ul className="dropdown-menu dropdown-menu-dark">
