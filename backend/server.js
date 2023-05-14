@@ -9,9 +9,16 @@ const { DataFrame } = require('pandas-js');
 const request = require('request');
 const fs = require('fs');
 const bcrypt = require("bcryptjs");
+const path = require("path")
 
 const jwt=require("jsonwebtoken");
 const JWT_SECRET= "kjjhjif565g5955dgdg()gsfsfsgdgh444545[][]47g"
+
+//image upload
+app.use(express.static(path.join(__dirname)))
+app.use(express.json())
+app.use("/images",express.static(path.join(__dirname+"/images")))
+
 
 const port = process.env.PORT || 8070;
 
@@ -85,3 +92,14 @@ const transactRouter = require("./routes/transactionRoutes.js");
 
 app.use("/transaction", transactionRouter); // loads the js file connected with the transactionRouter
 app.use("/transact", transactRouter);
+
+//blog Management
+
+const authBlog = require("./routes/blog")
+const Review = require("./routes/review")
+//const pdfTemplate = require("./documents/template")//template*/
+const BApprove = require("./routes/blogApprove")
+
+app.use("/review",Review)
+app.use("/blog",authBlog)
+app.use("/bApprove",BApprove)

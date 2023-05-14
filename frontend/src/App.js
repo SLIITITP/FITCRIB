@@ -36,6 +36,20 @@ import Calculate from "./components/calculations/calculations";
 import UserPaymentsViewAll from "./components/ReadAlluserPayments/readAllUserPayments"
 import FNFaq from "./components/FNFaqPage/FNFaq"
 
+
+//Blog Management
+import BView from "./components/BlogViews/View"
+import TView from "./components/BlogViews/TView"
+import BCreate from "./components/BlogCreate/Create"
+import MyBlogs from "./components/MyBlogs/MyBlogs"
+import Blog from "./components/SingleBlog/Blog"
+import TBlog from "./components/SingleBlog/Tblog"
+import UpdateBlogs from "./components/BlogUpdate/Update"
+import Modal from "./components/Review/ReviewModal"
+
+
+ 
+
 import NavigationBarB from './components/NavigationBarB/NavigationBarB'
 import React, { useState, useEffect } from "react";
 import UserContext from "./components/ContextComponent/ContextComponent";
@@ -75,7 +89,7 @@ function App() {
           <Route path="/SessionDetails/:id/:sessionNumber/:day" element={<SessionDetails />} />
 
           {/* user management */}
-          <Route path='' element={<Index />} />
+          <Route path='' element={<Index />}/>
           <Route path='/add' element={<Adduser />} />
           <Route path='/addpayment' element={<Addpayment />} />
           <Route path='/login' element={<Login />} />
@@ -98,6 +112,19 @@ function App() {
             <Route path='/calculate' element={<Calculate/>}/>
             <Route path="/alluserpaymentsFN" element={<UserPaymentsViewAll/>}/>
             <Route path="/fnfaq" element={<FNFaq/>}/>
+        
+            {/*Blog Management*/}
+ <Route exact path='/tBView' element={<TView/>}/>
+ <Route exact path='/Bview' element={<BView/>}/>
+ <Route exact path='/Bcreate' element={<BCreate/>}/>
+ <Route exact path='/myBlogs' element={<MyBlogs/>}/>
+ <Route exact path='/blog/:id' element={<Blog/>}/>
+ <Route exact path='/bUpdate/:id' element={<UpdateBlogs/>}/>
+ <Route exact path='/bReview/:id' element={<Modal/>}/>
+ <Route exact path='/tBlog/:id' element={<TBlog/>}/>
+
+        
+        
         </Routes>
         
       </div>
