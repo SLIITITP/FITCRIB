@@ -166,7 +166,7 @@ export default function SingleWorkout() {
                   <ul>
                     {session.map((item, index) => {
                       if (item.sentiment === "1" || item.sentiment === "2") {
-                        return <li key={index} onClick={() => sessionDetails(index)}>Day {item.day + 1} Session {item.sessionNumber} - {item.sessionComment}</li>;
+                        return <li key={index} onClick={() => sessionDetails(item.day, item.sessionNumber)}>Day {item.day + 1} Session {item.sessionNumber} - {item.sessionComment}</li>;
                       }
                       return null;
                     })}

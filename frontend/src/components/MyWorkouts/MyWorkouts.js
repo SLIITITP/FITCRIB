@@ -4,23 +4,25 @@ import "./MyWorkouts.css";
 import "bootstrap/dist/css/bootstrap.css";
 import DeleteButton from "../DeleteButton/DeleteButton";
 import { Button, Card, Col, Container, Form, Row } from "react-bootstrap";
-import UserContext from "../ContextComponent/ContextComponent";
+import UserContext from '../ContextComponent/ContextComponent';
 
 import axios from "axios";
 import UpdateButton from "../UpdateButton/UpdateButton";
 
 export default function MyWorkouts() {
 
+  const { user } = useContext(UserContext);
+  const userID = user._id
+
+
   const [allWorkouts, setWorkouts] = useState(null);
   const [selectedWorkoutId, setSelectedWorkoutId] = useState(null);
   const [searchQuery, setSearchQuery] = useState("");
-  
-  const { user } = useContext(UserContext);
-  console.log(user)
+
 
   function fetchWorkouts() {
     axios
-      .get("http://localhost:8070/workoutPlan/getWorkouts")
+      .get(`http://localhost:8070/workoutPlan/getWorkouts/${userID}`)
       .then((res) => {
         console.log(res.data)
         setWorkouts(res.data);
