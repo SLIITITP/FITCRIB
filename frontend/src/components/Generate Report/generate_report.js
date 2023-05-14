@@ -1,7 +1,9 @@
-import React, { useState, useEffect, PureComponent } from "react";
+import React, { useState, useEffect, PureComponent, useRef } from "react";
 import '../Generate Report/generate_report.css';
 import axios from "axios";
 import FNfootericon from "../Admin_page/adminfootericon.png";
+import jsPDF from 'jspdf';
+import html2canvas from 'html2canvas';
 import {
     // PieChart,
     // Pie,
@@ -18,6 +20,20 @@ import { PieChart, Pie, Sector, Cell, ResponsiveContainer } from 'recharts';
 export default function Generate_Report() {
 
     const [data, setData] = useState([]);
+
+    const divRef = useRef(null);
+
+    const saveAsPdf = async (div) => {
+        const canvas = await html2canvas(div);
+        const imgData = canvas.toDataURL('image/png');
+        const pdf = new jsPDF();
+        pdf.addImage(imgData, 'PNG', 0, 0, pdf.internal.pageSize.getWidth(), pdf.internal.pageSize.getHeight());
+        pdf.save('User report-FitCrib.pdf');
+    };
+
+    const handleSave = () => {
+        saveAsPdf(divRef.current);
+    };
 
     useEffect(() => {
         getUsers();
@@ -64,13 +80,17 @@ export default function Generate_Report() {
 
     return (
         <div className="generateReport_page">
-            
+
             <div className="background_Report_page">
                 <br />
 
-                <h1 className="ReportHeading">Report</h1>
+                <h1 className="UserReportHeading">Report</h1>
                 <br />
-                <div className="chart">
+                <div className="UserChart" ref={divRef}>
+                    <h1 className="UserReportHeading1">User Report</h1>
+                    <h2 className="UserReportHeading2">--FitCrib--</h2>
+                    <h3 className="UserReportHeading3">useradmin@FitCrib.com</h3>
+                    <br/>
                     <div className="UserPieChart">
                         <PieChart width={400} height={400} className="Userpie">
                             <Pie
@@ -97,9 +117,11 @@ export default function Generate_Report() {
                     </div>
 
                     <br />
+
                     <div className="UserBarChart">
                         <br />
-                        <BarChart
+                        <h5 className="UserBiechartYaxis">No.of Users</h5>
+                        <BarChart className="UserBar"
                             width={600}
                             height={500}
                             data={data1}
@@ -109,7 +131,7 @@ export default function Generate_Report() {
                                 left: 80,
                                 bottom: 5,
                             }}
-                            barSize={40}
+                            barSize={30}
                         >
                             <XAxis
                                 dataKey="name"
@@ -125,10 +147,11 @@ export default function Generate_Report() {
                     </div>
                     <br /><br />
                 </div>
-
+                <br/>
+                <button onClick={handleSave} className="UserPdfButton">Save as PDF</button>
+                <br/><br/>
             </div>
 
-           
         </div>
     )
 }
