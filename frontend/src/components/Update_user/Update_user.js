@@ -56,31 +56,34 @@ export default function Update() {
     
         result = await result.json();
         console.log(result.user);
-        
-        const user = {
-            ...JSON.parse(localStorage.getItem('user')),
-            Fullname,
-            Email,
-            Address,
-            TelephoneNumber,
-            UserType,
-            Gender,
-            Username,
-            Password,
-          };
-          localStorage.setItem('user', JSON.stringify(user));
+        navigate(`/profile/${user._id}`);
 
         // window.location.href = `/profile/${user._id}`;
+        
+        // const user = {
+        //     ...JSON.parse(localStorage.getItem('user')),
+        //     Fullname,
+        //     Email,
+        //     Address,
+        //     TelephoneNumber,
+        //     UserType,
+        //     Gender,
+        //     Username,
+        //     Password,
+        //   };
+        //   localStorage.setItem('user', JSON.stringify(user));
 
-        let path = `/profile/${user._id}`;
-        navigate(path);
+        // // window.location.href = `/profile/${user._id}`;
+
+        // let path = `/profile/${user._id}`;
+        // navigate(path);
 
 
-        // if (result) {
+        // // if (result) {
 
             
             
-        // }
+        // // }
     }
 
     //Home pages Control
@@ -146,7 +149,7 @@ export default function Update() {
                     <label for="username" className="viewheading">Username: </label><br />
                     <input type="text" className="viewforminput" value={Username} onChange={(e) => {
                         setUsername(e.target.value)
-                    }} /><br />
+                    }} readOnly/><br />
 
                     <label for="password" className="viewheading">Password: </label><br />
                     <input type="password" className="viewforminput" value={Password} onChange={(e) => {

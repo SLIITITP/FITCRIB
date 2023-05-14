@@ -1,103 +1,143 @@
-.container-fluid{
-    background-color: black;
-    height: 70px;
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300&display=swap');
+
+.ReHomePage{
+   background-image: url("../index/index2.jpg");
+   height: auto;
 }
-.home_page{
-    margin: 0;
-    padding: 0;
- }
- .img1{
-   background-size: cover;
-   background-repeat: no-repeat;
-   height: 109.1vh;
-   background-position: 69%;
- }
- /* .dropdown{
-    margin-left: 190px;
-    margin-top: 9px;
- } */
- /* .navbar-brand{
-    color: white;
-    font-size: 50px ;
-    font-weight: 500;
- }
- .navbar-brand:hover{
-    color: #CCFF00;
- }
- .navbar-nav{
-    margin-left: 63px;
- }
- .nav-item{
-    padding: 8px;
- } */
-
-
-
- /* footer */
- .footer{
-   background-color: #2B302A;
- }
- .footer_name{
-   /* position: relative;
-   top: -1.5cm; */
+.ReUserHomeHeading{
+   font-size: 70px;
    color: white;
-   margin-left: -1200px;
-   font-size: 60px;
-   /* padding-top: 10px; */
+   margin-left: 3%;
+   font-weight: bold;
+   font-family: 'Secular One', sans-serif;
 }
- .bottom_nav{
+.ReUserHomePara1{
+   font-size: 25px;
+   color: white;
+   margin-left: 3%;
+   font-weight: bold;
+   font-family: 'Jost', sans-serif;
+}
+.ReUserHomePara2{
+   font-size: 25px;
+   color: rgb(242, 121, 8);
+   margin-left: 14.5%;
+   margin-top: -3.5%;
+   font-weight: bold;
+   font-family: 'Jost', sans-serif;
+}
+.ReUserHomePara3{
+   font-size: 25px;
+   color: white;
+   margin-left: 37%;
+   margin-top: -3.6%;
+   font-weight: bold;
+   font-family: 'Jost', sans-serif;
+}
+.ReUserHomePara4{
+   font-size: 25px;
+   color: white;
+   margin-left: 3%;
+   margin-top: -1.5%;
+   font-weight: bold;
+   font-family: 'Jost', sans-serif;
+}
+.ReUserHomeDescription{
+   font-size: 25px;
+   color: white;
+   margin-left: 3%;
+   font-family: 'Jost', sans-serif;
+}
+.ReHomePageSecondPart{
+   background-color: #1F1F1F;
+   height: auto;
+}
+.ReUserDiv1{
+   background-color: #2B302A;
+   height: 350px;
+   width: 420px;
+   margin-left: 3%;
+   border-radius: 15px;
+   border: 5px solid #99FF33;
+}
+.ReUserDivHeading{
+   font-weight: bold;
+   color: white;
+   font-size: 40px;
    text-align: center;
-   list-style: none;
+   font-family: 'Secular One', sans-serif;
+}
+.ReUserDivPara{
    text-align: center;
-   padding-bottom: 2cm;
-}
-.bottom_nav ul li{
-   list-style: none;
-   display: inline-block;
-   padding: 0 30px;
-   position: relative;
-   top: 1.25cm;
-}
-.bottom_nav ul li a{
-   text-decoration: none;
-   color: #CCFF00;
-   font-size: 18px;
-   font-family: 'Times New Roman', Times, serif;
-}
-.wrapper{
-   display: inline-flex;
-   margin-right: 1200px;
-   line-break: auto;
-}
-.wrapper .icon{
-   margin: 0 10px;
-   margin-bottom: 30px;
-   padding-top: -40px;
-   cursor: pointer;
-}
-.wrapper .icon span{
-   height: 30px;
-   width: 30px;
-   display: block;
-   background: #fff;
-   text-align: center;
-   border-radius: 50%;
-   box-shadow: 0 5px 8px rgba(98, 233, 36, 0.9);
-   /* box-shadow: #CCFF00; */
-}
-.wrapper .icon span i{
+   color: white;
    font-size: 20px;
-   line-height: 30px;
+   padding: 10px;
+   font-family: 'Jost', sans-serif;
 }
-.wrapper .icon span:hover{
-   background: rgba(255, 255, 255, 0.9);
-   transition: 0.1s;
-   transform: scale(1.2);
+.ReUserDivIcon{
+   height: 50px;
+   width: 50px;
+   margin-left: 45%;
+   margin-top: 3%;
 }
-.wrapper .icon span .fa-facebook{
-   font-size: 20px;
+.ReUserHomeButton{
+   background-color: #1F1F1F;
+   color: #99FF33;
+   border-radius: 10px;
+   width: 200px;
+   margin-left: 24%;
+   transition: 1s;
 }
-.footer_line{
-   background-color: #CCA43D;
+.ReUserHomeButton:hover{
+   background-color: #99FF33;
+   color: #1F1F1F;
+   transform: scale(1.6);
+}
+.ReUserDiv2{
+   background-color: #2B302A;
+   height: 350px;
+   width: 420px;
+   margin-left: 36%;
+   border-radius: 15px;
+   border: 5px solid #99FF33;
+   margin-top: -24%;
+}
+.ReUserDiv3{
+   background-color: #2B302A;
+   height: 350px;
+   width: 420px;
+   margin-left: 69%;
+   border-radius: 15px;
+   border: 5px solid #99FF33;
+   margin-top: -24%;
+}
+.ReUserDiv4{
+   background-color: #2B302A;
+   height: 350px;
+   width: 420px;
+   margin-left: 3%;
+   border-radius: 15px;
+   border: 5px solid #99FF33;
+   margin-top: 3%;
+}
+.ReUserDiv5{
+   background-color: #2B302A;
+   height: 350px;
+   width: 420px;
+   margin-left: 36%;
+   border-radius: 15px;
+   border: 5px solid #99FF33;
+   margin-top: -24%;
+}
+.ReUserDiv6{
+   background-color: #2B302A;
+   height: 350px;
+   width: 420px;
+   margin-left: 69%;
+   border-radius: 15px;
+   border: 5px solid #99FF33;
+   margin-top: -24%;
 }
  
