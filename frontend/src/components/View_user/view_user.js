@@ -6,6 +6,7 @@ import '../View_user/view_user.css';
 import Usericon from '../View_user/usericon.jpg';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import UserContext from '../ContextComponent/ContextComponent';
 // import M from 'materialize-css'
 
 export default function ViewProfile() {
@@ -15,10 +16,8 @@ export default function ViewProfile() {
     const location = useLocation()
     const history = useNavigate();
 
-    // const Details = async()=>{
-    //     let Valid = localStorage.getItem("newUser")
-
-    // }
+    const { user } = useContext(UserContext);
+    console.log(user)
 
     useEffect(() => {
         getData();
@@ -29,7 +28,7 @@ export default function ViewProfile() {
 
         if (result.status === 200) {
             setData(result.data);
-            // console.log(data);
+
         }
 
     }
@@ -74,156 +73,12 @@ export default function ViewProfile() {
 
     }
 
-    //get all users
-
-    // useEffect(() => {
-    //     getUsers();
-    // }, [])
-
-    // const getUsers = async () => {
-    //     const response = await axios.get("http://localhost:8070/user");
-
-    //     if (response.status === 200) {
-    //         setData(response.data);
-    //         console.log(data);
-    //     }
-    // }
-
-    //search
-
-    // const searchModal = async(event) =>{
-    //     let key = event.target.value;
-    //     if(key){
-    //         let result = await fetch(`http://localhost:8070/user/search/${key}`);
-    //         result = await result.json()
-
-    //         if(result){
-    //             setData(result)
-    //         }
-    //     }else{
-    //         getData();
-    //     }
-    // }
-
-    // const searchModal = useRef(null);
-    // const [search, setSearch] = useState('');
-    // const [userDetails, setUserDetails] = useState([]);
-    // useEffect(()=>{
-    //     M.Modal.init(searchModal.current)
-    // },[])
-
-    // const fetchUsers =(query)=>{
-    //     setSearch(query)
-    //     fetch('/search-users',{
-    //         method: "post",
-    //         headers:{
-    //             "Content-Type": "application/json"
-    //         },
-    //         body: JSON.stringify({query})
-    //     }).then(res=>res.json())
-    //     .then(result=>{
-    //         setUserDetails(result.user)
-    //     })
-    // }
 
     return (
         <div className="view_page">
 
-            <nav class="navbar navbar-expand-lg bg-body-tertiary">
-                <div class="container-fluid">
-                    <a class="navbar-brand" onClick={HomepagesHandle}>FitCrib</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">WORKOUT PLANS</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">EXERCISES</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">MARKETPLACE</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">EDUCATIONAL CONTENT</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">NUTRITION PLANS</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">RECIPES</a>
-                            </li>
-
-                            <li>
-                                <div class="dropdown">
-                                    <a class="btn btn-secondary dropdown-toggle" id="profile_dropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        {/* {location.state.id} */}{data.user?.Fullname}
-                                    </a>
-
-                                    <ul class="dropdown-menu dropdown-menu-dark">
-                                        <li><a className="dropdown-item" onClick={(e) => {
-                                            e.preventDefault();
-                                            window.location.href = `/profile/${params.id}`
-                                        }}>My Profile</a></li>
-                                        <li><a class="dropdown-item" href="/login">Log out</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-
-
-
-
-            {/* data map */}
-            {/* {data && data.map((item, index) => {
-                        return (
-                            <tr key={index}>
-                                <th scope="row">{index + 1}</th>
-                                <td>{item.subject}</td>
-                                <td>{item.type}</td>
-                            </tr>
-                        );
-                    })}
-               */}
-
-
-
-
-
-            {/* search body */}
-
-            {/* <div id="modal1" class="modal" ref={searchModal}>
-                <div className="modal-content">
-                    <input type="text" className="signupforminput" placeholder="search users"  onChange={(e) => {
-                        searchModal(e.target.value);
-                    }} />
-                    <ul className="collection">
-                        {data && [data].map((item, index) => {
-                            return (
-                                <tr key={index}>
-                                    <th scope="row">{index + 1}</th>
-                                    <td>{item.Fullname}</td>
-                                    <td>{item.Username}</td>
-                                </tr>
-                            );
-                        })}
-                    </ul>
-                </div>
-                <div className="modal-footer">
-                    <button className="modal-close waves-effect waves-green btn-flat">Agree</button>
-                </div>
-            </div> */}
-
             {/* view body */}
             <div className="view_body">
-
-                {/* search bar */}
-                {/* <input type="" placeholder="Search user" className="usersearch modal-trigger" data-target="modal1" /> */}
 
                 <br /><br />
                 <div className="rectangle">
@@ -239,8 +94,8 @@ export default function ViewProfile() {
                                     <div class="card-body text-center">
                                         <img src={Usericon} alt="avatar"
                                             class="rounded-circle img-fluid" />
-                                        <h3 class="my-3">{data.user?.Fullname}</h3>
-                                        <p class="text-muted mb-4">{data.user?.UserType}</p>
+                                        <h3 class="my-3">{user?.Fullname}</h3>
+                                        <p class="text-muted mb-4">{user?.UserType}</p>
                                     </div>
                                 </div>
 
@@ -253,7 +108,7 @@ export default function ViewProfile() {
                                                 <p class="mb-0" id="view_heading">Full Name</p>
                                             </div>
                                             <div class="col-sm-9">
-                                                <p class="text-muted mb-0">{data.user?.Fullname}</p>
+                                                <p class="text-muted mb-0">{user?.Fullname}</p>
                                             </div>
                                         </div>
                                         <hr />
@@ -262,7 +117,7 @@ export default function ViewProfile() {
                                                 <p class="mb-0" id="view_heading">Email</p>
                                             </div>
                                             <div class="col-sm-9">
-                                                <p class="text-muted mb-0">{data.user?.Email}</p>
+                                                <p class="text-muted mb-0">{user?.Email}</p>
                                             </div>
                                         </div>
                                         <hr />
@@ -271,7 +126,7 @@ export default function ViewProfile() {
                                                 <p class="mb-0" id="view_heading">Address</p>
                                             </div>
                                             <div class="col-sm-9">
-                                                <p class="text-muted mb-0">{data.user?.Address}</p>
+                                                <p class="text-muted mb-0">{user?.Address}</p>
                                             </div>
                                         </div>
                                         <hr />
@@ -280,7 +135,7 @@ export default function ViewProfile() {
                                                 <p class="mb-0" id="view_heading">Telephone Number</p>
                                             </div>
                                             <div class="col-sm-9">
-                                                <p class="text-muted mb-0">{data.user?.TelephoneNumber}</p>
+                                                <p class="text-muted mb-0">{user?.TelephoneNumber}</p>
                                             </div>
                                         </div>
                                         <hr />
@@ -289,7 +144,7 @@ export default function ViewProfile() {
                                                 <p class="mb-0" id="view_heading">User Type</p>
                                             </div>
                                             <div class="col-sm-9">
-                                                <p class="text-muted mb-0">{data.user?.UserType}</p>
+                                                <p class="text-muted mb-0">{user?.UserType}</p>
                                             </div>
                                         </div>
                                         <hr />
@@ -298,7 +153,7 @@ export default function ViewProfile() {
                                                 <p class="mb-0" id="view_heading">Gender</p>
                                             </div>
                                             <div class="col-sm-9">
-                                                <p class="text-muted mb-0">{data.user?.Gender}</p>
+                                                <p class="text-muted mb-0">{user?.Gender}</p>
                                             </div>
                                         </div>
                                         <hr />
@@ -307,7 +162,7 @@ export default function ViewProfile() {
                                                 <p class="mb-0" id="view_heading">Username</p>
                                             </div>
                                             <div class="col-sm-9">
-                                                <p class="text-muted mb-0">{data.user?.Username}</p>
+                                                <p class="text-muted mb-0">{user?.Username}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -323,7 +178,7 @@ export default function ViewProfile() {
                         <button type="submit" className="updatebtn" onClick={(e) => {
                             e.preventDefault();
                             window.location.href = `/update/${params.id}`
-                        }}>Update Details</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                        }}>Update Details</button>
                         <button type="submit" className="deletebtn" onClick={() => deleteUser(params.id)}>Delete My Account</button>
                     </div>
                 </div>
@@ -331,16 +186,6 @@ export default function ViewProfile() {
             </div>
             <ToastContainer />
 
-
-            {/* <div>
-                <h3>Full name : {data.user?.Fullname}</h3>
-                <h3>Email : {data.user?.Email}</h3>
-                <h3>Address : {data.user?.Address}</h3>
-                <h3>TelephoneNumber : {data.user?.TelephoneNumber}</h3>
-                <h3>UserType : {data.user?.UserType}</h3>
-                <h3>Gender : {data.user?.Gender}</h3>
-                <h3>Username : {data.user?.Username}</h3>
-            </div> */}
 
             {/* footer */}
 

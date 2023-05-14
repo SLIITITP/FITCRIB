@@ -1,14 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { useParams, useLocation, useNavigate } from "react-router-dom";
 import '../Update_user/update_user.css';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import UserContext from '../ContextComponent/ContextComponent';
 
 
 export default function Update() {
 
     const location = useLocation()
     const history = useNavigate();
+    const { user, setUser } = useContext(UserContext);
 
     const [Fullname, setName] = useState("");
     const [Email, setEmail] = useState("");
@@ -47,11 +49,30 @@ export default function Update() {
             headers: {
                 'Content-Type': 'Application/json'
             }
+            
         });
-
+    
         result = await result.json();
+        console.log(result.user);
+        
+
 
         if (result) {
+
+            const user = {
+                ...JSON.parse(localStorage.getItem('user')),
+                Fullname,
+                Email,
+                Address,
+                TelephoneNumber,
+                UserType,
+                Gender,
+                Username,
+                Password,
+              };
+              localStorage.setItem('user', JSON.stringify(user));
+
+              
             toast.success('User updated successfully..!', {
                 position: "top-center",
                 autoClose: 5000,
@@ -63,6 +84,7 @@ export default function Update() {
                 theme: "light",
             });
             window.location.href = `/profile/${params.id}`;
+            
         }
     }
 
@@ -88,52 +110,7 @@ export default function Update() {
 
     return (
         <div className="update_page">
-            <nav class="navbar navbar-expand-lg bg-body-tertiary">
-                <div class="container-fluid">
-                    <a class="navbar-brand" onClick={HomepagesHandle}>FitCrib</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">WORKOUT PLANS</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">EXERCISES</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">MARKETPLACE</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">EDUCATIONAL CONTENT</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">NUTRITION PLANS</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">RECIPES</a>
-                            </li>
 
-                            <li>
-                                <div class="dropdown">
-                                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        {/* {location.state.id} */}{Fullname}
-                                    </a>
-
-                                    <ul class="dropdown-menu dropdown-menu-dark">
-                                        <li><a className="dropdown-item" onClick={(e) => {
-                                            e.preventDefault();
-                                            window.location.href = `/profile/${params.id}`
-                                        }}>My Profile</a></li>
-                                        <li><a class="dropdown-item" href="/login">Log out</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
             <br />
             <div className="rectangle">
                 <h1 className="updateprofile">User Profile</h1>
@@ -181,7 +158,7 @@ export default function Update() {
                         setPassword(e.target.value)
                     }} /><br /><br />
 
-                    <button className="userupdatebtn" onClick={updateUser}>Update</button>&nbsp;&nbsp;&nbsp;
+                    <button className="userupdatebtn" onClick={updateUser}>Update</button>
                     <button className="userupdatecancelbtn" onClick={(e) => {
                         e.preventDefault();
                         window.location.href = `/profile/${params.id}`;
@@ -193,45 +170,9 @@ export default function Update() {
             </div>
             <ToastContainer />
 
-            <br/><br/>
-
-            {/* footer */}
-
-            <footer className="footer">
-                <div class="foot_info">
-                    <div class="footer_logo">
-                        {/* <!--logo here--> */}
-                        {/* <a href="#"><img src="images/logo.png" alt=""></a> */}
-                        <h2 className="footer_name">FitCrib</h2>
-                    </div>
-
-                </div>
+            <br /><br />
 
 
-                <div class="bottom_nav">
-                    <ul>
-                        <li><a href="#">ABOUT US</a></li>
-                        <li><a href="#">CONTACT US</a></li>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">PRIVACY POLICY</a></li>
-                    </ul>
-                </div>
-                <div class="wrapper">
-                    <div class="icon">
-                        <span><i class="fa-brands fa-facebook"></i></span>
-                    </div>
-                    <div class="icon">
-                        <span><i class="fa-brands fa-instagram"></i></span>
-                    </div>
-                    <div class="icon">
-                        <span><i class="fa-brands fa-twitter"></i></span>
-                    </div>
-                    <div class="icon">
-                        <span><i class="fa-brands fa-linkedin-in"></i></span>
-                    </div>
-                </div>
-                <hr />
-            </footer>
         </div>
     )
 }
