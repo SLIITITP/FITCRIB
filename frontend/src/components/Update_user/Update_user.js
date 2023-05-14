@@ -156,7 +156,7 @@ export default function Update() {
                         setPassword(e.target.value)
                     }} /><br /><br />
 
-                    <button className="userupdatebtn" onClick={updateUser}>Update</button>
+                    <button className="userupdatebtn" onClick={updateUser}>Update</button>&nbsp;&nbsp;&nbsp;&nbsp;
                     <button className="userupdatecancelbtn" onClick={(e) => {
                         e.preventDefault();
                         window.location.href = `/profile/${params.id}`;

@@ -3,11 +3,10 @@
   padding: 0;
 }
 .index_bg{
-    background-image: url("../index/index5.jpg");
+    background-image: url("../index/keshan.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
-    background-position: 69%;
   }
 .nav{
   font-size: 25px;
@@ -21,7 +20,7 @@
   padding-right: 20px;
 }
 .nav-item{
-  margin-top: -10px;
+  margin-top: -9px;
 }
 .nav-link{
   color: aliceblue !important;
@@ -51,7 +50,7 @@
   color: aliceblue;
   position: relative;
   bottom: 125px;
-  left: 180px;
+ margin-left: 180px;
 }
 .he3{
   font-size: 50px;

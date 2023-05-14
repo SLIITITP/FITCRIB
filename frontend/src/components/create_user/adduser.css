@@ -57,6 +57,7 @@
 .signup{
     font-weight: bold;
     padding: 4px;
+    margin-left: 80px;
 }
 .rectangle{
     background-color: #CCFF00;
@@ -69,6 +70,7 @@
 .redirectinfo{
     color: white;
     padding-top: 10px;
+    margin-left: 80px;
 }
 .redirectinforectanegl{
     background-color: #2B302A;

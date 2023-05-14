@@ -81,7 +81,7 @@
    background-color: #1F1F1F;
    color: #CCFF00;
 }
-.updatebtn{
+.Userupdatebtn{
     background-color: #CCFF00;
     color: #1F1F1F;
     border-radius: 10px;
@@ -92,11 +92,11 @@
     font-size: 20px;
     margin-left: 570px;
 }
-.updatebtn:hover{
+.Userupdatebtn:hover{
     background-color: #1F1F1F;
     color: #CCFF00;
 }
-.deletebtn{
+.Userdeletebtn{
     background-color: red;
     color: #1F1F1F;
     border-radius: 10px;
@@ -106,7 +106,7 @@
     font-weight: bold;
     font-size: 20px;
 }
-.deletebtn:hover{
+.Userdeletebtn:hover{
     background-color: #1F1F1F;
     color: red;
 }

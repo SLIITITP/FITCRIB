@@ -3,7 +3,12 @@ import { useLocation, useNavigate, useParams } from "react-router-dom";
 import '../Home_page/home.css';
 import NavigationBarB from '../NavigationBarB/NavigationBarB'
 import UserContext from '../ContextComponent/ContextComponent';
-import workouticon from '../Home_page/workouticon.jpg'
+import myworkouticon from '../Home_page/Myworkouticon.png';
+import exerciseicon from '../Home_page/exerciseicon.png';
+import Edcontenticon from '../Home_page/Edcontenticon.png';
+import Recipesicon from '../Home_page/recipesicon.png';
+import Marketicon from '../Home_page/marketicon.png';
+import Nutritionicon from '../Home_page/nutritionicon.png';
 
 
 export default function Home() {
@@ -37,18 +42,18 @@ export default function Home() {
             <div className="ReHomePageSecondPart">
                 <br /><br />
                 <div className="ReUserDiv1">
-                    <img src={workouticon} className="ReUserDivIcon" />
+                    <img src={myworkouticon} className="ReUserDivIcon" />
                     <h2 className="ReUserDivHeading">My Workout</h2>
                     <p className="ReUserDivPara">All Registered Users, Trainers, Sellers and Administrators are listed here. All of the data related to them can be viewed by an administrator at any time.</p>
                     <button className="ReUserHomeButton" onClick={(e) => {
                         e.preventDefault();
-                        window.location.href = `#`;
+                        window.location.href = `/MyWorkouts`;
                     }}>MY WORKOUTS</button>
 
                 </div>
 
                 <div className="ReUserDiv2">
-                    <img src={workouticon} className="ReUserDivIcon" />
+                    <img src={exerciseicon} className="ReUserDivIcon" />
                     <h2 className="ReUserDivHeading">Exercises</h2>
                     <p className="ReUserDivPara">All Registered Users, Trainers, Sellers and Administrators are listed here. All of the data related to them can be viewed by an administrator at any time.</p>
                     <button className="ReUserHomeButton" onClick={(e) => {
@@ -59,7 +64,7 @@ export default function Home() {
                 </div>
 
                 <div className="ReUserDiv3">
-                    <img src={workouticon} className="ReUserDivIcon" />
+                    <img src={Marketicon} className="ReUserDivIcon" />
                     <h2 className="ReUserDivHeading">MarketPlace</h2>
                     <p className="ReUserDivPara">All Registered Users, Trainers, Sellers and Administrators are listed here. All of the data related to them can be viewed by an administrator at any time.</p>
                     <button className="ReUserHomeButton" onClick={(e) => {
@@ -70,7 +75,7 @@ export default function Home() {
                 </div>
 
                 <div className="ReUserDiv4">
-                    <img src={workouticon} className="ReUserDivIcon" />
+                    <img src={Edcontenticon} className="ReUserDivIcon" />
                     <h2 className="ReUserDivHeading">Educational Content</h2>
                     <p className="ReUserDivPara">All Registered Users, Trainers, Sellers and Administrators are listed here. All of the data related to them can be viewed by an administrator at any time.</p>
                     <button className="ReUserHomeButton" onClick={(e) => {
@@ -81,7 +86,7 @@ export default function Home() {
                 </div>
 
                 <div className="ReUserDiv5">
-                    <img src={workouticon} className="ReUserDivIcon" />
+                    <img src={Nutritionicon} className="ReUserDivIcon" />
                     <h2 className="ReUserDivHeading">Nutrition Plans</h2>
                     <p className="ReUserDivPara">All Registered Users, Trainers, Sellers and Administrators are listed here. All of the data related to them can be viewed by an administrator at any time.</p>
                     <button className="ReUserHomeButton" onClick={(e) => {
@@ -92,7 +97,7 @@ export default function Home() {
                 </div>
 
                 <div className="ReUserDiv6">
-                    <img src={workouticon} className="ReUserDivIcon" />
+                    <img src={Recipesicon} className="ReUserDivIcon" />
                     <h2 className="ReUserDivHeading">Recipes</h2>
                     <p className="ReUserDivPara">All Registered Users, Trainers, Sellers and Administrators are listed here. All of the data related to them can be viewed by an administrator at any time.</p>
                     <button className="ReUserHomeButton" onClick={(e) => {
