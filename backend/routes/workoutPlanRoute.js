@@ -21,7 +21,7 @@ const {
 router.post("/addWorkout", createWorkoutPlan)
 
 //Get all workouts
-router.get('/getWorkouts', getWorkouts)
+router.get('/getWorkouts/:userID', getWorkouts)
 // router.route("/getWorkouts").get((req,res) => {
 
 //     Workout.find().then((workouts) => {

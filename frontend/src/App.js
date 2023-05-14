@@ -54,7 +54,7 @@ function App() {
       localStorage.removeItem("user");
     }
   }, [user]);
-  console.log(user);
+
 
 
   return (
