@@ -87,7 +87,8 @@ export default function NewWorkoutPlan() {
 
   return (
     <>
-    <div className="NewWorkoutPlan">
+    <div className="NewWorkoutPlan" style={{ backgroundColor: "#1F1F1F" }}>
+      <br/>
     <div className="container-md">
       <div className="row justify-content-center">
         <div className="col-md-8 col-lg-10 col-xl-12">
@@ -179,6 +180,7 @@ export default function NewWorkoutPlan() {
           
         </div>
       </div>
+      <br/>
       </div>
     </>
   );

@@ -74,7 +74,7 @@ export default function MyWorkouts() {
   return (
     <>
     <div className="MyWorkouts">
-       <section className="h-100" style={{ backgroundColor: "black" }}>
+       <section className="h-100" style={{ backgroundColor: "#1F1F1F" }}>
       <Container className="h-100 py-5">
         <Row className="d-flex justify-content-start align-items-center h-100">
           <Col>
