@@ -126,7 +126,8 @@ function WorkoutSession() {
 
   return (
     <>
-      <div className="Session" >        
+      <div className="Session" style={{ backgroundColor: "#1F1F1F" }}>   
+      <br/>     
         <div className="workout-container">          
           <div className="container">
           <div>
@@ -223,6 +224,7 @@ function WorkoutSession() {
       <HeartRateMonitor />
     </div> */}
         </div>
+        <br/>
       </div>
     </>
   );
