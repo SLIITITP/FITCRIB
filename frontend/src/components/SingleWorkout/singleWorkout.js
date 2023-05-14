@@ -64,12 +64,14 @@ export default function SingleWorkout() {
 
   return (
     <>
-      <div className="SingleWorkout">
+      <div className="SingleWorkout" style={{ backgroundColor: "#1F1F1F" }}>
         <div className="row gx-8">
           <div className="col-md-8 col-lg-8 col-xl-8 overflow-auto mb-5 mt-5 workoutPlanContainer">
             {workout ? (
               <div className="card shadow SingleWorkout cardoutline w-100">
+                <br/>
                 <div className="card-body">
+                  
                   <h1 className="card-title">{workout.workoutName}</h1>
                   <p className="card-text">{workout.workoutDescription}</p>
                   <hr />
