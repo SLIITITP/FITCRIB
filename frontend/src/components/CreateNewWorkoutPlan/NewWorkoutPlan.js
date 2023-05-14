@@ -1,21 +1,29 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 // import DeleteButton from "../DeleteButton/DeleteButton";
 import './NewWorkoutPlan.css';
+import UserContext from '../ContextComponent/ContextComponent';
 
 export default function NewWorkoutPlan() {
 
+  const { user } = useContext(UserContext);
+  console.log(user)
+  const userID = user._id
+  console.log(userID)
   const [workoutName, setWorkoutName] = useState("");
   const [workoutDescription, setWorkoutDescription] = useState("");
   const [workoutDuration, setWorkoutDuration] = useState("");
   const [workoutPlan, setWorkoutPlan] = useState([]);
+
+  
 
   const handleCreateWorkoutPlan = () => {
     // console.log(exercises)
     // console.log(workoutPlan)
 
     const newWorkoutPlan = {
+      userID,
       workoutName,
       workoutDescription,
       workoutDuration,
@@ -100,16 +108,7 @@ export default function NewWorkoutPlan() {
                     <label htmlFor="workoutDescription" className="form-label">How many months are you hoping to continue the Workout Plan?</label>
                     <input type="text" className="form-control NewWorkoutPlan outline" id="workoutDescription" value={workoutDuration} onChange={handleWorkoutDurationChange} autocomplete="off" required/>
                   </div>
-                  {/* <div className="dropdown">
-  <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Dropdown button
-  </button>
-  <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <li className="dropdown-item" value ="0.25">0.25</li>
-    <a className="dropdown-item" >Another action</a>
-    <a className="dropdown-item" >Something else here</a>
-  </div>
-</div> */}
+                
                   <div className="mb-3">
                     <h3 class="card-title NewWorkoutPlan">Workout Plan</h3>
                     {workoutPlan.map((day, dayIndex) => (

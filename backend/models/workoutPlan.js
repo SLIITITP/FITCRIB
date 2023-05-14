@@ -25,6 +25,11 @@ const exerciseSchema = new mongoose.Schema({
 
 const workoutSchema = new mongoose.Schema({
 
+  userID: {
+    type: String,
+    required: true
+  },
+
   workoutName: {
     type: String,
     required: true

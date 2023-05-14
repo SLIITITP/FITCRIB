@@ -27,17 +27,30 @@ const createWorkoutPlan = async (req, res) => {
 //     }
 // }
 
-const getWorkouts= (req, res) => {
+// const getWorkouts= (req, res) => {
     
 
-        Workout.find().then((workouts) => {
-            res.json(workouts)
-        }).catch((err) => {
-            console.log(err)
-        })
+//         Workout.find().then((workouts) => {
+//             res.json(workouts)
+//         }).catch((err) => {
+//             console.log(err)
+//         })
     
     
    
+// }
+
+const getWorkouts= (req, res) => {
+  const userID = req.params.userID;
+
+  Workout.find({userID : userID}).then((workouts) => {
+      res.json(workouts)
+  }).catch((err) => {
+      console.log(err)
+  })
+
+
+
 }
 
 
