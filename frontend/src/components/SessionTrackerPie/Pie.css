@@ -1,0 +1,30 @@
+.piechart .piecontainer{
+    background-color: #fff;
+    padding-left: 35%;
+    background-color: #1F1F1F;
+    
+}
+
+.piechartheading{
+    color: #99FF33;
+    font-size: 45px;
+    font-weight: bold;
+    margin-left: 15px;
+}
+
+.piechartdiv{
+    background-color: #1F1F1F;
+}
+
+.piechartpara{
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Secular One', sans-serif;
+    margin-left: 5px;
+}
+
+.piechartWO{
+    margin: 40px;
+    
+}

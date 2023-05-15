@@ -1,0 +1,71 @@
+.pay_page{
+    margin: 0;
+    padding: 0;
+ }
+ .pay_page{
+    background-image: url("../index/index5.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 110vh;
+    background-position: 69%;
+}
+.heading{
+    margin-bottom: -120px;
+}
+.payinfo{
+    color: black;
+    font-size: 30px;
+    font-weight: 500;
+}
+.paymentinfo{
+    background-color: #CCFF00;
+    width: 1000px;
+    height: 100px;
+    border-radius: 10px;
+    margin-left: 250px;
+    margin-top: 20px;
+}
+.payment_form{
+    background-color: #2B302A;
+    text-align: center;
+    width: 600px;
+    height: 560px;
+    border-radius: 25px;
+    margin-left: 450px;
+}
+.paymentheading{
+    color: white;
+    padding-top: 10px;
+    font-size: 20px;
+}
+.paymentforminput{
+    width: 500px;
+    border-radius: 10px;
+    text-align: center;
+    height: 40px;
+}
+.paymentformdropdown{
+    width: 80px;
+    border-radius: 10px;
+    text-align: center;
+    height: 30px;
+    margin-top: 20px;
+}
+.paymentsubmit{
+    background-color: #CCFF00;
+    color: #1F1F1F;
+    border-radius: 10px;
+    width: 250px;
+    height: 50px;
+    transition: 1s;
+    font-weight: bold;
+    font-size: 20px;
+}
+.paymentsubmit:hover{
+    background-color: #1F1F1F;
+    color: #CCFF00;
+}
+.payheading{
+    color: #CCFF00;
+    margin-right: 150px;
+}

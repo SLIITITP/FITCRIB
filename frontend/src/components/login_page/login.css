@@ -1,0 +1,76 @@
+.heading{
+    margin-bottom: -120px;
+}
+.loginCompanyName{
+    text-decoration: none;
+}
+.login{
+    font-weight: bold;
+    padding: 4px;
+    margin-left: 80px;
+}
+.rectangle{
+    background-color: #CCFF00;
+    width: 300px;
+    height: 60px;
+    border-radius: 10px;
+    margin-left: 600px;
+    margin-top: 50px;
+}
+.login_page{
+    background-image: url("../index/index5.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-position: 69%;
+}
+.login_form{
+    background-color: #2B302A;
+    text-align: center;
+    width: 400px;
+    height: 450px;
+    border-radius: 25px;
+    margin-left: 550px;
+    margin-top: 50px;
+}
+.loginheading{
+    color: white;
+    padding-top: 10px;
+    font-size: 25px;
+}
+.loginforminput{
+    width: 300px;
+    border-radius: 10px;
+    text-align: center;
+    height: 40px;
+    font-size: 20px;
+}
+.form-select{
+    width: 300px;
+    border-radius: 10px;
+    text-align: center;
+    height: 45px;
+    font-size: 20px;
+    margin-left: 50px;
+}
+.login_page{
+   margin: 0;
+   padding: 0;
+}
+.loginsubmit{
+    background-color: #CCFF00;
+    color: #1F1F1F;
+    border-radius: 10px;
+    width: 150px;
+    height: 50px;
+    transition: 1s;
+    font-weight: bold;
+    font-size: 20px;
+}
+.loginsubmit:hover{
+    background-color: #1F1F1F;
+    color: #CCFF00;
+}
+.loginheading1{
+    color: white;
+}

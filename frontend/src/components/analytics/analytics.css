@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300&display=swap');
+
+.FNAnalytics{
+    background-color: #1f1f1f;
+    height: auto;
+}
+
+.FNAnalyticsHeading{
+    color: #99FF33;
+    font-size: 45px;
+    font-weight: bold;
+    margin-left: 15px;
+    font-family: 'Secular One', sans-serif;
+}
+
+.FNAnalyticsPara{
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Jost', sans-serif;
+
+}
+
+.FNFinancialChart{
+    background-color: white;
+    width: 400px;
+    height: 300px;
+    border-radius: 20px;
+    color: #99FF33;
+    border: 5px solid #99FF33;
+    margin-left: 60px;
+}
+
+.FNFinancialChartHeading{
+    color: black;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-top: 10px;
+    font-family: 'Secular One', sans-serif;
+}
+
+.FNFinancialChart2{
+    background-color: white;
+    width: 400px;
+    height: 300px;
+    border-radius: 20px;
+    color: #99FF33;
+    border: 5px solid #99FF33;
+    margin-left: 550px;
+    margin-top: -348px;
+}
+
+.FNFinancialP{
+    font-size: 180px;
+    color: black;
+    text-align: center;
+    margin-top: -30px;
+}
+
+.FNFinancialChart3{
+    background-color: white;
+    width: 400px;
+    height: 300px;
+    border-radius: 20px;
+    color: #99FF33;
+    border: 5px solid #99FF33;
+    margin-left: 1040px;
+    margin-top: -393px;
+    
+}

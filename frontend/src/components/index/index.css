@@ -1,0 +1,68 @@
+
+.index_bg{
+    background-image: url("../index/keshan.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+  }
+.nav{
+  font-size: 25px;
+  position: relative;
+  top: -120px;
+  right: 50px;
+  padding: 20px;
+  font-weight: bold;
+}
+.nav-item1{
+  padding-right: 20px;
+}
+.nav-item{
+  margin-top: -9px;
+}
+.nav-link{
+  color: aliceblue !important;
+}
+.nav-link:hover{
+  border-bottom: 2px solid rgba(134, 198, 7, 1) !important;
+}
+.name{
+  font-size: 80px;
+  font-weight: 500;
+  color: aliceblue;
+  text-align: left;
+  padding: 10px;
+  padding-left: 20px;
+}
+.he1{
+  font-size: 50px;
+  font-weight: 700;
+  color:  rgba(134, 198, 7, 1);
+  text-align: left;
+  padding-left: 20px;
+  padding-top: 200px;
+}
+.he2{
+  font-size: 80px;
+  font-weight: 700;
+  color: aliceblue;
+  position: relative;
+  bottom: 125px;
+ margin-left: 180px;
+}
+.he3{
+  font-size: 50px;
+  font-weight: 700;
+  color:  rgba(134, 198, 7, 1);
+  text-align: left;
+  padding-left: 20px;
+  position: relative;
+  bottom: 160px;
+}
+.he4{
+  font-size: 20px;
+  font-weight: 700;
+  color: aliceblue;
+  position: relative;
+  bottom: 140px;
+  padding-left: 20px;
+}

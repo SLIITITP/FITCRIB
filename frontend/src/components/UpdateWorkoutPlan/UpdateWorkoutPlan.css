@@ -1,0 +1,191 @@
+/* Responsive design */
+@media screen and (max-width: 768px) {
+  /* Place responsive styles here */
+}
+
+/* General styles */
+.UpdateWorkoutPlan .body {
+  margin: 10;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+/* Colors */
+.UpdateWorkoutPlan .black {
+  color: #000;
+}
+.UpdateWorkoutPlan .white {
+  color: #fff;
+}
+.UpdateWorkoutPlan .lime-green {
+  color: #c7ea46;
+}
+
+/* Background */
+.UpdateWorkoutPlan .body {
+  background-color: black;
+  color: white;
+}
+
+/* Header */
+.UpdateWorkoutPlan .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: lime-green;
+}
+
+.UpdateWorkoutPlan .header .h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+/* Navigation */
+.UpdateWorkoutPlan .nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #222;
+}
+
+.UpdateWorkoutPlan .nav .ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.UpdateWorkoutPlan .nav .ul .li {
+  margin-right: 20px;
+}
+
+.UpdateWorkoutPlan .nav .ul .li .a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.UpdateWorkoutPlan .nav .ul .li .a:hover {
+  background-color: lime-green;
+  color: black;
+}
+
+/* Main content */
+.UpdateWorkoutPlan .main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #333;
+}
+
+.UpdateWorkoutPlan .article {
+  flex-basis: 45%;
+  margin-bottom: 20px;
+  background-color: white;
+}
+
+.UpdateWorkoutPlan .article .img {
+  width: 100%;
+}
+
+.UpdateWorkoutPlan .article .h2 {
+  margin: 10px;
+}
+
+.UpdateWorkoutPlan .article .p {
+  margin: 10px;
+}
+
+/* Footer */
+.UpdateWorkoutPlan .footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  background-color: #222;
+}
+
+.UpdateWorkoutPlan .footer .p {
+  margin: 0;
+}
+
+.UpdateWorkoutPlan .container-md {
+    margin-top: 50px;
+    margin-bottom: 50px
+}
+
+.UpdateWorkoutPlan .card {
+    background-color: #fff;
+    color: #000;
+    border: none;
+    border-radius: 0;
+  }
+  
+  .UpdateWorkoutPlan .card-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 1rem;
+  }
+  
+  .UpdateWorkoutPlan .card-text {
+    font-size: 1.5rem;
+    color: #000;
+    margin-bottom: 2rem;
+  }
+  
+  .UpdateWorkoutPlan .list-group-item {
+    font-size: 1.2rem;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-bottom: 1px solid #000;
+  }
+  
+  .UpdateWorkoutPlan .list-group-item:last-child {
+    border-bottom: none;
+  }
+  
+  .UpdateWorkoutPlan .btn-primary  {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #32cd32;
+    border: none;
+    border-radius: 0;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+    
+  }
+
+  .UpdateWorkoutPlan .btn-danger  {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #9b0606;
+    border: none;
+    border-radius: 0;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+    
+  }
+  
+  .UpdateWorkoutPlan  .btn:hover {
+    background-color: #000;
+    color: #32cd32;
+    cursor: pointer;
+  }
+
+  .UpdateWorkoutPlan .outline  {
+    border-radius: 10px; /* Add rounded edges */
+    outline: 1px solid limegreen; /* Add lime green outline */
+  }
+
+  .UpdateWorkoutPlan .cardoutline  {
+    border-radius: 10px; /* Add rounded edges */
+    outline: 4px solid limegreen; /* Add lime green outline */
+  }
+  
+  
