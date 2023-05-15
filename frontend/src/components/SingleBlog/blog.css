@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100&display=swap');
+
+.content{
+    color: rgb(0, 0, 0);
+}
+#BTbody{
+    background-color: #1F1F1F;
+}
+.viewBack{
+    background-color: #E1F1C1;
+    width:80%;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+}
+#h1{
+     padding-left: 10px;
+    color:white;
+    font-family: 'Poppins',sans-serif;
+    font-size:2.5em;
+    font-weight: normal;
+  }
+.h1{
+    color:white;
+    margin-left: 130px;
+    font-family: 'Poppins',sans-serif;
+    font-size: 36;
+    font-weight: 400;
+}
+h2{
+    margin-left: 10px;
+    padding-top: 5px;
+    font-family: 'Poppins',sans-serif;
+    font-size: 36;
+    font-weight: 500;
+}
+
+h3{
+    margin-left: 10px;
+    padding-top: 5px;
+    font-family: 'Poppins',sans-serif;
+    font-size: 34;
+    font-weight: 400;
+}
+p{
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: justify;
+    font-family: 'Poppins',sans-serif;
+    font-size: 32;
+    font-weight: 300;
+}
+#stars{
+    margin-left: 10px;
+}
+.blogImg{
+    width:100%;
+    height:10%;
+}
+.contentView{
+    padding-bottom: 12px;
+    padding-left:7px;
+}
+.content{
+    text-align: justify;
+    font-weight: 100;
+
+}
+.back{
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 4px;
+    color:#99FF33;
+    font-size: 35px;
+    background-color:#0000;
+    border-color: #0000;
+}
+.back:hover{
+    color: white;
+}
+#add{
+    position:absolute;
+    left:85%;
+    bottom:15%;
+    margin-top: -5px;
+    font-size: 25px;
+}
+.addtxt{
+    position: absolute;
+    left: 51cm;
+}
+#btn2{
+    position:sticky;
+    background: transparent;
+  background-image: linear-gradient(to right, #99FF33 0%,#9acf6470 50%, #3CA55C  80%);
+  margin: 10px;
+  padding: 10px 75px;
+  font-weight:100;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: black;
+  border-radius: 30px;
+  display: block;
+  border: 0;
+
+}
+#btn2:hover{
+
+    background-color: aqua;
+  color: black;
+  text-decoration: none;
+
+}
+#review{
+    display:inline-block;
+    margin-left: 10px;
+    
+}

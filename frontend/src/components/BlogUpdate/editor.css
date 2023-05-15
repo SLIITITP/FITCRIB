@@ -7,4 +7,8 @@ h1{
     font-weight: normal;
     color:rgb(0, 0, 0);
   }
+.quill{
+  max-height:max-content;
+  height: 200px;
+}
   

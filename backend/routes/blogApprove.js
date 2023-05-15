@@ -12,28 +12,12 @@ router.post("/",async(req,res)=>{
  
  })
 
- router.delete("/:email",async(req,res)=>{
+ router.delete("/:heading",async(req,res)=>{
 
-    const {heading} = req.body
-    const email = req.params.email;
+    const {heading} = req.params.heading
 
-    const app = await Approve.find({'email':email})
-    await app.updateOne({
-        heading,
-        
-    })
-
-        .then(() => {
-           
-            res.status(200).send({ status: "Approved" });
-        })
-        .catch((err) => {
-
-            console.log(err.message);
-
-            res.status(500).send({ status: "Error Approve Blog", error: err.message });
-
-        });
+    const app = await Approve.findByIdAndDelete({'heading':heading})
+   
 })
 
  router.get("/",async(req,res)=>{
