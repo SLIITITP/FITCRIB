@@ -1,17 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState,useContext } from 'react';
 import axios from 'axios';
 import './addrecipe.css';
+import UserContext from '../ContextComponent/ContextComponent';
 
 import { storage } from "../addrecipe/firebase";
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import { v4 } from "uuid";
 
 const AddRecipe = () => {
+  const { user } = useContext(UserContext);
+  const userID = user._id
   const [recipeName, setRecipeName] = useState('');
   const [ingredients, setIngredients] = useState([{ ingredient: '' }]);
   const [image, setImage] = useState(null); // null instead of empty string
   const [steps, setSteps] = useState('');
   const [calories, setCalories] = useState('');
+
 
   const handleIngredientChange = (e, index) => {
     const updatedIngredients = [...ingredients];
@@ -40,6 +44,7 @@ const AddRecipe = () => {
       getDownloadURL(snapshot.ref).then((downloadURL) => {
         console.log('File available at', downloadURL);
         const newRecipe = {
+          userID: userID,
           recipename: recipeName,
           Ingredients: ingredients,
           image: downloadURL, // pass the public URL to MongoDB instead of the file object
