@@ -55,8 +55,9 @@ function Modal(props) {
                 </div>
                 <div className="modal-body">
                 <form className="ReviewForm" onSubmit={addReview}>
-                        <div className="d1"><h2>Heading</h2>
-                        <p className="Rtext">{heading}</p></div>
+                  <label className="Rtext">Heading</label>
+                          <p className="Rtext">{heading}</p>
+                        <div className="d1"></div>
                         <label className="Rtext">Rating</label><br></br>
                         <div className="center">
                           {[...Array(5)].map((star,i)=>{

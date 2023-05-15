@@ -54,7 +54,7 @@ async function createNewPost(event)
 }
 
 if(redirect){
-    return history.push("/tBview")
+    return history("/tBview")
 }
     
     return(<>
