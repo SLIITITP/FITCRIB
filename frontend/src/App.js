@@ -96,7 +96,7 @@ function App() {
       <UserContext.Provider value={{ user, setUser }}>
         <div className="App">
 
-          {user?.UserType === 'Registered User' || 'Seller' || 'Trainer' ? <NavigationBarB /> : <AdminHeader />}
+          {user?.UserType === ('Registered User' || 'Seller' || 'Trainer') ? <NavigationBarB /> : <AdminHeader />}
           <Routes>
             {/* <Route path="/" /> */}
             {/* <Route path = "/CreateWorkout" element = {<CreateWorkoutMain/>}/> */}
