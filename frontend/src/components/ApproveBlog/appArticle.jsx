@@ -27,7 +27,7 @@ const handleDelete = async (email,Uname)=>{
    try{ 
         if(window.confirm('Are you sure you want to Approve  '+Uname+ " Blog?")){
 
-            const response = await axios.delete('http://localhost:8070/bApprove/'+heading,{
+            const response = await axios.delete('http://localhost:8070/bApprove/'+blog.heading,{
                    
                  })
            console.log(response)
