@@ -111,3 +111,9 @@ const goalRouter = require("./routes/goals");
 
 app.use("/dietplan",dietplanRouter);
 app.use("/goal",goalRouter);
+
+//recipe management
+
+const recipeRouter = require("./routes/recipes.js");
+
+app.use("/recipe",recipeRouter);
