@@ -2,7 +2,7 @@
         let Recipe = require("../models/recipe");
 
         router.route("/add").post((req,res)=>{
-            
+            const userId = req.body.userID;
             const recipename = req.body.recipename;
             const Ingredients = req.body.Ingredients;
             const image = req.body.image; //add
@@ -10,6 +10,7 @@
             const Calories = Number(req.body.Calories);
 
             const newRecipe = new Recipe({
+                userId,
                 recipename,
                 Ingredients,
                 image, //add
@@ -25,8 +26,17 @@
         
         })
 
-        router.route("/").get((req,res)=>{
+        router.route("/:userID").get((req,res)=>{
+            const userID = req.params.userID;
+            Recipe.find({userId : userID}).then((recipes)=>{
+                res.json(recipes)
+            }).catch((err)=>{
+                console.log(err)
+            })
 
+        })
+
+        router.route("/").get((req,res)=>{
             Recipe.find().then((recipes)=>{
                 res.json(recipes)
             }).catch((err)=>{

@@ -107,7 +107,7 @@ function WorkoutSession() {
           sessionComment: comment,
           sentiment: response.data,
           sessionNumber: sessionNumber,
-          // dateAndTime
+          date : new Date()
         };
         axios
           .post("http://localhost:8070/workoutSession/addSession", newSession)
@@ -197,6 +197,7 @@ function WorkoutSession() {
               {/* <label>Comments about the Session</label>
       <textarea onChange={handleCommentChange} /> */}
               <div className="mb-3  Session">
+              <input type="hidden" name="date" value="<%= new Date().toISOString() %>"/>
                 <label
                   htmlFor="workoutDescription"
                   className="form-label Session"
