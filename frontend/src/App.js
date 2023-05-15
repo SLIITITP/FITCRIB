@@ -47,8 +47,26 @@ import TBlog from "./components/SingleBlog/Tblog"
 import UpdateBlogs from "./components/BlogUpdate/Update"
 import Modal from "./components/Review/ReviewModal"
 
+//nutrition tracking
 
- 
+import NTAddDietPlan from './components/AddDietPlan_folder/AddDietPlan';
+import NTAllDietPlans from './components/AllDietPlans_folder/AllDietPlans';
+import NTAppbmi from './components/Appbmi_folder/Appbmi';
+import SearchBar from './components/SearchBar_folder/SearchBar ';
+import NTGoalUpdate from './components/GoalUpdate_folder/GoalUpdate'
+import NTGoalsetting from './components/Goalsetting_folder/Goalsetting';
+import NTViewGoal from './components/ViewGoal_folder/ViewGoal';
+import NTMain from './components/Main_folder/Main';
+// import NTSearchGoals from './components/SearchGoal_folder/SearchGoal';
+import NTEditDietPlan from './components/EditDietPlan_folder/EditDietPlan';
+
+//recipe management
+import AddRecipe from './components/addrecipe/addrecipe';
+import AllRecipes from './components/AllRecipes/AllRecipes';
+import RecipeDetails from './components/RecipeDetails/RecipeDetails';
+import UpdateRecipe from './components/UpdateRecipe/UpdateRecipe';
+import RUVAComponent from './components/RUVA/RUVA';
+import RURDComponent from './components/RURD/RURD';
 
 import NavigationBarB from './components/NavigationBarB/NavigationBarB'
 import React, { useState, useEffect } from "react";
@@ -72,62 +90,80 @@ function App() {
 
 
   return (
-    
+
     <Router>
       <UserContext.Provider value={{ user, setUser }}>
-      <div className="App">
-      
-        {user?.UserType ==='Registered User' ? <NavigationBarB/> : <AdminHeader/>}
-        <Routes>
-          {/* <Route path="/" /> */}
-          {/* <Route path = "/CreateWorkout" element = {<CreateWorkoutMain/>}/> */}
-          <Route path="/MyWorkouts" element={<MyWorkouts />} />
-          <Route path="/SingleWorkout/:id" element={<SingleWorkout />} />
-          <Route path="/UpdateWorkout/:id" element={<UpdateWorkoutPlan />} />
-          <Route path="/NewWorkoutPlan" element={<NewWorkoutPlan />} />
-          <Route path="/Session/:id/:dayIndex" element={<WorkoutSession />} />
-          <Route path="/SessionDetails/:id/:sessionNumber/:day" element={<SessionDetails />} />
+        <div className="App">
 
-          {/* user management */}
-          <Route path='' element={<Index />}/>
-          <Route path='/add' element={<Adduser />} />
-          <Route path='/addpayment' element={<Addpayment />} />
-          <Route path='/login' element={<Login />} />
-          <Route path='/home/:id' element={<Home />} />
-          <Route path='/users' element={<Other_users />} />
-          <Route path='/profile/:id' element={<ViewProfile />} />
-          <Route path='/update/:id' element={<Update />} />
-          <Route path='/seller_home/:id' element={<Seller_home />} />
-          <Route path='/trainer_home/:id' element={<Trainer_home />} />
-          <Route path='/adminHome' element={<AdminHome/>}/>
-          <Route path='/allusers' element={<All_users />} />
-          <Route path='/report' element={<Generate_Report />} />
+          {user?.UserType === 'Registered User' ? <NavigationBarB /> : <AdminHeader />}
+          <Routes>
+            {/* <Route path="/" /> */}
+            {/* <Route path = "/CreateWorkout" element = {<CreateWorkoutMain/>}/> */}
+            <Route path="/MyWorkouts" element={<MyWorkouts />} />
+            <Route path="/SingleWorkout/:id" element={<SingleWorkout />} />
+            <Route path="/UpdateWorkout/:id" element={<UpdateWorkoutPlan />} />
+            <Route path="/NewWorkoutPlan" element={<NewWorkoutPlan />} />
+            <Route path="/Session/:id/:dayIndex" element={<WorkoutSession />} />
+            <Route path="/SessionDetails/:id/:sessionNumber/:day" element={<SessionDetails />} />
 
-          {/* financial management */}
-            <Route path='/finance' element={<FNDashboard/>}/>
-            <Route path='/addTransaction' element={<CreateTransaction/>}/>
-            <Route path='/viewTransaction' element={<ViewAllTransaction/>}/>
-            <Route path='/updateTransaction/:id' element={<UpdateTransaction/>}/>
-            <Route path='/financialperformance' element={<FinancialP/>}/>
-            <Route path='/calculate' element={<Calculate/>}/>
-            <Route path="/alluserpaymentsFN" element={<UserPaymentsViewAll/>}/>
-            <Route path="/fnfaq" element={<FNFaq/>}/>
-        
+            {/* user management */}
+            <Route path='' element={<Index />} />
+            <Route path='/add' element={<Adduser />} />
+            <Route path='/addpayment' element={<Addpayment />} />
+            <Route path='/login' element={<Login />} />
+            <Route path='/home/:id' element={<Home />} />
+            <Route path='/users' element={<Other_users />} />
+            <Route path='/profile/:id' element={<ViewProfile />} />
+            <Route path='/update/:id' element={<Update />} />
+            <Route path='/seller_home/:id' element={<Seller_home />} />
+            <Route path='/trainer_home/:id' element={<Trainer_home />} />
+            <Route path='/adminHome' element={<AdminHome />} />
+            <Route path='/allusers' element={<All_users />} />
+            <Route path='/report' element={<Generate_Report />} />
+
+            {/* financial management */}
+            <Route path='/finance' element={<FNDashboard />} />
+            <Route path='/addTransaction' element={<CreateTransaction />} />
+            <Route path='/viewTransaction' element={<ViewAllTransaction />} />
+            <Route path='/updateTransaction/:id' element={<UpdateTransaction />} />
+            <Route path='/financialperformance' element={<FinancialP />} />
+            <Route path='/calculate' element={<Calculate />} />
+            <Route path="/alluserpaymentsFN" element={<UserPaymentsViewAll />} />
+            <Route path="/fnfaq" element={<FNFaq />} />
+
             {/*Blog Management*/}
- <Route exact path='/tBView' element={<TView/>}/>
- <Route exact path='/Bview' element={<BView/>}/>
- <Route exact path='/Bcreate' element={<BCreate/>}/>
- <Route exact path='/myBlogs' element={<MyBlogs/>}/>
- <Route exact path='/blog/:id' element={<Blog/>}/>
- <Route exact path='/bUpdate/:id' element={<UpdateBlogs/>}/>
- <Route exact path='/bReview/:id' element={<Modal/>}/>
- <Route exact path='/tBlog/:id' element={<TBlog/>}/>
+            <Route exact path='/tBView' element={<TView />} />
+            <Route exact path='/Bview' element={<BView />} />
+            <Route exact path='/Bcreate' element={<BCreate />} />
+            <Route exact path='/myBlogs' element={<MyBlogs />} />
+            <Route exact path='/blog/:id' element={<Blog />} />
+            <Route exact path='/bUpdate/:id' element={<UpdateBlogs />} />
+            <Route exact path='/bReview/:id' element={<Modal />} />
+            <Route exact path='/tBlog/:id' element={<TBlog />} />
 
-        
-        
-        </Routes>
-        
-      </div>
+            {/*Nutrition tracking*/}
+            <Route exact path='/addDietPlan' element={<NTAddDietPlan />} />
+            <Route exact path='/allDietPlans' element={<NTAllDietPlans />} />
+            <Route exact path='/appBMI' element={<NTAppbmi />} />
+            <Route exact path='/dietSearchBar' element={<SearchBar />} />
+            <Route exact path='/updateGoal' element={<NTGoalUpdate />} />
+            <Route exact path='/goalSetting' element={<NTGoalsetting />} />
+            <Route exact path='/viewGoal' element={<NTViewGoal />} />
+            <Route exact path='/mainNT' element={<NTMain />} />
+            {/* <Route exact path='/searchGoal' element={<NTSearchGoals />} /> */}
+            <Route exact path='/editDietplan/:id' element={<NTEditDietPlan />} />
+
+            {/*Recipe Management */}
+            <Route path='/allrecipes' element={<AllRecipes />} />
+            <Route path='/addRecipe' element={<AddRecipe />} />
+            <Route path='/recipe/:id' element={<RecipeDetails />} />
+            <Route path='/updateRecipe/:id' element={<UpdateRecipe />} />
+            <Route path='/RUVA' element={<RUVAComponent />} />
+            <Route path='/RURD/recipe/:id' element={<RURDComponent />} />
+          </Routes>
+          {user?.UserType === 'Admin' && <AdminFooter />}
+
+        </div>
       </UserContext.Provider>
     </Router>
   );

@@ -22,6 +22,7 @@
     "node-pickle": "^0.0.2",
     "nodemon": "^2.0.20",
     "pandas-js": "^0.2.4",
+    "pdfkit": "^0.13.0",
     "pickle": "^0.2.0",
     "picklejs": "^0.101.0",
     "request": "^2.88.2"
