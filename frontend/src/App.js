@@ -47,6 +47,18 @@ import TBlog from "./components/SingleBlog/Tblog"
 import UpdateBlogs from "./components/BlogUpdate/Update"
 import Modal from "./components/Review/ReviewModal"
 
+//nutrition tracking
+
+import NTAddDietPlan from './components/AddDietPlan_folder/AddDietPlan';
+import NTAllDietPlans from './components/AllDietPlans_folder/AllDietPlans';
+import NTAppbmi from './components/Appbmi_folder/Appbmi';
+import SearchBar from './components/SearchBar_folder/SearchBar ';
+import NTGoalUpdate from './components/GoalUpdate_folder/GoalUpdate'
+import NTGoalsetting from './components/Goalsetting_folder/Goalsetting';
+import NTViewGoal from './components/ViewGoal_folder/ViewGoal';
+import NTMain from './components/Main_folder/Main';
+// import NTSearchGoals from './components/SearchGoal_folder/SearchGoal';
+import NTEditDietPlan from './components/EditDietPlan_folder/EditDietPlan';
 
 
 
@@ -123,9 +135,17 @@ function App() {
             <Route exact path='/bReview/:id' element={<Modal />} />
             <Route exact path='/tBlog/:id' element={<TBlog />} />
 
-
-
-
+            {/*Nutrition tracking*/}
+            <Route exact path='/addDietPlan' element={<NTAddDietPlan />} />
+            <Route exact path='/allDietPlans' element={<NTAllDietPlans />} />
+            <Route exact path='/appBMI' element={<NTAppbmi />} />
+            <Route exact path='/dietSearchBar' element={<SearchBar />} />
+            <Route exact path='/updateGoal' element={<NTGoalUpdate />} />
+            <Route exact path='/goalSetting' element={<NTGoalsetting />} />
+            <Route exact path='/viewGoal' element={<NTViewGoal />} />
+            <Route exact path='/mainNT' element={<NTMain />} />
+            {/* <Route exact path='/searchGoal' element={<NTSearchGoals />} /> */}
+            <Route exact path='/editDietplan/:id' element={<NTEditDietPlan />} />
 
           </Routes>
           {user?.UserType === 'Admin' && <AdminFooter />}
