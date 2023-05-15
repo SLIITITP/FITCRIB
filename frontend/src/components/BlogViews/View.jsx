@@ -1,4 +1,4 @@
-
+import "./Bview.css"
 import { FaSearch} from "react-icons/fa"
 import React ,{ useEffect ,useState} from "react"
 import axios from "axios"
@@ -37,13 +37,14 @@ export const View =()=>{
       }
 
 return(< >
+<body className="Bbody">
     <div>
       
     <h1 id="h1">Educational Content Blogs</h1>
         <br></br>
         <faFontAwesome icon="fa-solid fa-print" />
     {/*Search*/}
-    <div id="searchBox">
+    <div id="searchBoxUser">
                <input id="search"
                      value={search}  onChange={(e) => setSearch(e.target.value.toLowerCase())} placeholder='  Search Blogs' type='search'
                      /><span id="searchIcon"><FaSearch/></span>
@@ -71,8 +72,8 @@ return(< >
          
 return(
 
-        <div key={k} id="card" >
-            <div key={k}className="container" id="column" > <div onClick={()=>{history("/blog/"+B._id)}}>
+        <div key={k} id="Bcard" >
+            <div key={k}className="Bcontainer" id="column" > <div onClick={()=>{history("/blog/"+B._id)}}>
                 <img id="imgCard" src={'http://localhost:8070/'+B.image} alt="P 1" width="100%"></img>
                 <h2 >{B.heading} </h2>
                 <p >Category: {B.category}</p>
@@ -87,6 +88,7 @@ return(
        </div>{/*viewcard*/}
     </div>
      </div>
+     </body>
 </>     
 )
 }
