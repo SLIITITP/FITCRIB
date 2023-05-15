@@ -1,0 +1,96 @@
+.search{
+    background-color: green;
+    border: 1px solid #ccc;
+    box-shadow: 5px 5px 10px #99ff33;
+    border: green;
+  
+  }
+
+  .redbutton{
+    background-color: rgb(255, 0, 0);
+    border: rgb(255, 0, 0);
+    margin-left: 50px;
+  }
+
+  .greenbutton{
+    background-color: green;
+    border: green;
+  }
+
+  .spacetwo{
+    background-color: rgb(255, 0, 0);
+    border: rgb(255, 0, 0);
+    margin-left: 50px;
+  }
+  
+  .my-card{
+    background-color: #e3f2d4;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 4px #99ff33;
+  }
+
+  .space{
+    background-color: green;
+    border: green;
+    outline: none;
+    box-shadow: none;
+    background-color: green !important;
+    border-color: green !important;
+  }
+  
+  
+  .add:hover{
+    background-color: green;
+  }
+  
+  .ingredientcolor{
+    background-color: #e3f2d4;
+  }
+  
+  .reg{
+    background-color: green;
+  }
+  
+  .white-font {
+    color: white;
+  }
+  
+  .delete{
+    background-color: red;
+  }
+  
+  .container{
+    border-radius: 10;
+  }
+  
+  .spacetwo{
+    background-color: rgb(255, 0, 0);
+    border: rgb(255, 0, 0);
+    margin-left: 50px;
+  }
+  
+  
+  .search{
+    background-color: green;
+    border: 1px solid #ccc;
+    box-shadow: 5px 5px 10px #99ff33;
+    border: green;
+  
+  }
+  
+  .recipecard{
+    border: 1px solid #ccc;
+    box-shadow: 5px 5px 10px #99ff33;
+  }
+  
+  .card-body-add{
+    background-color: grey;
+  }
+  
+  .my-cardaddtoplate{
+    background-color: #e3f2d4;
+    border: 1px solid #ccc;
+    box-shadow: 5px 5px 10px #99ff33;
+  }
+
+  

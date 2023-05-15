@@ -1,4 +1,4 @@
-
+import "./blog.css"
 import { FaChevronLeft, FaPlusCircle } from "react-icons/fa"
 import React from "react"
 import 'react-quill/dist/quill.snow.css'
@@ -71,6 +71,7 @@ totalStars = (totalStars/count).toFixed(1) //wanna chnage 1 decimal
 console.log(totalStars)
 
 return(<>
+<body id="BTbody">
 <div >
 <button className="back" onClick={()=>{history("/Bview")}}><FaChevronLeft></FaChevronLeft></button></div>
         <h1 id="h1">Educational Content Blog</h1>
@@ -93,7 +94,7 @@ return(<>
                 <p><Star stars={totalStars}>{review.BID}</Star></p>
                 <h2>{review.BID}</h2>
                 
-                <button id="btn2" onClick={()=>OpenModel(blog._id)}><span id="addtxt">Add Review </span><span id="add"><FaPlusCircle /></span></button>
+                <button id="btn2" onClick={()=>OpenModel(blog._id)}><span id="addtxt">Add Review </span><span id="add"><FaPlusCircle/></span></button>
              <div className="modal-card">
         	      {show && <Modal BID={blog._id} heading={blog.heading} onClose={()=>setShow(false)} show={show}>
                     </Modal>}</div></div>
@@ -103,12 +104,14 @@ return(<>
                         <h3>Comment</h3>
                         <p>{R.comment}</p>
                         <p><Star stars={R.stars}>{R.id}</Star></p>
+                        
                         </>
                       )
 
 })
 }
             </div>
+            </body>
     </>     
 )
 }
