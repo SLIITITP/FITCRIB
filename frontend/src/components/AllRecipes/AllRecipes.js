@@ -1,17 +1,20 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState,useContext } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import jsPDF from 'jspdf';
 import 'jspdf-autotable';
 import './AllRecipes.css';
+import UserContext from '../ContextComponent/ContextComponent';
 
 const AllRecipes = () => {
+  const { user } = useContext(UserContext);
+  const userID = user._id
   const [recipes, setRecipes] = useState([]);
   const [selectedRecipes, setSelectedRecipes] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
-    axios.get('http://localhost:8070/recipe/')
+    axios.get(`http://localhost:8070/recipe/${userID}`)
       .then((response) => {
         console.log(response.data);
         setRecipes(response.data);
@@ -97,7 +100,7 @@ const AllRecipes = () => {
           <br />
         </div>
         <div className="create-recipe-button">
-          <Link to="add" className="btn btn-primary add">
+          <Link to="/addRecipe" className="btn btn-primary add">
             Create A Recipe
           </Link>
         </div>
