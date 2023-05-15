@@ -50,7 +50,7 @@ function Dashboard(){
 
             <div className="FNDashboardSqr3">
                 <br/>
-                <h2 className="FNSqrHeading">Check Financial Performance</h2>
+                <h2 className="FNSqrHeading">Financial Performance</h2>
                 <p className="FNSqrDesc">Full detailed financial performance of the company is displayed here. </p>
               
                 <button className="FNDashboardButton" onClick={(e) => {
