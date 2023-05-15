@@ -1,0 +1,22 @@
+.DetailsPDF {
+    font-family: Arial, sans-serif;
+  }
+  
+  .DetailsPDF.body {
+    font-size: 10pt;
+    line-height: 1.5;
+  }
+  
+  .DetailsPDF.h1 {
+    font-size: 14pt;
+    font-weight: bold;
+    margin-bottom: 10pt;
+  }
+  
+  .DetailsPDF.p {
+    margin-bottom: 5pt;
+  }
+  
+  .DetailsPDF.center {
+    text-align: center;
+  }

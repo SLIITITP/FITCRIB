@@ -1,21 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100&display=swap');
 
+.modal{
+ width: 60%;
+ display: flex;
+ margin-left: 20%;
+}
 .modal-content{
     width :500px;
     background-color: #fff;
+    margin-left: 20px;
 }
 .modal-header,.modal-footer{
     padding:10px;
 }
 .modal-title{
-    margin: 0;
+    margin-left: 0;
 }
 .modal-body{
     padding: 10px;
     border-top:1px solid #eee;
     border-bottom: 1px solid #eee;
 }
-form{
+.ReviewForm{
   text-align: start;
   background-color: #E1F1C1;
   padding-left: 10px;
@@ -24,20 +30,12 @@ form{
   margin-left: 40px;
   margin-right: 40px;
 }
-p,label{
+.Rtext{
     font-size: 1.2em;
     margin-left: 30px;
 }
-.sub,input,textarea{
+.sub,.Rinput{
     margin-left: 30px;
-}
-
-h1{
-  margin-left: 40px;
-  font-family: 'Poppins',sans-serif;
-    font-size:2em;
-  font-weight: normal;
-  color:white;
 }
 
 button{
@@ -52,6 +50,7 @@ button{
 
 .add,.can{
   margin-left: 25px;
+  margin-bottom: 20px;
   padding: 3px 2px 10px 2px;
   font-size: 24;
   background: transparent;
@@ -83,7 +82,7 @@ textarea{
 .stars{
   display: inline-block;
 }
-input[type="radio"]{
+.Rinput[type="radio"]{
   display:none
 }
 .star{

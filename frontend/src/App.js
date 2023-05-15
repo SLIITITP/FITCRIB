@@ -46,6 +46,7 @@ import Blog from "./components/SingleBlog/Blog"
 import TBlog from "./components/SingleBlog/Tblog"
 import UpdateBlogs from "./components/BlogUpdate/Update"
 import Modal from "./components/Review/ReviewModal"
+import Approve from "./components/ApproveBlog/appArticle"
 
 //nutrition tracking
 
@@ -60,7 +61,13 @@ import NTMain from './components/Main_folder/Main';
 // import NTSearchGoals from './components/SearchGoal_folder/SearchGoal';
 import NTEditDietPlan from './components/EditDietPlan_folder/EditDietPlan';
 
-
+//recipe management
+import AddRecipe from './components/addrecipe/addrecipe';
+import AllRecipes from './components/AllRecipes/AllRecipes';
+import RecipeDetails from './components/RecipeDetails/RecipeDetails';
+import UpdateRecipe from './components/UpdateRecipe/UpdateRecipe';
+import RUVAComponent from './components/RUVA/RUVA';
+import RURDComponent from './components/RURD/RURD';
 
 import NavigationBarB from './components/NavigationBarB/NavigationBarB'
 import React, { useState, useEffect } from "react";
@@ -89,7 +96,7 @@ function App() {
       <UserContext.Provider value={{ user, setUser }}>
         <div className="App">
 
-          {user?.UserType === 'Registered User' ? <NavigationBarB /> : <AdminHeader />}
+          {user?.UserType === 'Registered User' || 'Seller' || 'Trainer' ? <NavigationBarB /> : <AdminHeader />}
           <Routes>
             {/* <Route path="/" /> */}
             {/* <Route path = "/CreateWorkout" element = {<CreateWorkoutMain/>}/> */}
@@ -133,7 +140,8 @@ function App() {
             <Route exact path='/blog/:id' element={<Blog />} />
             <Route exact path='/bUpdate/:id' element={<UpdateBlogs />} />
             <Route exact path='/bReview/:id' element={<Modal />} />
-            <Route exact path='/tBlog/:id' element={<TBlog />} />
+            <Route exact path='/tBlog/:id' element={<TBlog />}/>
+            <Route exact path='/bApprove' element={<Approve/>}/>
 
             {/*Nutrition tracking*/}
             <Route exact path='/addDietPlan' element={<NTAddDietPlan />} />
@@ -147,6 +155,13 @@ function App() {
             {/* <Route exact path='/searchGoal' element={<NTSearchGoals />} /> */}
             <Route exact path='/editDietplan/:id' element={<NTEditDietPlan />} />
 
+            {/*Recipe Management */}
+            <Route path='/allrecipes' element={<AllRecipes />} />
+            <Route path='/addRecipe' element={<AddRecipe />} />
+            <Route path='/recipe/:id' element={<RecipeDetails />} />
+            <Route path='/updateRecipe/:id' element={<UpdateRecipe />} />
+            <Route path='/RUVA' element={<RUVAComponent />} />
+            <Route path='/RURD/recipe/:id' element={<RURDComponent />} />
           </Routes>
           {user?.UserType === 'Admin' && <AdminFooter />}
 
