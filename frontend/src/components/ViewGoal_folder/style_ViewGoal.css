@@ -1,0 +1,51 @@
+.containesearch .body {
+    background-color: #000000;
+  }
+  
+  /* Viewgoal */
+
+.d1{
+    background-color: #2b3028;
+}
+.txtview{
+    color: #99ff33;
+}
+.view_reward{
+    text-align: center;
+    color: #99ff33;
+
+}
+
+
+
+
+/* Reward Box */
+
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(209, 209, 209);
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+  
+  .popup-content {
+    padding: 20px;
+  }
+  
+  .CardActions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .btn-report {
+    margin-left: auto;
+    background-color: chartreuse;
+  }
+  

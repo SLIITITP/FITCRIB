@@ -1,0 +1,67 @@
+.create_box{
+   
+        background-color: #2b3028;
+        padding: 50px;
+        border-radius: 20px;
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
+        
+        width: 80%;
+        text-align: center;
+        margin: auto; /* center horizontally */
+        margin-top: 100px;
+    
+
+}
+
+.textheader{
+    color: #99ff33;
+}
+
+.btn-primary:hover {
+    background-color: #9eb229;
+  }
+  
+  .btn-primary:focus {
+    box-shadow: none;
+    outline: none;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .btn-primary {
+    margin-right: 30px;
+  }
+  .btn-primary{
+    background-color: #99ff33;
+    
+  }
+  .btn-primary.red-text {
+    color: black;
+  }
+  .create_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .homelink{
+    color: #99ff33;
+  }
+  .addmeal_btn{
+    background-color: chartreuse;
+  }
+  .meal_remove{
+    background-color: red;
+  }
+  .btn_submit{
+    background-color: chartreuse;
+  }
+  .form-control_add{
+    background-color: rgb(235, 232, 228);
+    width: 1200px;
+    height: 50px;
+    border-radius: 5px;
+  }

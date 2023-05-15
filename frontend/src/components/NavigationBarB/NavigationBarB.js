@@ -81,7 +81,10 @@ export default function NavigationBarB(props) {
                                     <a className="nav-link" href="#">EDUCATIONAL CONTENT</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#">NUTRITION PLANS</a>
+                                    <a className="nav-link" onClick={(e) => {
+                                        e.preventDefault();
+                                        window.location.href = `/mainNT`
+                                    }}>NUTRITION PLANS</a>
                                 </li>
                                 <li className="nav-item">
                                     <a className="nav-link" href="#">RECIPES</a>
