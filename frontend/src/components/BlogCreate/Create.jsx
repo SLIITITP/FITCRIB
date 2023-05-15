@@ -1,4 +1,4 @@
-import "./create.css"
+import "./Bcreate.css"
 import React from "react"
 import 'react-quill/dist/quill.snow.css'
 import { useState } from "react"
@@ -54,7 +54,7 @@ async function createNewPost(event)
 }
 
 if(redirect){
-    return history.push("/tBview")
+    return history("/tBview")
 }
     
     return(<>
@@ -72,22 +72,22 @@ if(redirect){
     <input type="heading" id="Binput" value={heading} onChange={event=> setHeading(event.target.value)} required/><br></br>
     <label className="Blabel">Category</label>
     <br></br>
-    <select name="category" placeholder="select category" onChange={event => setCategory(event.target.value)}>
-    <option value="Phisic">Phisic</option>
-    <option value="Health">Health</option>
-    <option value="Diet">Diet</option>
-    <option value="Exercises">Exercise</option>
+    <select id="selectItems" name="category" placeholder="select category" onChange={event => setCategory(event.target.value)}>
+    <option id="bOption" value="Phisic">Phisic</option>
+    <option id="bOption" value="Health">Health</option>
+    <option id="bOption" value="Diet">Diet</option>
+    <option id="bOption" value="Exercises">Exercise</option>
   </select>
   <br></br>
     <label className="Blabel" >Image</label>
     <input  type="file"  name="image" className="imgStyle"
-    onChange={event => setFiles(event.target.files)} required/><br></br>
+    onChange={event => setFiles(event.target.files)} required/><br></br><br></br>
     <label className="Blabel">Content</label> <br></br> 
     <Editor 
     value={content} 
     onChange={setContent}/>
     
-    <button style={{marginTop:'3px',marginLeft:'30px'}} type="submit" className="create">create</button>
+    <button style={{marginTop:'60px',marginLeft:'30px'}} type="submit" className="create">create</button>
      </form>
      </body>
         </>
