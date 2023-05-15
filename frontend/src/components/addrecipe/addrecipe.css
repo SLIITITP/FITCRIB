@@ -1,0 +1,90 @@
+.greenbutton {
+    background-color: green;
+    border: green;
+  }
+  
+  
+  .createcard{
+    background-color: #e3f2d4;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 4px #99ff33;
+    
+  }
+  
+  .space{
+    background-color: green;
+    border: green;
+    margin-left: 50px;
+  }
+  
+  
+  .add:hover{
+    background-color: green;
+  }
+  
+  .ingredientcolor{
+    background-color: #e3f2d4;
+  }
+  
+  .addrecipe {
+    background-color: #1f1f1f;
+  }
+  
+  .reg{
+    background-color: green;
+  }
+  
+  .white-font {
+    color: white;
+  }
+  
+  .add {
+    background-color: green;
+    border: green;
+  }
+  
+  
+  .delete{
+    background-color: red;
+  }
+  
+  .Rcontainer{
+    border-radius: 10;
+    width: 1000px;
+  }
+  
+  .spacetwo{
+    background-color: rgb(255, 0, 0);
+    border: rgb(255, 0, 0);
+    margin-left: 50px;
+  }
+  
+  
+  .card-body-add{
+    background-color: grey;
+  }
+
+  .background-Rcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .horizontal-barcreate {
+    background-image: url("https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+    background-size: cover;
+    background-position: center;
+    height: 150px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .upload-image{
+    background-color: #e3f2d4;
+    width: 250px;
+    height: 250px;
+  }
+  
+  
