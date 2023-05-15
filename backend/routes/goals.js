@@ -8,8 +8,12 @@ router.route("/create").post((request,response)=>{
     const targetCal = Number(request.body.targetCal);
     const calin = Number(request.body.calin);
     const  time = Number(request.body.time);
+      const userID = request.body.userID;
+
 
     const newGoal = new Goal({
+            userID,
+
         targetCal,
         calin,
         time
@@ -22,8 +26,10 @@ router.route("/create").post((request,response)=>{
     })
 });
 
-router.route("/").get((request,response)=>{
-    Goal.find().then((goals)=>{
+router.route("/:userID").get((request,response)=>{
+      const userID = request.params.userID;
+
+    Goal.find({userID : userID}).then((goals)=>{
         response.json(goals)
     }).catch((err)=>{
         console.log(err)
