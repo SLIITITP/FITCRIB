@@ -22,7 +22,7 @@ function Footer() {
 
                     <p className="FNFooterHead2" onClick={(e) => {
                         e.preventDefault();
-                        window.location.href = `#`;
+                        window.location.href = `/allusers`;
                     }}>ALL USERS</p>
 
                     <p className="FNFooterHead3" onClick={(e) => {

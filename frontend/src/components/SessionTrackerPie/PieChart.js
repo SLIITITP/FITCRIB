@@ -83,9 +83,9 @@ export default function PieChart() {
           label: "Sessions",
           data: completedSessions
             ? [
-                completedSessions[index],
-                totalSessionsPerDay - completedSessions[index],
-              ]
+              completedSessions[index],
+              totalSessionsPerDay - completedSessions[index],
+            ]
             : [],
           backgroundColor: [
             "rgba(54, 162, 235, 0.2)",
@@ -102,41 +102,49 @@ export default function PieChart() {
 
   return (
     <>
-    <div className="piechart">
-    <div className="piecontainer">
-      <div
-        id="carouselExampleControls"
-        className="carousel slide"
-        data-bs-ride="carousel"
-      >
-        <div className="carousel-inner">
-          {completedSessions &&
-            completedSessions.map((item, index) => {
-              
-              return (
-                <item>
-                <div key={index} className={`${"active" === index ? "active" : ""}`} style={{ width: "30%", height: "30%" }}>
-                  <p>Day {index + 1} completed sessions</p>
-                  
-                  <Pie data={data(index)} />
-                 
-                  </div>
-                  </item>
-              );
-              
-            })}
-       </div>
-        <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
-          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span className="visually-hidden">Previous</span>
-        </a>
-        <a className="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
-          <span className="carousel-control-next-icon" aria-hidden="true"></span>
-          <span className="visually-hidden">Next</span>
-        </a>
+      <div className="piechartdiv">
+        <br />
+        <h1 className="piechartheading">Progress Details</h1>
+        <br/>
+        <div className="piechart">
+          <div className="piecontainer">
+            <div
+              id="carouselExampleControls"
+              className="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div className="carousel-inner">
+                {completedSessions &&
+                  completedSessions.map((item, index) => {
+
+                    return (
+                      <item>
+                        <div key={index} className={`${"active" === index ? "active" : ""}`} style={{ width: "40%", height: "40%", border: "5px solid #99FF33", backgroundColor: "white" }}>
+                          <p className="piechartpara">Day {index + 1} completed sessions</p>
+
+                          <Pie data={data(index)} className="piechartWO" />
+                          
+                        </div>
+                        <br/>
+                      </item>
+                    );
+
+                  })}
+              </div>
+              {/* <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
+                <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span className="visually-hidden">Previous</span>
+              </a>
+              <a className="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
+                <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                <span className="visually-hidden">Next</span>
+              </a> */}
+            </div>
+          </div>
+        </div>
+        <br />
       </div>
-    </div>
-    </div>
-  </>
+
+    </>
   );
 }

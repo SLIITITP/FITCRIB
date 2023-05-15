@@ -110,8 +110,9 @@ export default function UpdateWorkoutPlan() {
   };
 
   return (
-    <>
-    <div className="UpdateWorkoutPlan">
+
+    <div className="UpdateWorkoutPlan" style={{ backgroundColor: "#1F1F1F" }}>
+      <br/>
     <div className="container-md UpdateWorkoutPlan">
       <div className="row justify-content-center UpdateWorkoutPlan">
         <div className="col-md-8 col-lg-10 col-xl-12 UpdateWorkoutPlan">
@@ -216,7 +217,8 @@ export default function UpdateWorkoutPlan() {
         </div>
         
       </div>
+      <br/>
       </div>
-    </>
+    
   );
 }
