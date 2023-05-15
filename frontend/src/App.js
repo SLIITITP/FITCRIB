@@ -46,6 +46,7 @@ import Blog from "./components/SingleBlog/Blog"
 import TBlog from "./components/SingleBlog/Tblog"
 import UpdateBlogs from "./components/BlogUpdate/Update"
 import Modal from "./components/Review/ReviewModal"
+import Approve from "./components/ApproveBlog/appArticle"
 
 //nutrition tracking
 
@@ -139,7 +140,8 @@ function App() {
             <Route exact path='/blog/:id' element={<Blog />} />
             <Route exact path='/bUpdate/:id' element={<UpdateBlogs />} />
             <Route exact path='/bReview/:id' element={<Modal />} />
-            <Route exact path='/tBlog/:id' element={<TBlog />} />
+            <Route exact path='/tBlog/:id' element={<TBlog />}/>
+            <Route exact path='/bApprove' element={<Approve/>}/>
 
             {/*Nutrition tracking*/}
             <Route exact path='/addDietPlan' element={<NTAddDietPlan />} />

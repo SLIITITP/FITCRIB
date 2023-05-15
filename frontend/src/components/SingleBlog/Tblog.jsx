@@ -1,4 +1,4 @@
-
+import "./blog.css"
 import { FaChevronLeft} from "react-icons/fa"
 import React from "react"
 import 'react-quill/dist/quill.snow.css'
@@ -62,8 +62,10 @@ totalStars =(totalStars/count).toFixed(1) //wanna chnage 1 decimal
 console.log(totalStars)
 
 return(<>
+<body id="BTbody">
 <div >
-<button className="back" onClick={()=>{history.push("/")}}><FaChevronLeft></FaChevronLeft></button></div>
+  
+<button className="back" onClick={()=>{history("/tBview")}}><FaChevronLeft></FaChevronLeft></button></div>
         <h1 className="h1">Educational Content Blog</h1>
         <br></br>
 
@@ -87,6 +89,7 @@ return(<>
                 
               </div>  
         </div>
+        </body>
     </>     
 )
 }
