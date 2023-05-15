@@ -68,7 +68,7 @@
     Search
   </button>
 </form>
-        <button onClick={() => window.location.href = '/'} className="btn btn-primary greenbutton ">Trainer</button>
+       
         <div className="row">
           {recipes.map((recipe) => (
             <div className="col-md-4 mb-4" key={recipe._id}>
