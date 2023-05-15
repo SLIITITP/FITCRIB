@@ -1,5 +1,5 @@
 import style_ViewGoal from './style_ViewGoal.css'
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect,useContext } from "react";
 import axios from "axios";
 import {
   List,
@@ -20,6 +20,8 @@ import { Link } from "react-router-dom";
 import { Bar } from 'react-chartjs-2';
 import 'chart.js/auto';
 import jsPDF from 'jspdf';
+import UserContext from '../ContextComponent/ContextComponent';
+
 
 
 
@@ -34,6 +36,10 @@ export default function ViewGoal() {
   const [targetCal, setTargetCal] = useState("");
   const [calin, setCalin] = useState("");
   const [time, setTime] = useState("");
+
+   const { user } = useContext(UserContext);
+  const userID = user._id
+
 
   //Analysis nutrition goal with bar chart
   const chartData = {
@@ -63,10 +69,10 @@ export default function ViewGoal() {
   //Delete nutrition goal
   const handleDelete = (goalId) => {
     axios
-      .delete(`http://localhost:2080/goal/delete/${goalId}`)
+      .delete(`http://localhost:8070/goal/delete/${goalId}`)
       .then(() => {
         alert("Your Goal Is Deleted");
-        window.location.reload("http://localhost:2080/goal/");
+        window.location.reload("http://localhost:8070/goal/");
       })
       .catch((err) => {
         alert(err.message);
@@ -101,7 +107,7 @@ export default function ViewGoal() {
     
     if(targetCal <=calin){
       axios
-      .put(`http://localhost:2080/goal/update/${selectedGoal._id}`, updatedGoal)
+      .put(`http://localhost:8070/goal/update/${selectedGoal._id}`, updatedGoal)
       .then(() => {
         alert("Congratulations!");
         window.location.reload("");
@@ -127,7 +133,7 @@ if(targetCal <=calin){
   useEffect(() => {
     function getGoals() {
       axios
-        .get("http://localhost:2080/goal/")
+        .get(`http://localhost:8070/goal/${userID}`)
         .then((res) => {
           console.log(res.data);
           setGoals(res.data);
@@ -139,35 +145,44 @@ if(targetCal <=calin){
     getGoals();
   }, []);
 
- //Goal Report
-const generatePDF = () => {
-  const doc = new jsPDF();
-  doc.setFontSize(18);
-  doc.text("Nutrition Goal Report", 55, 13);
-  let y = 20;
-
-  goals.forEach((goal) => {
-    doc.setFontSize(14);
-    doc.setFont("helvetica", "bold"); 
-    doc.text(`Target Calories: ${goal.targetCal} cal`, 20, y + 15);
-
-    doc.setFont("helvetica", "normal"); 
-    doc.text(`Calories In: ${goal.calin} cal`, 20, y + 25);
-    doc.text(`During: ${goal.time} Week`, 20, y + 35);
-    doc.text(`Created At: ${format(new Date(goal.createdAt), "dd/MM/yyyy")}`, 20, y + 45);
-
-    doc.setDrawColor(0); 
-    doc.setLineWidth(0.5); 
-
+  const generatePDF = () => {
+    const doc = new jsPDF();
+    doc.setFontSize(18);
+    doc.text("Nutrition Goal Report", 80, 20);
+    let y = 40;
   
-    doc.rect(8, y + 8, 80, 55, "S");
-
-    y += 80;
-  });
-
-  doc.save('my_report.pdf');
-}
-
+    goals.forEach((goal) => {
+      doc.setFontSize(14);
+      doc.setFont("helvetica", "bold"); 
+      doc.text(`Target Calories: ${goal.targetCal} cal`, 80, y);
+  
+      doc.setFont("helvetica", "normal"); 
+      doc.text(`Calories In: ${goal.calin} cal`, 80, y + 10);
+      doc.text(`During: ${goal.time} Week`, 80, y + 20);
+      doc.text(`Created At: ${format(new Date(goal.createdAt), "dd/MM/yyyy")}`, 80, y + 30);
+  
+      doc.setDrawColor(0); 
+      doc.setLineWidth(0.5); 
+  
+      doc.rect(70, y - 5, 80, 40, "S");
+  
+      y += 50;
+    });
+  
+    // Add watermark text
+    const watermarkText = "FITCRIB";
+    const textWidth = doc.getStringUnitWidth(watermarkText) * doc.internal.getFontSize() / doc.internal.scaleFactor;
+    const textHeight = doc.internal.getFontSize();
+    const x = (doc.internal.pageSize.getWidth() - textWidth) / 2;
+    const watermarkY = doc.internal.pageSize.getHeight() - textHeight - 10;
+    doc.setTextColor(200);
+    doc.setFontSize(48);
+    doc.text(watermarkText, x, watermarkY);
+  
+    doc.save('nutrition_report.pdf');
+  }
+  
+  
 
 
   return (
@@ -220,7 +235,7 @@ const generatePDF = () => {
         <Button type="button" class="btn btn-warning" onClick={handleUpdate}>
           collect
         </Button>
-          <Link to="/goalset/">
+          <Link to="/goalSetting/">
         <button type="button" class="btn btn-success">
           Back
         </button>
@@ -238,7 +253,7 @@ const generatePDF = () => {
     {editMode ? (
       <div> </div>
     ) : (
-      <Link to="/goalset/">
+      <Link to="/goalSetting/">
         <button type="button" class="btn btn-success">
           Back
         </button>

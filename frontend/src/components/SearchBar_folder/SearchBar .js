@@ -15,7 +15,7 @@ function SearchBar() {
   useEffect(() => {
     const fetchSearchResults = async () => {
       try {
-        const response = await axios.get(`http://localhost:2080/dietplan/search/${searchText}`);
+        const response = await axios.get(`http://localhost:8070/dietplan/search/${searchText}`);
         setSearchResults(response.data);
         setError(false); // Reset error state if search is successful
       } catch (err) {
