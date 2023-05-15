@@ -15,7 +15,7 @@ export default function Goalsetting(){
   const handleSubmit = (event) => {
     event.preventDefault();
     axios
-      .post("http://localhost:2080/goal/create", { targetCal, calin, time })
+      .post("http://localhost:2080/goal/create", {userID, targetCal, calin, time })
       .then((res) => {
         alert("Successful")
         console.log(res.data);
