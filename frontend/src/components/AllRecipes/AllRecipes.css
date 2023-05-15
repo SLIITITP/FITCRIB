@@ -1,0 +1,145 @@
+ .AllRecipePage .search{
+    background-color: green;
+    border: 1px solid #ccc;
+    box-shadow: 5px 5px 10px #99ff33;
+    border: green;
+    margin-right: 20px;
+  
+  }
+
+  .AllRecipePage .redbutton{
+    background-color: rgb(255, 0, 0);
+    border: rgb(255, 0, 0);
+    margin-left: 50px;
+  }
+
+  .AllRecipePage .greenbutton{
+    background-color: green;
+    border: green;
+    margin-left: 50px;
+  }
+
+
+  .AllRecipePage .spacetwo{
+    background-color: rgb(255, 0, 0);
+    border: rgb(255, 0, 0);
+    margin-left: 50px;
+  }
+
+  
+  .AllRecipePage .my-card{
+    background-color: #e3f2d4;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 4px #99ff33;
+    border-radius: 2px;
+  }
+
+  .AllRecipePage .recipecard{
+    border: 1px solid #ccc;
+    box-shadow: 5px 5px 10px #99ff33;
+  }
+
+  
+  .AllRecipePage .card-body-add{
+    background-color: grey;
+  }
+  
+  .AllRecipePage .my-cardaddtoplate{
+    background-color: #e3f2d4;
+    border: 1px solid #ccc;
+    box-shadow: 5px 5px 10px #99ff33;
+  }
+
+  
+  
+  .AllRecipePage .space{
+    margin-left: 50px;
+    background-color: green;
+    border: green;
+  }
+  
+  
+  .AllRecipePage .add:hover{
+    background-color: green;
+  }
+  
+  .AllRecipePage .ingredientcolor{
+    background-color: #e3f2d4;
+  }
+  
+  .AllRecipePage {
+    background-color: #1f1f1f;
+  }
+  
+  .AllRecipePage .reg{
+    background-color: green;
+  }
+  
+  .AllRecipePage .white-font {
+    color: white;
+  }
+  
+  .AllRecipePage .add {
+    background-color: green;
+    border: green;
+  }
+  
+  
+  .AllRecipePage .delete{
+    background-color: red;
+  }
+  
+  .AllRecipePage .container{
+    border-radius: 10;
+  }
+  
+  
+  .AllRecipePage .card-body-add{
+    background-color: grey;
+  }
+  
+
+  .AllRecipePage .create{
+    float: right;
+    margin-right: 20px;
+  }
+
+  .AllRecipePage .upload-image1{
+    background-color: #e3f2d4;
+    width: 350px;
+    height: 250px;
+  }
+
+  .AllRecipePage .btn-primary.greenbutton:active,
+  .AllRecipePage .btn-primary.greenbutton:focus {
+    outline: none;
+    box-shadow: none;
+    background-color: green !important;
+    border-color: green !important;
+  }
+  
+  .AllRecipePage .btn-primary.create:active,
+  .AllRecipePage .btn-primary.create:focus {
+    outline: none;
+    box-shadow: none;
+    background-color: green !important;
+    border-color: green !important;
+  }
+
+  .AllRecipePage .btn-primary.space,
+  .AllRecipePage .btn-primary.space {
+    outline: none;
+    box-shadow: none;
+    background-color: green !important;
+    border-color: green !important;
+  }
+
+  .AllRecipePage .btn-primary.search,
+  .AllRecipePage .btn-primary.search {
+    outline: none;
+    box-shadow: none;
+    background-color: green !important;
+    border-color: green !important;
+  }
+
+  
