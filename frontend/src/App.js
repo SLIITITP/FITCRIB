@@ -60,7 +60,13 @@ import NTMain from './components/Main_folder/Main';
 // import NTSearchGoals from './components/SearchGoal_folder/SearchGoal';
 import NTEditDietPlan from './components/EditDietPlan_folder/EditDietPlan';
 
-
+//recipe management
+import AddRecipe from './components/addrecipe/addrecipe';
+import AllRecipes from './components/AllRecipes/AllRecipes';
+import RecipeDetails from './components/RecipeDetails/RecipeDetails';
+import UpdateRecipe from './components/UpdateRecipe/UpdateRecipe';
+import RUVAComponent from './components/RUVA/RUVA';
+import RURDComponent from './components/RURD/RURD';
 
 import NavigationBarB from './components/NavigationBarB/NavigationBarB'
 import React, { useState, useEffect } from "react";
@@ -147,6 +153,13 @@ function App() {
             {/* <Route exact path='/searchGoal' element={<NTSearchGoals />} /> */}
             <Route exact path='/editDietplan/:id' element={<NTEditDietPlan />} />
 
+            {/*Recipe Management */}
+            <Route path='/allrecipes' element={<AllRecipes />} />
+            <Route path='/addRecipe' element={<AddRecipe />} />
+            <Route path='/recipe/:id' element={<RecipeDetails />} />
+            <Route path='/updateRecipe/:id' element={<UpdateRecipe />} />
+            <Route path='/RUVA' element={<RUVAComponent />} />
+            <Route path='/RURD/recipe/:id' element={<RURDComponent />} />
           </Routes>
           {user?.UserType === 'Admin' && <AdminFooter />}
 
