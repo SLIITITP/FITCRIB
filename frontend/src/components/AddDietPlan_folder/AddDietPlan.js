@@ -1,11 +1,13 @@
 import style_AddDietPlan from "./style_AddDietPlan.css";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { List, ListItem, ListItemText, ListItemSecondaryAction, IconButton, Card, CardContent, Typography, CardActions, Button } from "@mui/material";
 import { Delete } from "@mui/icons-material";
 import formatDistanceToNow from "date-fns/formatDistanceToNow";
 import EditDietPlan from '../EditDietPlan_folder/EditDietPlan';
+import UserContext from '../ContextComponent/ContextComponent';
+
 
 
 
@@ -21,17 +23,23 @@ export default function AddDietPlan(){
   const [dietplans, setDietplans] = useState(null);
   const [deleteId, setDeleteId] =useState("");
 
+  const { user } = useContext(UserContext);
+  const userID = user._id
+
+
+
   function sendData(e){
     e.preventDefault();
 
     const newDietplan = {
+      userID,
       mealName,
       dayofMeal,
       goal,
       mealplan
     };
 
-    axios.post("http://localhost:2080/dietplan/add",newDietplan).then(()=>{
+    axios.post("http://localhost:8070/dietplan/add",newDietplan).then(()=>{
       alert("Your Dirt Plan  Is Added")
       window.location.reload("http://localhost:2080/dietplan/");
 

@@ -4,6 +4,11 @@ const Schema = mongoose.Schema;
 const goalSchema = new Schema({
         //  fields...
 
+        userID: {
+          type: String,
+          required: true,
+        },
+      
   
     targetCal: {
       type: Number,
