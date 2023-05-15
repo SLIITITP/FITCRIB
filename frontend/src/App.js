@@ -48,7 +48,7 @@ import UpdateBlogs from "./components/BlogUpdate/Update"
 import Modal from "./components/Review/ReviewModal"
 
 
- 
+
 
 import NavigationBarB from './components/NavigationBarB/NavigationBarB'
 import React, { useState, useEffect } from "react";
@@ -72,62 +72,65 @@ function App() {
 
 
   return (
-    
+
     <Router>
       <UserContext.Provider value={{ user, setUser }}>
-      <div className="App">
-      
-        {user?.UserType ==='Registered User' ? <NavigationBarB/> : <AdminHeader/>}
-        <Routes>
-          {/* <Route path="/" /> */}
-          {/* <Route path = "/CreateWorkout" element = {<CreateWorkoutMain/>}/> */}
-          <Route path="/MyWorkouts" element={<MyWorkouts />} />
-          <Route path="/SingleWorkout/:id" element={<SingleWorkout />} />
-          <Route path="/UpdateWorkout/:id" element={<UpdateWorkoutPlan />} />
-          <Route path="/NewWorkoutPlan" element={<NewWorkoutPlan />} />
-          <Route path="/Session/:id/:dayIndex" element={<WorkoutSession />} />
-          <Route path="/SessionDetails/:id/:sessionNumber/:day" element={<SessionDetails />} />
+        <div className="App">
 
-          {/* user management */}
-          <Route path='' element={<Index />}/>
-          <Route path='/add' element={<Adduser />} />
-          <Route path='/addpayment' element={<Addpayment />} />
-          <Route path='/login' element={<Login />} />
-          <Route path='/home/:id' element={<Home />} />
-          <Route path='/users' element={<Other_users />} />
-          <Route path='/profile/:id' element={<ViewProfile />} />
-          <Route path='/update/:id' element={<Update />} />
-          <Route path='/seller_home/:id' element={<Seller_home />} />
-          <Route path='/trainer_home/:id' element={<Trainer_home />} />
-          <Route path='/adminHome' element={<AdminHome/>}/>
-          <Route path='/allusers' element={<All_users />} />
-          <Route path='/report' element={<Generate_Report />} />
+          {user?.UserType === 'Registered User' ? <NavigationBarB /> : <AdminHeader />}
+          <Routes>
+            {/* <Route path="/" /> */}
+            {/* <Route path = "/CreateWorkout" element = {<CreateWorkoutMain/>}/> */}
+            <Route path="/MyWorkouts" element={<MyWorkouts />} />
+            <Route path="/SingleWorkout/:id" element={<SingleWorkout />} />
+            <Route path="/UpdateWorkout/:id" element={<UpdateWorkoutPlan />} />
+            <Route path="/NewWorkoutPlan" element={<NewWorkoutPlan />} />
+            <Route path="/Session/:id/:dayIndex" element={<WorkoutSession />} />
+            <Route path="/SessionDetails/:id/:sessionNumber/:day" element={<SessionDetails />} />
 
-          {/* financial management */}
-            <Route path='/finance' element={<FNDashboard/>}/>
-            <Route path='/addTransaction' element={<CreateTransaction/>}/>
-            <Route path='/viewTransaction' element={<ViewAllTransaction/>}/>
-            <Route path='/updateTransaction/:id' element={<UpdateTransaction/>}/>
-            <Route path='/financialperformance' element={<FinancialP/>}/>
-            <Route path='/calculate' element={<Calculate/>}/>
-            <Route path="/alluserpaymentsFN" element={<UserPaymentsViewAll/>}/>
-            <Route path="/fnfaq" element={<FNFaq/>}/>
-        
+            {/* user management */}
+            <Route path='' element={<Index />} />
+            <Route path='/add' element={<Adduser />} />
+            <Route path='/addpayment' element={<Addpayment />} />
+            <Route path='/login' element={<Login />} />
+            <Route path='/home/:id' element={<Home />} />
+            <Route path='/users' element={<Other_users />} />
+            <Route path='/profile/:id' element={<ViewProfile />} />
+            <Route path='/update/:id' element={<Update />} />
+            <Route path='/seller_home/:id' element={<Seller_home />} />
+            <Route path='/trainer_home/:id' element={<Trainer_home />} />
+            <Route path='/adminHome' element={<AdminHome />} />
+            <Route path='/allusers' element={<All_users />} />
+            <Route path='/report' element={<Generate_Report />} />
+
+            {/* financial management */}
+            <Route path='/finance' element={<FNDashboard />} />
+            <Route path='/addTransaction' element={<CreateTransaction />} />
+            <Route path='/viewTransaction' element={<ViewAllTransaction />} />
+            <Route path='/updateTransaction/:id' element={<UpdateTransaction />} />
+            <Route path='/financialperformance' element={<FinancialP />} />
+            <Route path='/calculate' element={<Calculate />} />
+            <Route path="/alluserpaymentsFN" element={<UserPaymentsViewAll />} />
+            <Route path="/fnfaq" element={<FNFaq />} />
+
             {/*Blog Management*/}
- <Route exact path='/tBView' element={<TView/>}/>
- <Route exact path='/Bview' element={<BView/>}/>
- <Route exact path='/Bcreate' element={<BCreate/>}/>
- <Route exact path='/myBlogs' element={<MyBlogs/>}/>
- <Route exact path='/blog/:id' element={<Blog/>}/>
- <Route exact path='/bUpdate/:id' element={<UpdateBlogs/>}/>
- <Route exact path='/bReview/:id' element={<Modal/>}/>
- <Route exact path='/tBlog/:id' element={<TBlog/>}/>
+            <Route exact path='/tBView' element={<TView />} />
+            <Route exact path='/Bview' element={<BView />} />
+            <Route exact path='/Bcreate' element={<BCreate />} />
+            <Route exact path='/myBlogs' element={<MyBlogs />} />
+            <Route exact path='/blog/:id' element={<Blog />} />
+            <Route exact path='/bUpdate/:id' element={<UpdateBlogs />} />
+            <Route exact path='/bReview/:id' element={<Modal />} />
+            <Route exact path='/tBlog/:id' element={<TBlog />} />
 
-        
-        
-        </Routes>
-        
-      </div>
+
+
+
+
+          </Routes>
+          {user?.UserType === 'Admin' && <AdminFooter />}
+
+        </div>
       </UserContext.Provider>
     </Router>
   );
