@@ -1,0 +1,89 @@
+.spacetwo{
+    background-color: rgb(255, 0, 0);
+    border: rgb(255, 0, 0);
+    margin-left: 50px;
+  }
+
+  .space {
+    margin-left: 50px;
+    background-color: green;
+    border: green;
+  }
+  
+  
+  .my-card{
+    background-color: #e3f2d4;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 4px #99ff33;
+  }
+  
+  .add:hover{
+    background-color: green;
+  }
+  
+  .ingredientcolor{
+    background-color: #e3f2d4;
+  }
+  
+  .RRURD {
+    background-color: #1f1f1f;
+  }
+  
+  .reg{
+    background-color: green;
+  }
+  
+  .white-font {
+    color: white;
+  }
+  
+  .add {
+    background-color: green;
+    border: green;
+  }
+
+  
+  .delete{
+    background-color: red;
+  }
+  
+  .RRURDcontainer{
+    border-radius: 10;
+    margin-left: 10px;
+  }
+  
+  
+  
+  .search{
+    background-color: green;
+    border: 1px solid #ccc;
+    box-shadow: 5px 5px 10px #99ff33;
+    border: green;
+  
+  }
+  
+  .recipecard{
+    border: 1px solid #ccc;
+    box-shadow: 5px 5px 10px #99ff33;
+  }
+  
+  .card-body-add{
+    background-color: grey;
+  }
+  
+  .my-cardaddtoplate{
+    background-color: #e3f2d4;
+    border: 1px solid #ccc;
+    box-shadow: 5px 5px 10px #99ff33;
+  }
+
+
+  .horizontal-barrurd {
+    background-image: url("https://images.unsplash.com/photo-1613514785940-daed07799d9b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+    background-size: cover;
+    background-position: center;
+    height: 150px; /* Adjust the height as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }

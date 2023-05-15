@@ -1,0 +1,28 @@
+.goaltext{
+    color: #99ff33;
+}
+.background{
+   background-color: #2b3028;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
+    
+    width: 80%;
+    text-align: center;
+    margin: auto;
+    margin-top: 10px;
+}
+.goal-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .goal-buttons button {
+    margin-right: 1rem;
+  }
+  
+  .goal-buttons button:hover {
+    background-color: #9eb229;
+  }
+  

@@ -46,9 +46,28 @@ import Blog from "./components/SingleBlog/Blog"
 import TBlog from "./components/SingleBlog/Tblog"
 import UpdateBlogs from "./components/BlogUpdate/Update"
 import Modal from "./components/Review/ReviewModal"
+import Approve from "./components/ApproveBlog/appArticle"
 
+//nutrition tracking
 
+import NTAddDietPlan from './components/AddDietPlan_folder/AddDietPlan';
+import NTAllDietPlans from './components/AllDietPlans_folder/AllDietPlans';
+import NTAppbmi from './components/Appbmi_folder/Appbmi';
+import SearchBar from './components/SearchBar_folder/SearchBar ';
+import NTGoalUpdate from './components/GoalUpdate_folder/GoalUpdate'
+import NTGoalsetting from './components/Goalsetting_folder/Goalsetting';
+import NTViewGoal from './components/ViewGoal_folder/ViewGoal';
+import NTMain from './components/Main_folder/Main';
+// import NTSearchGoals from './components/SearchGoal_folder/SearchGoal';
+import NTEditDietPlan from './components/EditDietPlan_folder/EditDietPlan';
 
+//recipe management
+import AddRecipe from './components/addrecipe/addrecipe';
+import AllRecipes from './components/AllRecipes/AllRecipes';
+import RecipeDetails from './components/RecipeDetails/RecipeDetails';
+import UpdateRecipe from './components/UpdateRecipe/UpdateRecipe';
+import RUVAComponent from './components/RUVA/RUVA';
+import RURDComponent from './components/RURD/RURD';
 
 import NavigationBarB from './components/NavigationBarB/NavigationBarB'
 import React, { useState, useEffect } from "react";
@@ -121,12 +140,28 @@ function App() {
             <Route exact path='/blog/:id' element={<Blog />} />
             <Route exact path='/bUpdate/:id' element={<UpdateBlogs />} />
             <Route exact path='/bReview/:id' element={<Modal />} />
-            <Route exact path='/tBlog/:id' element={<TBlog />} />
+            <Route exact path='/tBlog/:id' element={<TBlog />}/>
+            <Route exact path='/bApprove' element={<Approve/>}/>
 
+            {/*Nutrition tracking*/}
+            <Route exact path='/addDietPlan' element={<NTAddDietPlan />} />
+            <Route exact path='/allDietPlans' element={<NTAllDietPlans />} />
+            <Route exact path='/appBMI' element={<NTAppbmi />} />
+            <Route exact path='/dietSearchBar' element={<SearchBar />} />
+            <Route exact path='/updateGoal' element={<NTGoalUpdate />} />
+            <Route exact path='/goalSetting' element={<NTGoalsetting />} />
+            <Route exact path='/viewGoal' element={<NTViewGoal />} />
+            <Route exact path='/mainNT' element={<NTMain />} />
+            {/* <Route exact path='/searchGoal' element={<NTSearchGoals />} /> */}
+            <Route exact path='/editDietplan/:id' element={<NTEditDietPlan />} />
 
-
-
-
+            {/*Recipe Management */}
+            <Route path='/allrecipes' element={<AllRecipes />} />
+            <Route path='/addRecipe' element={<AddRecipe />} />
+            <Route path='/recipe/:id' element={<RecipeDetails />} />
+            <Route path='/updateRecipe/:id' element={<UpdateRecipe />} />
+            <Route path='/RUVA' element={<RUVAComponent />} />
+            <Route path='/RURD/recipe/:id' element={<RURDComponent />} />
           </Routes>
           {user?.UserType === 'Admin' && <AdminFooter />}
 

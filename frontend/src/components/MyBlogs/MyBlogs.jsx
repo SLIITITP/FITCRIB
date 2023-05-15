@@ -1,4 +1,4 @@
-
+import "./myBlogs.css"
 import { FaChevronLeft } from "react-icons/fa"
 import React from "react"
 import axios from "axios"
@@ -31,10 +31,9 @@ const handleDelete = async (Id,Uname)=>{
                    
                  })
            console.log(response)
-        }
-        if(redirect.ok){
+           if(response.ok){
             setRedirect(true)
-            return history.push("/tBView")
+        }
         }
         
           }
@@ -43,17 +42,21 @@ const handleDelete = async (Id,Uname)=>{
        }
     
 }
+if(redirect){
+    return history.push("/myBlogs")
+}
 
 return(<>
+<body className="Bbody">
 <div>
-<button className="back" onClick={()=>{history.push("/tBView")}}><FaChevronLeft></FaChevronLeft></button></div>
-<h1 id="h1">My Blogs</h1>
+<button className="back" onClick={()=>{history("/tBView")}}><FaChevronLeft></FaChevronLeft></button></div>
+<h1 id="h4">My Blogs</h1>
 <br></br>
  <div id="vCards">
 {blog.map((B,k)=>{
 return(
         <div key={k} id="card" >
-            <div key={k}className="container" id="column" > 
+            <div key={k}className="Bcontainer" id="column" > 
                 <img id="imgCard" src={'http://localhost:8070/'+B.image} alt="P 1" width="100%"></img>
                 <p >Heading:{B.heading} </p>
                 <p >Username: {B.username}</p>
@@ -63,7 +66,7 @@ return(
                 <br></br>
                 <p>Date & Time: {B.createdAt}</p>
 
-                <button id="update" onClick={()=>{history.push("/bUpdate/"+B._id)}}>Update</button>
+                <button id="update" onClick={()=>{history("/bUpdate/"+B._id)}}>Update</button>
                 <button id="delete" onClick={()=>handleDelete(B._id,B.username)}>Delete</button>
 
             </div>
@@ -71,6 +74,7 @@ return(
 )       
 })}
 </div>
+</body>
 </>
 )
 }
