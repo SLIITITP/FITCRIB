@@ -3,6 +3,12 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 const dietSchema = new Schema({
   // fields...
+
+  userID: {
+    type: String,
+    required: true,
+  },
+
   mealName: {
     type: String,
     required: true,

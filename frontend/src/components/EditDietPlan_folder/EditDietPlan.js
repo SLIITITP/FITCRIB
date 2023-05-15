@@ -35,7 +35,7 @@ export default function EditDietPlan({ dietplan, onSave, onCancel }) {
     const updatedDietplan = { ...dietplan };
     updatedDietplan.mealplan = mealplan;
     axios
-      .put(`http://localhost:2080/dietplan/update/${dietplan._id}`, updatedDietplan)
+      .put(`http://localhost:8070/dietplan/update/${dietplan._id}`, updatedDietplan)
       .then(() => {
         // Update the dietplans state with the updated diet plan
         setDietplans(prevState => prevState.map((dp) => dp._id === updatedDietplan._id ? updatedDietplan : dp));
@@ -43,7 +43,7 @@ export default function EditDietPlan({ dietplan, onSave, onCancel }) {
         setEditId(updatedDietplan._id);
         setEditedDietplan(updatedDietplan);
         alert("Updated Your Diet Plan")
-        window.location.reload(`http://localhost:2080/dietplan/get/${dietplan._id}`);
+        window.location.reload(`http://localhost:8070/dietplan/get/${dietplan._id}`);
       })
       .catch((err) => {
         alert(err.message);
