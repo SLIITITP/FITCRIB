@@ -2,24 +2,38 @@
 
 #Bbody{
   background-color: #2e2e2e;
+  padding-bottom: 50px;
 }
 #Bform{
   background-color: #E1F1C1;
   border-radius: 15px; 
-  margin-left: 40px;
-  margin-right: 40px;
+  margin-left: 90px;
+  margin-right: 90px;
   padding-top: 20px;
 }
 .Blabel{
     font-size: 1.2em;
     margin-left: 30px;
+    margin-bottom: 10px;
+    font-family: 'Poppins',serif;
 
 }
-.sub,input,textarea,select{
+.sub,#Binput,textarea,select{
     margin-left: 30px;
+    margin-bottom: 20px;
+}
+.back{
+  position: absolute;
+  margin-top: 10px;
+  margin-left: 4px;
+  color:#99FF33;
+  font-size: 35px;
+  background-color:#0000;
+  border-color: #0000;
 }
 
 #bH1{
+  padding-top: 25px;
   margin-left: 40px;
   font-family: 'Poppins',serif;
   font-size:2em;
@@ -74,7 +88,7 @@ button{
   color: darkgreen;
   background-color: #d5fa8b;
 }
-select{
+#selectItems{
   border-radius: 15em;
   border-width: 0.8px;
   padding-left: 10px;
@@ -95,4 +109,8 @@ select:hover{
 }
 .back{
   margin-right: 10px;
+}
+#bOption
+{
+  background-color: #99FF33;
 }

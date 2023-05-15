@@ -1,4 +1,4 @@
-
+import "./Bupdate.css"
 import React from "react"
 import 'react-quill/dist/quill.snow.css'
 import { FaChevronLeft } from "react-icons/fa"
@@ -75,32 +75,33 @@ if(redirect){
   }
     
     return(<>
-    <div><button className="back" onClick={()=>{history.push("/tBView")}}><FaChevronLeft></FaChevronLeft></button></div>
+    <body id="Bbody">
+    <div><button className="back" onClick={()=>{history("/tBView")}}><FaChevronLeft></FaChevronLeft></button></div>
         
-        <h1>Update Blog Page</h1><br></br>
+        <h1 className="bH1">Update Blog Page</h1><br></br>
         
     <form onSubmit={handleUpdate} id="Bform">
      <br></br> 
      
-    <label>BID</label>  <br></br>
+    <label className="Blabel">BID</label>  <br></br>
     <input type="text" id="Binput" value={id} readOnly/><br></br>
-    <label>Username</label>  <br></br>
+    <label className="Blabel">Username</label>  <br></br>
     <input type="username" id="Binput" placeholder={"Username"} value={username}  onChange={event=> setName(event.target.value)} /><br></br>
-    <label>Email</label> <br></br> 
+    <label className="Blabel">Email</label> <br></br> 
     <input type="email" id="Binput" placeholder={"Email"} value={email} onChange={event=> setEmail(event.target.value)} /><br></br>
-    <label>Heading</label>  <br></br>
+    <label className="Blabel">Heading</label>  <br></br>
     <input type="heading" id="Binput" placeholder={"Blog Heading"} value={heading}  onChange={event=> setHeading(event.target.value)} /><br></br>
     <br></br>
-    <label>Category</label>  <br></br>
+    <label className="Blabel">Category</label>  <br></br>
     <select name="category" placeholder="select category" onChange={event => setCategory(event.target.value)}>
     <option value="Phisic">Phisic</option>
     <option value="Health">Health</option>
     <option value="Diet">Diet</option>
     <option value="Exercises">Exercise</option>
   </select><br></br>
-    <label >Image</label><br></br>
-    {<img src={'http://localhost:8070/'+image} width="20%" height="15%"></img>}
-    <input type="file"  name="image" className="imgStyle"
+    <label className="Blabel">Image</label><br></br>
+    {<img className="imgSize" alt="pic" src={'http://localhost:8070/'+image} width="20%" height="15%"></img>}
+    <input type="file"  name="image" className="imgStyle2"
     onChange={ev => setFiles(ev.target.files)}/><br></br>
     
     <Editor theme="snow" 
@@ -109,6 +110,7 @@ if(redirect){
     <button className="update" type="submit">update</button>
     <button className="cancel"  onClick={()=>{history.push("/")}}>Cancel</button>
      </form>
+     </body>
         </>
     )
     

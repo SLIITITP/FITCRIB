@@ -1,4 +1,4 @@
-
+import "./Bmodal.css"
 import React ,{ useRef,useState} from "react"
 
 import { FaStar } from "react-icons/fa";
@@ -54,18 +54,18 @@ function Modal(props) {
                 <div className="model-header">
                 </div>
                 <div className="modal-body">
-                <form onSubmit={addReview}>
-                        <div className="d1"><label>Heading</label>
-                        <p>{heading}</p></div>
-                        <label>Rating</label><br></br>
+                <form className="ReviewForm" onSubmit={addReview}>
+                        <div className="d1"><h2>Heading</h2>
+                        <p className="Rtext">{heading}</p></div>
+                        <label className="Rtext">Rating</label><br></br>
                         <div className="center">
                           {[...Array(5)].map((star,i)=>{
                           
                             const ratingValue = i + 1
                             
                              return (
-                              <label>
-                              <input type="radio" name="stars"  value={ratingValue} onClick={event=> setStars(event.target.value)}></input>
+                              <label className="Rtext">
+                              <input className="Rinput" type="radio" name="stars"  value={ratingValue} onClick={event=> setStars(event.target.value)}></input>
 
                             <FaStar className="star" size={30} color={ratingValue <=(hover || stars)? "orange" : "#a3a3a3" }
                              onMouseEnter={()=>setHover(ratingValue)}
@@ -74,10 +74,10 @@ function Modal(props) {
                           )})}
 
                       </div>
-                      <label>The Rating is {stars}</label><br></br>
+                      <label className="Rtext">The Rating is {stars}</label><br></br>
                        
-                        <label>Review</label><br></br>
-                        <textarea name="comment" value={comment}  onChange={event=> setComment(event.target.value)}></textarea><br></br>
+                        <label className="Rtext">Review</label><br></br>
+                        <textarea className="Rinput" name="comment" value={comment}  onChange={event=> setComment(event.target.value)}></textarea><br></br>
                                 
                         <button type="submit" className="add">Add</button>
                         <br></br>
