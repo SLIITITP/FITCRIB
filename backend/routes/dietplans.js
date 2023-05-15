@@ -44,12 +44,15 @@ router.route("/generate-pdf/:id").get(async (request, response) => {
   });
 // Route for adding new diet plan
 router.route("/add").post((request,response)=>{
+  const userID = request.body.userID;
+
   const mealName = request.body.mealName;
   const dayofMeal = request.body.dayofMeal;
   const goal = request.body.goal;
   const mealplan = request.body.mealplan;
 
   const newDietplan = new Dietplan({
+    userID,
     mealName,
     dayofMeal,
     goal,
@@ -64,8 +67,10 @@ router.route("/add").post((request,response)=>{
 });
 
 // Route for getting all diet plans
-router.route("/").get((request,response)=>{
-  Dietplan.find().then((dietplans)=>{
+router.route("/:userID").get((request,response)=>{
+  const userID = request.params.userID;
+
+  Dietplan.find({userID : userID}).then((dietplans)=>{
     response.json(dietplans);
   }).catch((err)=>{
     console.log(err);
@@ -73,7 +78,7 @@ router.route("/").get((request,response)=>{
 });
 
 
-http://localhost:2080/dietplan/update/
+http://localhost:8070/dietplan/update/
 router.route("/update/:id").put(async(request,response)=>{
     let dietplanId = request.params.id;
     const {mealName, dayofMeal,goal,mealplan} = request.body;
@@ -96,7 +101,7 @@ router.route("/update/:id").put(async(request,response)=>{
 
     })
 })
-http://localhost:2080/dietplan/delete/
+http://localhost:8070/dietplan/delete/
 
 router.route("/delete/:id").delete(async (request,response)=>{
     let dietplanId = request.params.id;

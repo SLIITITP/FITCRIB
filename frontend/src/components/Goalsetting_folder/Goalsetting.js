@@ -1,8 +1,10 @@
 import style_Goalsetting from './style_Goalsetting.css';
 import axios from "axios";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import React from "react";
 import { Link } from "react-router-dom";
+import UserContext from '../ContextComponent/ContextComponent';
+
 
 export default function Goalsetting(){
 
@@ -12,10 +14,15 @@ export default function Goalsetting(){
   const [calin, setCalin] = useState("");
   const [time, setTime] = useState("");
 
+  const { user } = useContext(UserContext);
+  const userID = user._id
+
+  
+
   const handleSubmit = (event) => {
     event.preventDefault();
     axios
-      .post("http://localhost:2080/goal/create", { targetCal, calin, time })
+      .post("http://localhost:8070/goal/create", { userID,targetCal, calin, time })
       .then((res) => {
         alert("Successful")
         console.log(res.data);

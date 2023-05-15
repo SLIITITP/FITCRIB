@@ -1,6 +1,6 @@
 import style_AllDietPlan from './style_AllDietPlan.css'
 // import './CSS/style_Footer.css';
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import { List, ListItem, ListItemText, ListItemSecondaryAction, IconButton, Card, CardContent, Typography, CardActions, Button, TextField } from "@mui/material";
 import { Delete } from "@mui/icons-material";
@@ -12,6 +12,9 @@ import 'react-toastify/dist/ReactToastify.css';
 import { Link } from 'react-router-dom';
 import SearchBar from "../SearchBar_folder/SearchBar ";
 import jsPDF from "jspdf";
+
+import UserContext from '../ContextComponent/ContextComponent';
+
 
 
 
@@ -31,6 +34,10 @@ export default function AllDietPlans() {
   const [searchResults, setSearchResults] = useState([]);
   const [error, setError] = useState(false);
 
+  const { user } = useContext(UserContext);
+  const userID = user._id
+
+
   
 
 
@@ -46,7 +53,7 @@ export default function AllDietPlans() {
       .delete(`http://localhost:2080/dietplan/delete/${dietplanId}`)
       .then(() => {
         window.confirm("Are You Sure To Delete The Diet Plan");
-        window.location.reload("http://localhost:2080/dietplan/");
+        window.location.reload("http://localhost:8070/dietplan/");
       })
       .catch((err) => {
         alert(err.message)
@@ -65,7 +72,7 @@ export default function AllDietPlans() {
       .put(`http://localhost:2080/dietplan/update/${dietplan._id}`, updatedDietplan)
       .then(() => {
         setSelectedDietplan(updatedDietplan);
-        window.location.reload("http://localhost:2080/dietplan");
+        window.location.reload("http://localhost:8070/dietplan");
       })
       .catch((err) => {
         alert(err.message);
@@ -87,7 +94,7 @@ export default function AllDietPlans() {
   useEffect(() => {
     function getDietplans() {
       axios
-        .get("http://localhost:2080/dietplan/")
+        .get(`http://localhost:8070/dietplan/${userID}`)
         .then((res) => {
           console.log(res.data);
           setDietplans(res.data);
@@ -105,7 +112,7 @@ export default function AllDietPlans() {
   const renderDietPlanCard = (dietplan) => {
     const handleGeneratePDF = () => {
       axios
-        .get(`http://localhost:2080/dietplan/generate-pdf/${dietplan._id}`, {
+        .get(`http://localhost:8070/dietplan/generate-pdf/${dietplan._id}`, {
           responseType: "blob",
         })
         .then((res) => {
