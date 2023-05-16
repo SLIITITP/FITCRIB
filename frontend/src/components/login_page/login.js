@@ -36,7 +36,7 @@ export default function Login(){
         if (result.Fullname) {
             localStorage.setItem('newUser', JSON.stringify(result))
             if (result.UserType === "Seller") {
-                history(`/seller_home/${result._id}`, { state: { id:result.Fullname } })
+                history(`/SellerHome/${result._id}`, { state: { id:result.Fullname } })
                 // window.location.href = `/seller_home/${result._id}`;
             }
             else if (result.UserType === "Registered User") {
