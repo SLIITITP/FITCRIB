@@ -31,9 +31,34 @@
 
   }
   
-  .btn_setgoal{
-    background-color: chartreuse;
-    border-radius: 15%;
+  .NTbtn_setgoal{
+    background-color: rgb(60, 119, 0);
+    color: #fff;
+   border: none;
+   padding: 8px 16px;
+   font-size: 1rem;
+   border-radius: 4px;
+   cursor: pointer;
+
+  }
+  .NTbtn_setgoal:hover{
+        background-color: #9eb229;
+
+  }
+  .NTbtn_Viewgoal{
+     background-color: rgb(60, 119, 0);
+    color: #fff;
+   border: none;
+   padding: 8px 16px;
+   font-size: 1rem;
+   border-radius: 4px;
+   cursor: pointer;
+
+  }
+  .NTbtn_Viewgoal:hover{
+     background-color: #9eb229;
+
+
 
   }
   

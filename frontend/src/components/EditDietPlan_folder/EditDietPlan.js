@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { TextField, Button } from "@mui/material";
 import axios from "axios";
+import style_EditDietPlan from './style_EditDietPlan.css';
 
 
 export default function EditDietPlan({ dietplan, onSave, onCancel }) {
@@ -9,6 +10,19 @@ export default function EditDietPlan({ dietplan, onSave, onCancel }) {
   const [editId, setEditId] = useState(null);
   const [editedDietplan, setEditedDietplan] = useState(null);
   const [dietplans, setDietplans] = useState([]);
+
+  const [editedMealName, setEditedMealName] = useState(dietplan.mealName);
+const [editedDayOfMeal, setEditedDayOfMeal] = useState(dietplan.dayofMeal);
+
+const handleMealNameChange = (event) => {
+  setEditedMealName(event.target.value);
+};
+
+const handleDayOfMealChange = (event) => {
+  setEditedDayOfMeal(event.target.value);
+};
+
+
 
   const handleMealChange = (event, index) => {
     const updatedMeal = { ...mealplan[index], meal: event.target.value };
@@ -34,6 +48,8 @@ export default function EditDietPlan({ dietplan, onSave, onCancel }) {
   const handleSave = () => {
     const updatedDietplan = { ...dietplan };
     updatedDietplan.mealplan = mealplan;
+    updatedDietplan.mealName = editedMealName;
+    updatedDietplan.dayofMeal = editedDayOfMeal;
     axios
       .put(`http://localhost:8070/dietplan/update/${dietplan._id}`, updatedDietplan)
       .then(() => {
@@ -53,21 +69,39 @@ export default function EditDietPlan({ dietplan, onSave, onCancel }) {
   return (
     <div>
     <h2>Edit Diet Plan</h2>
-    <TextField label="Meal Name" value={dietplan.mealName}  />
-    <TextField label="Day of Meal" value={dietplan.dayofMeal}  />
-    {mealplan.map((meal, index) => (
-      <div key={index}>
-        <TextField label="Meal" value={meal.meal} onChange={(event) => handleMealChange(event, index)} />
-          <TextField label="Size" value={meal.size} onChange={(event) => handleSizeChange(event, index)} />
-          <Button type="button" class="btn btn-success" onClick={handleAddMeal}>Add</Button>
+    
+    <TextField label="Meal Name" value={editedMealName} onChange={handleMealNameChange} />
+  <TextField label="Day of Meal" value={editedDayOfMeal} onChange={handleDayOfMealChange} />
 
-          <Button type="button" class="btn btn-danger" onClick={() => handleRemoveMeal(index)}>Remove</Button>
+  {mealplan.map((meal, index) => (
+    <div key={index}>
+      <TextField
+        label="Meal"
+        value={meal.meal}
+        onChange={(event) => handleMealChange(event, index)}
+      />
+      <TextField
+        label="Size"
+        value={meal.size}
+        onChange={(event) => handleSizeChange(event, index)}
+      />
+      <Button type="button" class="NT_btnViewoneAddEdit" onClick={handleAddMeal}>
+        Add
+      </Button>
 
-        </div>
-      ))}
-
-      <Button type="button" class="btn btn-success" data-bs-toggle="button" aria-pressed="true" onClick={handleSave}>Update</Button>
-      <Button variant="contained" onClick={onCancel}>Cancel</Button>
+      <Button type="button" class="NT_allbtnDtEdit" onClick={() => handleRemoveMeal(index)}>
+        Remove
+      </Button>
     </div>
+  ))}
+
+  <Button type="button" class="NT_ItemupdateEdit" data-bs-toggle="button" aria-pressed="true" onClick={handleSave}>
+    Update
+  </Button>
+  <Button class="NT_ItemupdateEditCalcel" variant="contained" onClick={onCancel}>
+    Cancel
+  </Button>
+</div>
+
   );
 }

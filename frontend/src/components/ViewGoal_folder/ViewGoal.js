@@ -144,7 +144,7 @@ if(targetCal <=calin){
     }
     getGoals();
   }, []);
-
+//
   const generatePDF = () => {
     const doc = new jsPDF();
     doc.setFontSize(18);
@@ -186,13 +186,13 @@ if(targetCal <=calin){
 
 
   return (
-    <div className="d1">
+    <div className="NT_d1">
       
       <CardContent>
         {goals.map((goal) => (
           <ListItem key={goal._id}>
 
-                <p className="txtview">Target Calories: {goal.targetCal} | Created At: {format(
+                <p className="NT_goaltxtview">Target Calories: {goal.targetCal} | Created At: {format(
                 new Date(goal.createdAt),
                 "dd/MM/yyyy"
               )}</p>
@@ -216,10 +216,10 @@ if(targetCal <=calin){
         ))}
       </CardContent>
   
-      <Card className='view' open={open} onClose={handleClose}>
-  <CardContent className="d1">
+      <Card className='NTview' open={open} onClose={handleClose}>
+  <CardContent className="NT_d1">
     {editMode && (
-      <div className="popup">
+      <div className="NT_popup">
         <h3 className="center">Target = {targetCal} cal in {time} Week</h3>
         <div className="popup-content">
           <TextField disabled className="text_header" label="Time" variant="outlined" margin="normal" fullWidth value={time} onChange={(e) => setTime(e.target.value)} />
@@ -249,7 +249,7 @@ if(targetCal <=calin){
     )}
     
   </CardContent>
-  <CardActions className="d1">
+  <CardActions className="NT_d1">
     {editMode ? (
       <div> </div>
     ) : (
@@ -260,7 +260,7 @@ if(targetCal <=calin){
       </Link>
       
     )}
-          <button type="button" class="btn btn-report" onClick={generatePDF}>Generate Report</button>
+          <button type="button" class="NT-report" onClick={generatePDF}>Generate Report</button>
 
   </CardActions>
 </Card>
