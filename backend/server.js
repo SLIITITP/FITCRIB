@@ -15,6 +15,8 @@ const upload = multer({ dest: 'uploads/' })
 
 const jwt=require("jsonwebtoken");
 const JWT_SECRET= "kjjhjif565g5955dgdg()gsfsfsgdgh444545[][]47g"
+//tharusha exercise em
+const workoutModel = require('./workout/workout-controller ')
 
 //image upload
 app.use(express.static(path.join(__dirname)))
@@ -126,3 +128,7 @@ app.use("/recipe",recipeRouter);
 const adRouter = require("./routes/advertisements.js");
 
 app.use("/ad",adRouter);
+
+
+//exericise mangement api point
+app.use("/workout", workoutModel);

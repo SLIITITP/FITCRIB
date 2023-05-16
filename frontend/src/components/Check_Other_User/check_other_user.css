@@ -1,0 +1,77 @@
+.CheckOtherUserProfilepage{
+    background-color: #b2beb5;
+    height: auto;
+}
+.View_other_user_photo{
+    background-color: #2B302A;
+    width: 400px;
+    height: 420px;
+    border-radius: 25px;
+    margin-left: 5%;
+    margin-top: 10%;
+}
+.OthUserImg{
+    width: 280px;
+    height: 300px;
+    padding-top: 30px;
+    margin-left: 18%;
+}
+.OthName{
+    padding-top: 20px;
+    color: white;
+    margin-left: 25%;
+}
+.OthType{
+    color: white;
+    margin-left: 40%;
+}
+.View_other_user_data{
+    background-color: #2B302A;
+    width: 800px;
+    height: 530px;
+    border-radius: 25px;
+    margin-left: 40%;
+    margin-top: -33%;
+}
+.OthViewHeading{
+    color: white;
+    padding: 15px;
+    text-align: left;
+    
+}
+.Othhrline{
+    height: 5px;
+    width: auto;
+    background-color: white;
+    border: solid 2px;
+}
+.OthViewDetails{
+   color: white;
+   margin-top: -50px;
+   margin-left: 350px;
+}
+.cancelViewOthProfile{
+    background-color: #CCFF00;
+    color: #1F1F1F;
+    border-radius: 10px;
+    width: 250px;
+    height: 50px;
+    transition: 1s;
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 70%;
+ }
+ .cancelViewOthProfile:hover{
+    background-color: #1F1F1F;
+    color: #CCFF00;
+ }
+ .OthRec{
+    background-color: #CCFF00;
+    width: 500px;
+    height: 60px;
+    border-radius: 10px;
+    margin-left: 35%;
+ }
+ .OthHeading{
+    margin-left: 15%;
+ }

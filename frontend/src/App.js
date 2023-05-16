@@ -19,6 +19,7 @@ import Trainer_home from './components/Trainer_home_page/trainer_page';
 import Update from './components/Update_user/Update_user';
 import ViewProfile from './components/View_user/view_user';
 import Other_users from './components/Other_users/other_users';
+import Check_Other_User from './components/Check_Other_User/check_other_user'
 
 import All_users from './components/All_users/all_user';
 import Generate_Report from './components/Generate Report/generate_report';
@@ -86,6 +87,13 @@ import OrderPage from './components/OrderPage/OrderPage';
 import Cart from './components/Cart/Cart';
 import ViewSalesReport from './components/ViewSalesReport/ViewSalesReport';
 
+//exercise management
+import { UserDashboard } from './screen/user-dashboard';
+import {TrainerDashboard} from './screen/trainer-dashboard';
+import {TrainerFeed} from './screen/trainer-feed';
+import {AddWorkout} from './screen/add-workout';
+import {EditWorkout} from './screen/update-workout';
+import {ViewWorkout} from './screen/view-workout';
 
 
 function App() {
@@ -140,6 +148,7 @@ function App() {
             <Route path='/adminHome' element={<AdminHome />} />
             <Route path='/allusers' element={<All_users />} />
             <Route path='/report' element={<Generate_Report />} />
+            <Route path='/otherUserProfile/:id' element={<Check_Other_User/>}/>
 
             {/* financial management */}
             <Route path='/finance' element={<FNDashboard />} />
@@ -194,6 +203,14 @@ function App() {
             <Route path='/salesReport' element={<ViewSalesReport/>}/>
             <Route path='/AllOrders' element={<OrderPage/>}/>
             <Route path='/SalesReport' element={<ViewSalesReport/>}/>
+
+            {/* exercise management */}
+            <Route path="/userDashboard" element={<UserDashboard />} /> 
+            <Route path="/viewWorkout" element={<ViewWorkout />} /> 
+            <Route path="/trainerFeed" element={<TrainerFeed />} /> 
+            <Route path="/addWorkout" element={<AddWorkout />} />
+            <Route path="/editWorkout" element={<EditWorkout />} /> 
+
 
           </Routes>
           {user?.UserType === 'Admin' && <AdminFooter />}
