@@ -1,12 +1,12 @@
-.MPbackto{
+.SearchAdvertisements .MPbackto{
     margin-top: 1cm;
     margin-left: 1cm;
 }
-.MBuyerViewcard{
+.SearchAdvertisements .MBuyerViewcard{
     padding-bottom: 1cm;
     background-color: antiquewhite;
 }
-.MPcard2{
+.SearchAdvertisements .MPcard2{
     padding-bottom: 1cm;
     margin-bottom: 2cm;
     width: 10cm;
@@ -16,67 +16,67 @@
     background-color:beige;
     cursor: pointer;
 }
-.MBuyerViewcardSet{
+.SearchAdvertisements .MBuyerViewcardSet{
     display: flex;
     flex-wrap: wrap;
     margin-left: 75px;
 }
-.MPcard1{
+.SearchAdvertisements .MPcard1{
     height: 7cm;
 }
-.MProw{
+.SearchAdvertisements .MProw{
     padding-bottom: 1cm;
 }
-.MPSearchCardDetls{
+.SearchAdvertisements .MPSearchCardDetls{
     margin-left: -7cm;
     text-align: center;
     margin-top: 1cm;
 }
-.MPsearchCName{
+.SearchAdvertisements .MPsearchCName{
     font-weight: 600;
     font-size: 25px;
 }
-.MPsearchCWeight{
+.SearchAdvertisements .MPsearchCWeight{
     text-align: center;
     font-weight: 600;
 }
-.MPsearchCPrice{
+.SearchAdvertisements .MPsearchCPrice{
     position: relative;
     bottom: 0.45cm;
     font-weight: 600;
 }
-.MPsearchACart{
+.SearchAdvertisements .MPsearchACart{
     width: 5cm;
     margin-left: 25%;
     margin-top: 6%;
 }
-.searchACart:hover{
+.SearchAdvertisements .searchACart:hover{
     background-color: #4c8b0d;
 }
-#searchCWeightnum{
+.SearchAdvertisements #searchCWeightnum{
     color: #70be22;
     font-weight: 600;
 }
-#searchCPricenum{
+.SearchAdvertisements #searchCPricenum{
     color: #c31c1c;
     font-weight: 600;
 }
-#cart{
+.SearchAdvertisements #cart{
     color: #99FF33;
     font-size: 35px;
     margin-left: 1cm;
     cursor: pointer;
 }
-#cartNum{
+.SearchAdvertisements #cartNum{
     color: #dddddd;
     font-size: 35px;
     margin-left: 1cm;
 }
-#searchCNamnum{
+.SearchAdvertisements #searchCNamnum{
     color: #ffffff;
     font-weight: 600;
 }
-.warning{
+.SearchAdvertisements .warning{
     height: 40px;
     width: 250px;
     position: absolute;
