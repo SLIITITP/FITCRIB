@@ -1,5 +1,5 @@
 
-//import './style_Appbmi.css';
+import './style_Appbmi.css';
 import React from "react";
 import {useState} from "react";
 
@@ -75,8 +75,8 @@ function Appbmi(){
               <input className='input height' type="number" value={height} onChange={(event) => setHeight(event.target.value)} min="0" required/>
             </div>
             <div>
-              <button className="btn1" type="submit">Submit</button>
-              <button className="btn2" onClick={reload} type="submit">Re-Enter</button>
+              <button className="NTMBIbtn1" type="submit">Submit</button>
+              <button className="NTMBIbtn2" onClick={reload} type="submit">Re-Enter</button>
             </div>
           </form>
           <div className="view">

@@ -1,67 +1,73 @@
-.create_box{
-   
-        background-color: #2b3028;
-        padding: 50px;
-        border-radius: 20px;
-        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
-        
-        width: 80%;
-        text-align: center;
-        margin: auto; /* center horizontally */
-        margin-top: 100px;
-    
-
-}
-
-.textheader{
-    color: #99ff33;
-}
-
-.btn-primary:hover {
-    background-color: #9eb229;
+.create_box {
+  background-color: #2b3028;
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+  width: 80%;
+  text-align: center;
+  margin: auto;
+  margin-top: 100px;
   }
   
-  .btn-primary:focus {
-    box-shadow: none;
-    outline: none;
+  .NTtextheader {
+  color: #99ff33;
+  }
+  
+  .NTbtn_Addmeal {
+  background-color: chartreuse;
+  border: none;
+  padding: 8px 16px;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right:650px
+
+  }
+  
+  .NTbtn_Addmeal:hover {
+  background-color: limegreen;
+  }
+  
+  .NTbtn_Addmeal:active {
+    background-color: darkgreen;
   }
   
   .button-container {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  gap: 25px;
   }
   
-  .btn-primary {
-    margin-right: 30px;
+  .meal_remove {
+  background-color: red;
+  border: none;
+  padding: 8px 16px;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right:200px
+
   }
-  .btn-primary{
-    background-color: #99ff33;
-    
+  
+  .NTbtn_submit {
+  background-color: chartreuse;
+  border: none;
+  padding: 8px 16px;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right:-1000px;
+  margin-top: -20px;
   }
-  .btn-primary.red-text {
-    color: black;
+
+  .NTbtn_submit:hover{
+    background-color: darkgreen;
   }
-  .create_box {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  
+  .NT_linlall {
+  color: #99ff33;
   }
-  .homelink{
-    color: #99ff33;
-  }
-  .addmeal_btn{
-    background-color: chartreuse;
-  }
-  .meal_remove{
-    background-color: red;
-  }
-  .btn_submit{
-    background-color: chartreuse;
-  }
-  .form-control_add{
-    background-color: rgb(235, 232, 228);
-    width: 1200px;
-    height: 50px;
-    border-radius: 5px;
+  .NT_Seachbar{
+   color: #2b3028;
   }
