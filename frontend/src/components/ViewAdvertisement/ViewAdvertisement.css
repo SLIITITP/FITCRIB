@@ -1,0 +1,89 @@
+body{
+    background-color: #252525;
+}
+.MSellerBtns{
+    list-style-type: none;
+    }
+    .MViewcard{
+        width: 1cm;
+    }
+.MSellerPageHeader1{
+    color: #99FF33;
+    margin-left: 9cm;
+    padding-bottom: 1cm;
+    padding-top: 1cm;
+}
+.MSellerPageHeader2{
+    margin-left: 9.1cm;
+}
+.MVheader2Name{
+    font-weight: 600;
+    color: aliceblue;
+}
+.MVheader2Btns{
+    margin-left: 10cm;
+    margin-top: -1.25cm;
+}
+
+#SalesBTN{
+    background-color: #99FF33;
+    color:black
+}
+
+#PostBTN{
+    background-color: #99FF33;
+    color:black
+}
+.MproductVcard{
+    width: 20cm;
+    height: 4cm;
+    margin-left: 6.2cm;
+    background-color:antiquewhite;
+    border: 2px solid;
+    border-radius: 5px;
+    border-color: #99FF33;
+}
+.ViewCard{
+    padding-bottom: 1cm;
+}
+.Viewcard-body{
+    margin-top: -3.5cm;
+    margin-left: 8cm;
+    color: #99FF33;
+}
+.vertical {
+    border-right: 2px solid rgb(255, 255, 255);
+    height: 1000px;
+    position: absolute;
+    right: 80%;
+}
+.card-title{
+    color: black;
+    margin-left: 7cm;
+}
+.card-text{
+    color: black;
+    margin-left: 7cm;
+}
+.card-price{
+    color: black;
+    width: 5cm;
+    position: relative;
+    top: -0.25cm;
+    z-index: 1;
+}
+.updateBTN{
+    width: 4cm;
+    margin-left: 15cm;
+    margin-top: -6.6cm;
+    position: relative;
+    top: 0.75cm;
+}
+
+.deleteBTN{
+    width: 4cm;
+    margin-left: 15cm;
+    margin-top: -4.8cm;
+    position: relative;
+    bottom: -0.5cm;
+}
