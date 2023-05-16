@@ -1,11 +1,15 @@
-//import "../AddAdvertisement/AddAdvertisement.css"
-import React, { useState, useEffect } from "react";
+import "../AddAdvertisement/AddAdvertisement.css"
+import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate, useLocation } from "react-router-dom";
+import UserContext from '../ContextComponent/ContextComponent';
 
 export default function AddAdvertisement() {
+  
+  const { user } = useContext(UserContext);
+  const userID = user._id
 
   const [name, setName] = useState("");
   const [category, setCategory] = useState("");
@@ -29,6 +33,7 @@ export default function AddAdvertisement() {
 
 
     const newAd = {
+      userID,
       name,
       category,
       // image,
@@ -52,8 +57,7 @@ export default function AddAdvertisement() {
     formData.append('description', description)
 
     axios.post("http://localhost:8070/ad/add", newAd).then(() => {
-
-      window.location.href = `/SellerHome`
+      window.location.href = `/SellerHome/${userID}`
 
     }).catch((err) => {
       alert(err)
