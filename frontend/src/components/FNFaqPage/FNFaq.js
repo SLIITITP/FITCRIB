@@ -21,11 +21,11 @@ export default function FAQ() {
         },
         {
             question: 'Can I update a transaction record?',
-            answer: 'Imesh gobbaya fuck you motherfucker'
+            answer: 'Yes, you can update transaction records by clicking the update button on the view all transactions page.'
         },
         {
             question: 'Can I delete a transaction record?',
-            answer: 'Rashmika uba kathai ban apoooooo wadak na uba, ubata musthafa kiyanne nikanda? .'
+            answer: 'Yes, you can delete a transaction record by clicking the delete button as per need.'
         },
         {
             question: 'How to check whether the company is having a negative net profit?',
