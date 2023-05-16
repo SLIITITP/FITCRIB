@@ -1,0 +1,20 @@
+.CheckoutProduct .MPcheckoutsemiHeading{
+    color: #82df24;
+}
+.CheckoutProduct .MPcheckoutsemiHeading2{
+    color: #82df24;
+    position: relative;
+    left: 50%;
+}
+.CheckoutProduct .productTable{
+    margin-left: 3cm;
+}
+.CheckoutProduct #checktotal{
+    color: black;
+}
+.CheckoutProduct .checkCancelBTN{
+    margin-left: 5.7cm;
+}
+.CheckoutProduct .checkInputF{
+    margin-left: 0.8cm;
+}
