@@ -74,16 +74,16 @@ export default function MyWorkouts() {
   return (
     <>
     <div className="MyWorkouts">
-       <section className="h-100" style={{ backgroundColor: "#1F1F1F" }}>
-      <Container className="h-100 py-5">
-        <Row className="d-flex justify-content-start align-items-center h-100">
+       <section className="h-100 MyWorkouts" style={{ backgroundColor: "#1F1F1F" }}>
+      <Container className="h-100 py-5 MyWorkouts">
+        <Row className="d-flex justify-content-start align-items-center h-100 MyWorkouts">
           <Col>
-            <div className="d-flex justify-content-between align-items-left mb-4">
-              <h3 className="fw-normal mb-0 text-black text-white">
+            <div className="d-flex justify-content-between align-items-left mb-4 MyWorkouts">
+              <h3 className="fw-normal mb-0 text-black text-white MyWorkouts">
               My Workouts
               </h3>
-              <div className="d-flex justify-content-end">
-                <Form className="d-flex">
+              <div className="d-flex justify-content-end MyWorkouts">
+                <Form className="d-flex MyWorkouts">
                   <Form.Control
                     type="text"
                     placeholder="Search Workout"
@@ -99,45 +99,45 @@ export default function MyWorkouts() {
               </div>
             </div>
 
-            <div className="workouts">
+            <div className="workouts MyWorkouts">
               {allWorkouts ?
                 allWorkouts.map((workout) => (
                   <Card
-                    className="rounded-3 mb-4"
+                    className="rounded-3 mb-4 MyWorkouts"
                     style={{ backgroundColor: "white" }}
                     key={workout._id}
                   >
-                    <Card.Body className="p-4">
-                      <Row className="d-flex justify-content-between align-items-center">
+                    <Card.Body className="p-4 MyWorkouts">
+                      <Row className="d-flex justify-content-between align-items-center MyWorkouts">
                       
                         <Col md={2} lg={2} xl={2}>
-                        <div className="Clickable" onClick={() => viewWorkout(workout._id)}>
+                        <div className="Clickable MyWorkouts" onClick={() => viewWorkout(workout._id)}>
                           <Card.Img
                             variant="top"
                             src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
-                            className="img-fluid rounded-3"
+                            className="img-fluid rounded-3 MyWorkouts"
                             alt="Workout"
                           />
                           </div>
                         </Col>
                         <Col md={3} lg={3} xl={3}>
-                          <div className="Clickable" onClick={() => viewWorkout(workout._id)}>
-                            <Card.Title className="lead fw-normal mb-2">
+                          <div className="Clickable MyWorkouts" onClick={() => viewWorkout(workout._id)}>
+                            <Card.Title className="lead fw-normal mb-2 MyWorkouts">
                               {workout.workoutName}
                             </Card.Title>
                           </div>
-                          <div className="Clickable" onClick={() => viewWorkout(workout._id)}>
+                          <div className="Clickable MyWorkouts" onClick={() => viewWorkout(workout._id)}>
                           <Card.Text>
-                            <span className="text-muted">
+                            <span className="text-muted MyWorkouts">
                               {workout.workoutDescription}
                             </span>
                           </Card.Text>
                           </div>
                         </Col>
-                        <Col md={2} lg={2} xl={2} className="text-end">
+                        <Col md={2} lg={2} xl={2} className="text-end MyWorkouts">
                           <UpdateButton  variant="primary" id = {workout._id}/>
                         </Col>
-                        <Col md={1} lg={1} xl={2} className="text-end">
+                        <Col md={1} lg={1} xl={2} className="text-end MyWorkouts">
                         <DeleteButton variant="danger" id = {workout._id}/>
                         </Col>
                       </Row>
@@ -148,9 +148,9 @@ export default function MyWorkouts() {
                 )}
             </div>
 
-            <Card className="mb-4">
-              <Card.Body className="p-4 d-flex flex-row">
-                <div className="form-outline flex-fill">
+            <Card className="mb-4 MyWorkouts">
+              <Card.Body className="p-4 d-flex flex-row MyWorkouts">
+                <div className="form-outline flex-fill MyWorkouts">
                   <Card.Title as="h3">Want to create a new WorkoutPlan?</Card.Title>
                 </div>
                 <Button
