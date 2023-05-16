@@ -37,7 +37,7 @@ export default function Trainer_home() {
                     <p className="AdminDivPara">Trainers can access the educational content management system from here.</p>
                     <button className="AdminButton" onClick={(e) => {
                                                                             e.preventDefault();
-                                                                            window.location.href=`#`;
+                                                                            window.location.href=`/tBview`;
                                                                             }}>Educational Content</button>
                 </div>
 
