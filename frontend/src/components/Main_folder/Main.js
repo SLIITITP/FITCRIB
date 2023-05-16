@@ -7,18 +7,18 @@ export default function Main() {
   return (
   
         <div className="NThome">
-        <body>
-          <div className="con">
-            <h1 className="txtindex">Nutrition Tracking Management System</h1>
+        <body className="NT_main">
+          <div className="NT_con">
+            <h1 className="NT_txtindex">Nutrition Tracking Management System</h1>
 
-            <div className="row">
-              <div className="col-sm-3">
-                <div className="card_main">
+            <div className="NTmain_row">
+              <div className="NT_col-sm-3">
+                <div className="NTcard_main">
                   <div className="card-body_main">
                     <h2 className="card-title_main">Create Diet Plan</h2>
                     <hr></hr>
                     
-                    <h3 className="card-text_main">
+                    <h3 className="NTcard-text_main">
                       Create Your Diet Plan Here!
                     </h3><Link to="/addDietPlan">
                     <button type="button" className="btn btn-success"> 
@@ -28,8 +28,8 @@ export default function Main() {
                 </div>
               </div>
 
-              <div className="col-sm-3">
-                <div className="card_main">
+              <div className="NT_col-sm-3">
+                <div className="NTcard_main">
                   <div className="card-body_main">
                     <h2 className="card-title_main">BMI Calculator</h2>
                     <hr></hr>
@@ -44,8 +44,8 @@ export default function Main() {
                 </div>
               </div>
 
-              <div className="col-sm-3">
-                <div className="card_main">
+              <div className="NT_col-sm-3">
+                <div className="NTcard_main">
                   <div className="card-body_main">
                     <h2 className="card-title_main">Set Nutrition Goal</h2>
                     <hr></hr>

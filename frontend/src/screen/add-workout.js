@@ -91,33 +91,33 @@ export const AddWorkout = () => {
             <div className="sub-container">
                 <div className="add-workout-container">
                     <div className="add-workout-header">
-                        <h1>Add Workout</h1>
+                        <h1>Add Exercise</h1>
                     </div>
                     <div className="add-workout-body">
                         <form enctype="multipart/form-data" className="add-workout-form" onSubmit={(e) =>onSubmit(e)}>
                                 <div className="add-workout-form-group">
-                                    <label className="add-workout-form-label" htmlFor="workoutName">Workout Name : </label>
-                                    <input className="add-workout-form-input" onChange={handleInputChange} type="text" id="workoutName" name="workoutName" placeholder="Workout Name..." required/>
+                                    <label className="add-workout-form-label" htmlFor="workoutName">Exercise Name : </label>
+                                    <input className="add-workout-form-input" onChange={handleInputChange} type="text" id="workoutName" name="workoutName" placeholder="Exercise Name..." required/>
                                     <span className="error-message"></span>
                                 </div>
                                 <div className="add-workout-form-group">
                                     <label className="add-workout-form-label" htmlFor="mainBodyPart">Main affected body part : </label>
-                                    <input className="add-workout-form-input" onChange={handleInputChange} type="text" id="mainBodyPart" name="mainBodyPart" placeholder="Workout main effected body part..." required /> {/*pattern={"^[0-9]"*/} 
+                                    <input className="add-workout-form-input" onChange={handleInputChange} type="text" id="mainBodyPart" name="mainBodyPart" placeholder="Exercise main effected body part..." required /> {/*pattern={"^[0-9]"*/} 
                                     <span className="error-message"></span>
                                 </div> 
                                 <div className="add-workout-form-group">
                                     <label className="add-workout-form-label" htmlFor="sideBodyParts">Side affected body part : </label>
-                                    <input className="add-workout-form-input" onChange={handleInputChange} type="text" id="sideBodyParts" name="sideBodyParts" placeholder="Workout side effected body part.." required/>
+                                    <input className="add-workout-form-input" onChange={handleInputChange} type="text" id="sideBodyParts" name="sideBodyParts" placeholder="Exercise side effected body part.." required/>
                                     <span className="error-message"></span>
                                 </div> 
                                 <div className="add-workout-form-group">
                                     <label  className="add-workout-form-label" htmlFor="link">Link : </label>
-                                    <input className="add-workout-form-input" onChange={handleInputChange} type="text" id="link" name="link" placeholder="Workout Workout video link..." required/>
+                                    <input className="add-workout-form-input" onChange={handleInputChange} type="text" id="link" name="link" placeholder="Exercise video link..." required/>
                                     <span className="error-message"></span>
                                 </div> 
                                 <div className="add-workout-form-group">
                                     <label className="add-workout-form-label" htmlFor="description">Description : </label>
-                                    <textarea className="add-workout-form-textarea" onChange={handleInputChange} type="text" id="description" name="description" placeholder="Workout description..." required/>
+                                    <textarea className="add-workout-form-textarea" onChange={handleInputChange} type="text" id="description" name="description" placeholder="Exercise description..." required/>
                                     <span className="error-message"></span>
                                 </div>
                                 <div className="add-workout-form-group-images">
@@ -135,7 +135,7 @@ export const AddWorkout = () => {
                                     
                                 </div>
                                 <div className="add-workout-form-footer">
-                                    <button className="add-workout-form-button" type="submit" >Add Workout</button>
+                                    <button className="add-workout-form-button" type="submit" >Add Exercise</button>
                                     <button className="add-workout-form-button" type="cancel">Cancel</button>
                                 </div>
 
