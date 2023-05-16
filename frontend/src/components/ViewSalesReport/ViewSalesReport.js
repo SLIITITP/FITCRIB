@@ -82,7 +82,7 @@ function OrderPage() {
     console.log("data=>", data);
 
     return (
-        <div>
+        <div className='ViewSalesReport'>
 
             <button className="btn btn-success backto" onClick={(e) => { e.preventDefault(); window.location.href = `/SellerHome`; }} >Back</button>
 

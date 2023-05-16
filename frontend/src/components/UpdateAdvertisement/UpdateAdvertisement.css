@@ -1,33 +1,33 @@
-.AddAdvertisment .MPCreateFormHead{
+.UpdateAdvertisement .MPCreateFormHead{
     text-align: center;
     
 }
-.AddAdvertisment #MPcformhead{
+.UpdateAdvertisement #MPcformhead{
     color: #99FF33;
     padding-bottom: 0.5cm;
 }
-.AddAdvertisment #MPbackg{
+.UpdateAdvertisement #MPbackg{
     background-color: #2b3028;
     padding-top: 1cm;
     width: 22cm;
 }
 
-.AddAdvertisment .MPCreataFormData1{
+.UpdateAdvertisement .MPCreataFormData1{
     width: 20cm;
     margin-left: 0.65cm;
 }
-.AddAdvertisment .M_AddFormDescInput{
+.UpdateAdvertisement .M_AddFormDescInput{
     width: 19cm;
 }
-.AddAdvertisment .MFormCancelBtn{
+.UpdateAdvertisement .MFormCancelBtn{
     width: 5cm;
     margin-left: 8.5cm;
 }
-.AddAdvertisment .MFormSubmitBtn{
+.UpdateAdvertisement .MFormSubmitBtn{
     width: 5cm;
     
 }
-.AddAdvertisment #MFormSubmitBtn{
+.UpdateAdvertisement #MFormSubmitBtn{
     background-color: #99FF33 !important;
     border: #99FF33;
     color: black;

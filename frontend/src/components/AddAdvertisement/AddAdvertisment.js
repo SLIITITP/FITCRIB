@@ -90,120 +90,124 @@ export default function AddAdvertisement() {
   }
 
   return (
-    <div className="form createForm" id="createForm" >
-      <form onSubmit={sendData} encType='multipart/form-data'>
-        <div className='py-4 CreataFormData'>
-          <div className='container' id="MPbackg">
-            <div className='card-header MPCreateFormHead' id="MPcformhead">
-              <h4><b>Add Product To Market</b></h4>
-            </div>
-            <div className='row'>
-              <div className=''>
-                <div className='card MPCreataFormData1'>
+    <>
+      <div className="AddAdvertisment">
+        <div className="form createForm" id="createForm">
+          <form onSubmit={sendData} encType='multipart/form-data'>
+            <div className='py-4 CreataFormData'>
+              <div className='container' id="MPbackg">
+                <div className='card-header MPCreateFormHead' id="MPcformhead">
+                  <h4><b>Add Product To Market</b></h4>
+                </div>
+                <div className='row'>
+                  <div className=''>
+                    <div className='card MPCreataFormData1'>
 
-                  <div className='card-body'>
+                      <div className='card-body'>
 
-                    <div className='row'>
-                      <div className='col-md-12'>
-                        <label for="MformName" className="form-label M_AddFormName">Product Name</label>
-                        <input type="text" className="form-control M_AddFormNameInput" placeholder="Barbell" onChange={(e) => {
-                          setName(e.target.value);
-                        }} required>
+                        <div className='row'>
+                          <div className='col-md-12'>
+                            <label for="MformName" className="form-label M_AddFormName">Product Name</label>
+                            <input type="text" className="form-control M_AddFormNameInput" placeholder="Barbell" onChange={(e) => {
+                              setName(e.target.value);
+                            }} required>
 
-                        </input><br />
-                      </div>
-                      <div className='col-md-4'>
-                        <div className='form-group mb-3'>
-                          <label for="MformCategory" className="form-label M_AddFormCat">Product Category</label>
-                          <select class="form-select M_AddFormCatSelect" onChange={(e) => {
-                            setCategory(e.target.value);
-                          }} required>
-                            <option>Select</option>
-                            <option>Home Fitness</option>
-                            <option>Commercial Fitness</option>
-                            <option>Outdoor Fitness</option>
-                          </select>
-                        </div>
-                      </div>
-                      &nbsp;&nbsp;&nbsp;&nbsp;
-                      <div className='col-md-5'>
-                        <div className='form-group mb-3'>
-                          <label for="MformCategory" className="form-label M_AddFormImg">Product Image</label>&nbsp;&nbsp;&nbsp;&nbsp;
-                          <input type="file" multiple />
-                        </div>
-                      </div>
-                      {/* <!-- Add a hidden input field for the date field --> */}
-                      <input type="hidden" name="date" value="<%= new Date().toISOString() %>" />
-                      <div className='col-md-4'>
-                        <div className='form-group mb-3'>
-                          <label for="MformPrice" className="form-label M_AddFormPrice" >Price (LKR)</label>
+                            </input><br />
+                          </div>
+                          <div className='col-md-4'>
+                            <div className='form-group mb-3'>
+                              <label for="MformCategory" className="form-label M_AddFormCat">Product Category</label>
+                              <select class="form-select M_AddFormCatSelect" onChange={(e) => {
+                                setCategory(e.target.value);
+                              }} required>
+                                <option>Select</option>
+                                <option>Home Fitness</option>
+                                <option>Commercial Fitness</option>
+                                <option>Outdoor Fitness</option>
+                              </select>
+                            </div>
+                          </div>
                           &nbsp;&nbsp;&nbsp;&nbsp;
-                          <input type="number" className="form-control M_AddFormPriceInput" onChange={(e) => {
-                            setPrice(e.target.value);
-                          }} required></input>
-                        </div>
-                      </div>
+                          <div className='col-md-5'>
+                            <div className='form-group mb-3'>
+                              <label for="MformCategory" className="form-label M_AddFormImg">Product Image</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                              <input type="file" multiple />
+                            </div>
+                          </div>
+                          {/* <!-- Add a hidden input field for the date field --> */}
+                          <input type="hidden" name="date" value="<%= new Date().toISOString() %>" />
+                          <div className='col-md-4'>
+                            <div className='form-group mb-3'>
+                              <label for="MformPrice" className="form-label M_AddFormPrice">Price (LKR)</label>
+                              &nbsp;&nbsp;&nbsp;&nbsp;
+                              <input type="number" className="form-control M_AddFormPriceInput" onChange={(e) => {
+                                setPrice(e.target.value);
+                              }} required></input>
+                            </div>
+                          </div>
 
-                      <div className='col-md-4'>
-                        <div className='form-group mb-3'>
-                          <label for="MformWeight" className="form-label M_AddFormWeight">Product Weight</label>
-                          &nbsp;&nbsp;&nbsp;&nbsp;
-                          <input type="number" className="form-control M_AddFormWeightInput" onChange={(e) => {
-                            setWeight(e.target.value);
-                          }} required></input>
-                        </div>
-                      </div>
-                      <div className='col-md-4'>
-                        <div className='form-group mb-3'>
-                          <label for="MformStock" className="form-label M_AddFormStock">Product Stock In Hand</label>
-                          &nbsp;&nbsp;&nbsp;&nbsp;
-                          <input type="number" className="form-control M_AddFormStockInput" onChange={(e) => {
-                            setStock(e.target.value);
-                          }} required></input>
-                        </div>
-                      </div>
+                          <div className='col-md-4'>
+                            <div className='form-group mb-3'>
+                              <label for="MformWeight" className="form-label M_AddFormWeight">Product Weight</label>
+                              &nbsp;&nbsp;&nbsp;&nbsp;
+                              <input type="number" className="form-control M_AddFormWeightInput" onChange={(e) => {
+                                setWeight(e.target.value);
+                              }} required></input>
+                            </div>
+                          </div>
+                          <div className='col-md-4'>
+                            <div className='form-group mb-3'>
+                              <label for="MformStock" className="form-label M_AddFormStock">Product Stock In Hand</label>
+                              &nbsp;&nbsp;&nbsp;&nbsp;
+                              <input type="number" className="form-control M_AddFormStockInput" onChange={(e) => {
+                                setStock(e.target.value);
+                              }} required></input>
+                            </div>
+                          </div>
 
-                      <div className='col-md-11'>
-                        <div className='form-group mb-3'>
-                          <label for="MformDesc" className="M_AddFormDesc">Product Description</label><br />
+                          <div className='col-md-11'>
+                            <div className='form-group mb-3'>
+                              <label for="MformDesc" className="M_AddFormDesc">Product Description</label><br />
 
-                          <textarea className="M_AddFormDescInput" onChange={(e) => {
-                            setDesc(e.target.value);
-                          }}></textarea>
+                              <textarea className="M_AddFormDescInput" onChange={(e) => {
+                                setDesc(e.target.value);
+                              }}></textarea>
+                            </div>
+                          </div>
+                          <div class="mb-3 Mform-check">
+                            <div class="form-check">
+                              <input className="form-check-input M_AddFormCheck" type="checkbox" required></input>
+                              <label className="form-check-label M_AddFormCheck" for="MFormCheck">
+                                I accept the Terms And Conditions
+                              </label>
+                            </div>
+
+                          </div>
+
+                          <div className='col-md-12'>
+                            <button type="button" class="MFormCancelBtn btn btn-secondary" onClick={(e) => {
+                              e.preventDefault();
+                              window.location.href = `/SellerHome`;
+                            }}>Cancel</button>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            <button type="submit" class="MFormSubmitBtn btn btn-primary" id="MFormSubmitBtn" onClick={notify}>Submit</button>
+                          </div>
                         </div>
-                      </div>
-                      <div class="mb-3 Mform-check">
-                        <div class="form-check">
-                          <input className="form-check-input M_AddFormCheck" type="checkbox" required></input>
-                          <label className="form-check-label M_AddFormCheck" for="MFormCheck">
-                            I accept the Terms And Conditions
-                          </label>
-                        </div>
-
-                      </div>
-
-                      <div className='col-md-12'>
-                        <button type="button" class="MFormCancelBtn btn btn-secondary" onClick={(e) => {
-                          e.preventDefault();
-                          window.location.href = `/SellerHome`;
-                        }}>Cancel</button>
-                        &nbsp;&nbsp;&nbsp;&nbsp;
-                        <button type="submit" class="MFormSubmitBtn btn btn-primary" id="MFormSubmitBtn" onClick={notify}>Submit</button>
                       </div>
                     </div>
                   </div>
+
+
                 </div>
+
               </div>
 
-
             </div>
-
-          </div>
-
+            <ToastContainer />
+          </form>
         </div>
-        <ToastContainer />
-      </form>
-    </div>
+      </div>
+    </>
 
   )
 

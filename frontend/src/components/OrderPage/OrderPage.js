@@ -26,9 +26,8 @@ const OrderPage = () => {
 
     return (
         <>
-            <>
+            <div className="OrderPage">
                 <body>
-
                     <div className="orderPgTitle">
                         <h1>Your Order History</h1>
                     </div>
@@ -72,14 +71,9 @@ const OrderPage = () => {
                             }
 
                         </div>
-
                     </div>
-
                 </body>
-
-
-            </>
-
+            </div>
         </>
     )
 }

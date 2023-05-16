@@ -1,41 +1,41 @@
-.MOrderPage{
+.OrderPage .MOrderPage{
     color: aliceblue;
 }
-.MOrderHeading{
+.OrderPage .MOrderHeading{
     color: chartreuse;
     text-align: center;
     padding-top: 1cm;
 }
-.MOrderReportBTN{
+.OrderPage .MOrderReportBTN{
     margin-left: 29.65cm;
     width: 5cm;
 }
-.MOrderTable{
+.OrderPage .MOrderTable{
     margin-top: 1cm;
     margin-left: 2.5cm;
 }
-.MOrderTableHeading{
+.OrderPage .MOrderTableHeading{
     color: antiquewhite;
 }
-.MOrderTableData{
+.OrderPage .MOrderTableData{
     color:azure;
 }
-.orderPgTitle{
+.OrderPage .orderPgTitle{
     color: chartreuse;
     text-align: center;
     padding-top: 1cm;
     padding-bottom: 1cm;
 }
-.order-title{
+.OrderPage .order-title{
     font-size: 23px;
     margin-top: -0.25cm;
 }
-.order-price{
+.OrderPage .order-price{
     margin-top: 0.5cm;
 }
-.order-qty{
+.OrderPage .order-qty{
     margin-top: -0.3cm;
 }
-.order-date{
+.OrderPage .order-date{
     margin-top: -0.35cm;
 }
