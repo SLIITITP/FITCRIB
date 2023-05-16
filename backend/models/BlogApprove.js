@@ -1,22 +1,35 @@
 const mongoose = require ("mongoose")
 
 const ApproveBlogSchema = new mongoose.Schema({
-
-    heading:{
+    userId:{
         type:String,
         require:true,
-        unique:true
     },
-    email : {
-        type: String,
-        require:true,
-        unique:true
+    heading:{
+        type:String,
+        require:true
     },
-    bApprove:{
-        type:Boolean,
+    username:{
+        type:String,
         require:true,
-
-    }
+    },
+    email:{
+        type:String,
+        require:true,
+    },
+    content:{
+        type:String,
+        require :true, 
+    },
+    image:{
+        type:String ,
+        require: false,
+    },
+    category:{
+        type:String,
+        require :false, 
+    },
+    
 },
 {
     timestamps:true,

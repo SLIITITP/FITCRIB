@@ -1,0 +1,91 @@
+.SearchAdvertisements .MPbackto{
+    margin-top: 1cm;
+    margin-left: 1cm;
+}
+.SearchAdvertisements .MBuyerViewcard{
+    padding-bottom: 1cm;
+    background-color: antiquewhite;
+}
+.SearchAdvertisements .MPcard2{
+    padding-bottom: 1cm;
+    margin-bottom: 2cm;
+    width: 10cm;
+    margin-left: 1.5cm;
+    border-radius: 10px;
+    /* background-color: #2b3028; */
+    background-color:beige;
+    cursor: pointer;
+}
+.SearchAdvertisements .MBuyerViewcardSet{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 75px;
+}
+.SearchAdvertisements .MPcard1{
+    height: 7cm;
+}
+.SearchAdvertisements .MProw{
+    padding-bottom: 1cm;
+}
+.SearchAdvertisements .MPSearchCardDetls{
+    margin-left: -7cm;
+    text-align: center;
+    margin-top: 1cm;
+}
+.SearchAdvertisements .MPsearchCName{
+    font-weight: 600;
+    font-size: 25px;
+}
+.SearchAdvertisements .MPsearchCWeight{
+    text-align: center;
+    font-weight: 600;
+}
+.SearchAdvertisements .MPsearchCPrice{
+    position: relative;
+    bottom: 0.45cm;
+    font-weight: 600;
+}
+.SearchAdvertisements .MPsearchACart{
+    width: 5cm;
+    margin-left: 25%;
+    margin-top: 6%;
+}
+.SearchAdvertisements .searchACart:hover{
+    background-color: #4c8b0d;
+}
+.SearchAdvertisements #searchCWeightnum{
+    color: #70be22;
+    font-weight: 600;
+}
+.SearchAdvertisements #searchCPricenum{
+    color: #c31c1c;
+    font-weight: 600;
+}
+.SearchAdvertisements #cart{
+    color: #99FF33;
+    font-size: 35px;
+    margin-left: 1cm;
+    cursor: pointer;
+}
+.SearchAdvertisements #cartNum{
+    color: #dddddd;
+    font-size: 35px;
+    margin-left: 1cm;
+}
+.SearchAdvertisements #searchCNamnum{
+    color: #ffffff;
+    font-weight: 600;
+}
+.SearchAdvertisements .warning{
+    height: 40px;
+    width: 250px;
+    position: absolute;
+    right: 0;
+    top: 10%;
+    background-color: rgb(210, 91, 91);
+    font-size: 1.1rem;
+    color: white;
+    font-family: cursive;
+    padding: 5px;
+    border-radius: 5px;
+}

@@ -1,0 +1,89 @@
+body{
+    background-color: #252525;
+}
+.ViewAdvertisement .MSellerBtns{
+    list-style-type: none;
+    }
+    .MViewcard{
+        width: 1cm;
+    }
+.ViewAdvertisement .MSellerPageHeader1{
+    color: #99FF33;
+    margin-left: 9cm;
+    padding-bottom: 1cm;
+    padding-top: 1cm;
+}
+.ViewAdvertisement .MSellerPageHeader2{
+    margin-left: 9.1cm;
+}
+.ViewAdvertisement .MVheader2Name{
+    font-weight: 600;
+    color: aliceblue;
+}
+.ViewAdvertisement .MVheader2Btns{
+    margin-left: 10cm;
+    margin-top: -1.25cm;
+}
+
+.ViewAdvertisement #SalesBTN{
+    background-color: #99FF33;
+    color:black
+}
+
+.ViewAdvertisement #PostBTN{
+    background-color: #99FF33;
+    color:black
+}
+.ViewAdvertisement .MproductVcard{
+    width: 20cm;
+    height: 4cm;
+    margin-left: 6.2cm;
+    background-color:antiquewhite;
+    border: 2px solid;
+    border-radius: 5px;
+    border-color: #99FF33;
+}
+.ViewAdvertisement .ViewCard{
+    padding-bottom: 1cm;
+}
+.ViewAdvertisement .Viewcard-body{
+    margin-top: -3.5cm;
+    margin-left: 8cm;
+    color: #99FF33;
+}
+.ViewAdvertisement .vertical {
+    border-right: 2px solid rgb(255, 255, 255);
+    height: 1000px;
+    position: absolute;
+    right: 80%;
+}
+.ViewAdvertisement .card-title{
+    color: black;
+    margin-left: 7cm;
+}
+.ViewAdvertisement .card-text{
+    color: black;
+    margin-left: 7cm;
+}
+.ViewAdvertisement .card-price{
+    color: black;
+    width: 5cm;
+    position: relative;
+    top: -0.25cm;
+    z-index: 1;
+}
+.ViewAdvertisement .updateBTN{
+    width: 4cm;
+    margin-left: 15cm;
+    margin-top: -6.6cm;
+    position: relative;
+    top: 0.75cm;
+}
+
+.ViewAdvertisement .deleteBTN{
+    width: 4cm;
+    margin-left: 15cm;
+    margin-top: -4.8cm;
+    position: relative;
+    bottom: -0.5cm;
+}
