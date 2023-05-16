@@ -69,7 +69,7 @@ export default function Home() {
                     <p className="ReUserDivPara">All Registered Users, Trainers, Sellers and Administrators are listed here. All of the data related to them can be viewed by an administrator at any time.</p>
                     <button className="ReUserHomeButton" onClick={(e) => {
                         e.preventDefault();
-                        window.location.href = `#`;
+                        window.location.href = `/buyer`;
                     }}>MARKETPLACE</button>
 
                 </div>
@@ -91,7 +91,7 @@ export default function Home() {
                     <p className="ReUserDivPara">All Registered Users, Trainers, Sellers and Administrators are listed here. All of the data related to them can be viewed by an administrator at any time.</p>
                     <button className="ReUserHomeButton" onClick={(e) => {
                         e.preventDefault();
-                        window.location.href = `#`;
+                        window.location.href = `/mainNT`;
                     }}>NUTRITION PLANS</button>
 
                 </div>
@@ -102,7 +102,7 @@ export default function Home() {
                     <p className="ReUserDivPara">All Registered Users, Trainers, Sellers and Administrators are listed here. All of the data related to them can be viewed by an administrator at any time.</p>
                     <button className="ReUserHomeButton" onClick={(e) => {
                         e.preventDefault();
-                        window.location.href = `#`;
+                        window.location.href = `/RUVA`;
                     }}>RECIPES</button>
 
                 </div>

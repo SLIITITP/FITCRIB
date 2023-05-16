@@ -36,7 +36,7 @@
     return (
       <div className='RDetails'>
       <div className="Rdetailscontainer">
-        <Link to="/" className="btn btn-primary mb-4" style={{ backgroundColor: "green", color: "white" }}>Back to Home</Link>
+        <Link to="/allrecipes" className="btn btn-primary mb-4" style={{ backgroundColor: "green", color: "white" }}>Back to Home</Link>
         <center><h2 style={{color: 'white'}}>Recipe Details</h2><br /></center>
         <div className="horizontal-barrecipedetails"></div>
         <div className="row">
@@ -61,7 +61,7 @@
                     src={recipe.image} alt=""/>
                 </div>
                 <div>
-                  <Link to={`/update/${id}`} className="btn btn-primary mr-2 mt-3 space" style={{ backgroundColor: "green", color: "white" }}>Update Recipe</Link>
+                  <Link to={`/updateRecipe/${id}`} className="btn btn-primary mr-2 mt-3 space" style={{ backgroundColor: "green", color: "white" }}>Update Recipe</Link>
                   <button type="button" className="btn btn-danger spacetwo mt-3 " onClick={handleDelete} >Delete Recipe</button>
                 </div>
               </div>

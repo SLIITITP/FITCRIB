@@ -147,6 +147,13 @@ const FinancialPerf = () => {
 
                     <p className="FNFinancialChartP">No. of Transactions</p>
                 </div>
+                <br/>
+                <div className="FNfinancialDataPDF">
+                    <p className="FNFinancialPDFP">Total Income: {totalIncome} (LKR)</p>
+                    <p className="FNFinancialPDFP">Total Expenses: {totalExpense} (LKR)</p>
+                    <p className="FNFinancialPDFP">Net Profit: {netProfit} (LKR)</p>
+
+                </div>
                 <br /><br />
             </div>
             <br/>

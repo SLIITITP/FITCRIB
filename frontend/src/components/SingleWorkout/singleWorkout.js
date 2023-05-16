@@ -65,35 +65,35 @@ export default function SingleWorkout() {
   return (
     <>
       <div className="SingleWorkout" style={{ backgroundColor: "#1F1F1F" }}>
-        <div className="row gx-8">
-          <div className="col-md-8 col-lg-8 col-xl-8 overflow-auto mb-5 mt-5 workoutPlanContainer">
+        <div className="SingleWorkout row gx-8">
+          <div className="SingleWorkout col-md-8 col-lg-8 col-xl-8 overflow-auto mb-5 mt-5 workoutPlanContainer">
             {workout ? (
-              <div className="card shadow SingleWorkout cardoutline w-100">
+              <div className="SingleWorkout card shadow SingleWorkout cardoutline w-100">
                 <br/>
-                <div className="card-body">
+                <div className="SingleWorkout card-body">
                   
-                  <h1 className="card-title">{workout.workoutName}</h1>
-                  <p className="card-text">{workout.workoutDescription}</p>
+                  <h1 className="SingleWorkout card-title">{workout.workoutName}</h1>
+                  <p className="SingleWorkout card-text">{workout.workoutDescription}</p>
                   <hr />
                   {workout.workoutPlan &&
                     workout.workoutPlan.map((items, index) => {
                       return (
-                        <div key={index} className="mb-4">
-                          <div className="d-flex justify-content-between align-items-center mb-2">
+                        <div key={index} className="SingleWorkout mb-4">
+                          <div className="SingleWorkout d-flex justify-content-between align-items-center mb-2">
                             <h4>Day {index + 1}</h4>
                             <button
-                              className="btn btn-outline-success"
+                              className="SingleWorkout btn btn-outline-success"
                               onClick={() => handleIndex(index)}
                             >
                               Start Session
                             </button>
                           </div>
-                          <ul className="list-group">
+                          <ul className="SingleWorkout list-group">
                             {items.map((subItems, sIndex) => {
                               return (
                                 <li
                                   key={sIndex}
-                                  className="list-group-item d-flex justify-content-between align-items-center"
+                                  className="SingleWorkout list-group-item d-flex justify-content-between align-items-center"
                                 >
                                   <span>{subItems.exerciseName}</span>
                                   <span>
@@ -110,11 +110,11 @@ export default function SingleWorkout() {
                         
                       );
                     })}
-                  <div className="d-flex justify-content-center">
+                  <div className="SingleWorkout d-flex justify-content-center">
                     <UpdateButton id={workout._id} />
                   </div>
                   <br/>
-                  <div className="d-flex justify-content-center">
+                  <div className="SingleWorkout d-flex justify-content-center">
                   <DeleteButton id={workout._id} />
                   </div>
                 </div >
@@ -125,8 +125,8 @@ export default function SingleWorkout() {
             )}
           </div>
 
-          <div className="col-md-3 col-lg-3 col-xl-3 overflow-auto mb-5 mt-5 sessionContainer cardoutline">
-            <div className="card shadow">
+          <div className="SingleWorkout col-md-3 col-lg-3 col-xl-3 overflow-auto mb-5 mt-5 sessionContainer cardoutline">
+            <div className="SingleWorkout card shadow">
               <div>
                 <h2>Satisfactory Sessions</h2>
                 <br/>
@@ -146,28 +146,14 @@ export default function SingleWorkout() {
                 )}
               </div>
               <br/>
-              {/* <div>
-                <h1>Alright Sessions</h1>
-                {session ? (
-                  <ul>
-                    {session.map((item, index) => {
-                      if (item.sentiment === "3") {
-                        return <li key={index}>Day {item.day + 1} Session {item.sessionNumber} - {item.sessionComment}</li>;
-                      }
-                      return null;
-                    })}
-                  </ul>
-                ) : (
-                  <p>Loading ......</p>
-                )}
-              </div> */}
+              
               <div>
                 <h2>Unsatisfactory Sessions</h2>
                 <br/>
                 {session ? (
                   <ul>
                     {session.map((item, index) => {
-                      if (item.sentiment === "1" || item.sentiment === "2") {
+                      if (item.sentiment === "1" || item.sentiment === "2" || item.sentiment === "3") {
                         return <li key={index} onClick={() => sessionDetails(item.day, item.sessionNumber)}>Day {item.day + 1} Session {item.sessionNumber} - {item.sessionComment}</li>;
                       }
                       return null;

@@ -73,6 +73,22 @@ import NavigationBarB from './components/NavigationBarB/NavigationBarB'
 import React, { useState, useEffect } from "react";
 import UserContext from "./components/ContextComponent/ContextComponent";
 
+//Marketplace Management
+
+import AddAdvertisement from './components/AddAdvertisement/AddAdvertisment';
+import 'react-toastify/dist/ReactToastify.css';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import ViewAdvertisement from './components/ViewAdvertisement/ViewAdvertisement';
+import UpdateAdvertisement from './components/UpdateAdvertisement/UpdateAdvertisement';
+import SearchAdvertisements from './components/SearchAdvertisements/SearchAdvertisements';
+import ProductView from './components/ProductView/ProductView';
+import CheckoutProduct from './components/CheckoutProduct/CheckoutProduct';
+import OrderPage from './components/OrderPage/OrderPage';
+import Cart from './components/Cart/Cart';
+import ViewSalesReport from './components/ViewSalesReport/ViewSalesReport';
+
+
+
 function App() {
 
   const [user, setUser] = useState(() => {
@@ -96,7 +112,11 @@ function App() {
       <UserContext.Provider value={{ user, setUser }}>
         <div className="App">
 
-          {user?.UserType === 'Registered User' ? <NavigationBarB /> : <AdminHeader />}
+        {user?.UserType === 'Registered User' || user?.UserType === 'Seller' || user?.UserType === 'Trainer' ? (
+            <NavigationBarB />
+          ) : (
+            <AdminHeader />
+          )}
           <Routes>
             {/* <Route path="/" /> */}
             {/* <Route path = "/CreateWorkout" element = {<CreateWorkoutMain/>}/> */}
@@ -162,6 +182,19 @@ function App() {
             <Route path='/updateRecipe/:id' element={<UpdateRecipe />} />
             <Route path='/RUVA' element={<RUVAComponent />} />
             <Route path='/RURD/recipe/:id' element={<RURDComponent />} />
+
+            {/* Marketplace Management */}
+            <Route path='/buyer' element={<SearchAdvertisements/>}/>
+            <Route path='/cart' element={<Cart/>}/>
+            <Route path='/checkout/:id' element={<CheckoutProduct/>}/>
+            <Route path='/getProduct/:id' element={<ProductView/>}/>
+            <Route path='/SellerHome' element={<ViewAdvertisement/>}/>
+            <Route path='/addAd' element={<AddAdvertisement/>}/>
+            <Route path='/updateAd/:id' element={<UpdateAdvertisement/>}/>
+            <Route path='/salesReport' element={<ViewSalesReport/>}/>
+            <Route path='/AllOrders' element={<OrderPage/>}/>
+            <Route path='/SalesReport' element={<ViewSalesReport/>}/>
+
           </Routes>
           {user?.UserType === 'Admin' && <AdminFooter />}
 
