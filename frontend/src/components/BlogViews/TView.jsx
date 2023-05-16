@@ -32,7 +32,7 @@ return(<>
                      /><span id="searchIcon"><FontAwesomeIcon icon={faSearch}/></span>
            </div>
         <div id="buttons" style={{marginLeft:"40px"}}><button id="btn3" onClick={()=>{history("/bCreate")}} ><span id="btnText">Create Blog</span><span id="create"><FontAwesomeIcon className="Bicon" icon={faPlusCircle}/></span></button></div>
-        <div id="buttons"><button id="btn3" onClick={()=>{history("/myBlogs")}}><span id="btnText">My Blog</span><span id="file"><FontAwesomeIcon className="Bicon" icon={faFileAlt}/></span></button></div>
+        <div id="buttons"><button id="btn3" onClick={()=>{history("/myBlogs")}}><span id="btnText">My Blogs</span><span id="file"><FontAwesomeIcon className="Bicon" icon={faFileAlt}/></span></button></div>
         <br></br>
 
 <div id="vCards">

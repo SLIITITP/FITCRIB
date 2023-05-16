@@ -1,13 +1,18 @@
 import "./Bcreate.css"
 import React from "react"
 import 'react-quill/dist/quill.snow.css'
-import { useState } from "react"
+import { useState,useContext } from "react"
 import {  useNavigate } from "react-router-dom"
 import Editor from "../BlogUpdate/Editor"
 import { FaChevronLeft } from "react-icons/fa"
-import axios from "axios"
+
+import UserContext from '../ContextComponent/ContextComponent';
 
 export const Create =()=>{
+
+  
+  const { user } = useContext(UserContext);
+  const userID = user._id
 
     const history = useNavigate()
 
@@ -23,29 +28,31 @@ async function createNewPost(event)
 {
     const data = new FormData()
 
+    data.set('userId',userID)
     data.set('username',username)
     data.set('heading',heading)
     data.set('email',email)
     data.set('content',content)
     data.set('category',category)
     data.set('file',files[0])
+    
 
     event.preventDefault()
-    
+   /* 
     const response = await fetch('http://localhost:8070/blog',{
      method : 'POST',
         body: data,
       })
       console.log(files)
-      if(response.ok){
-        setRedirect(true)
-      }  
+        */
   
-    await axios.post('http://localhost:8070/bApprove',{
-      "heading":heading,
-      "email":email,
-      "bApprove":false
+    const response = await fetch('http://localhost:8070/bApprove',{
+      method:'POST',
+      body: data,
     })
+    if(response.ok){
+      setRedirect(true)
+    }
      /* axios.post('/create-pdf',data)
       .then(()=>axios.get('fetch-pdf',{ responseType:'blob'}))
       .then((res)=>{
@@ -59,7 +66,7 @@ if(redirect){
     
     return(<>
     <body id="Bbody">
-    <div><button className="back" onClick={()=>{history("/tBview")}}><FaChevronLeft></FaChevronLeft></button></div>
+    <div><button className="Bback" onClick={()=>{history("/tBview")}}><FaChevronLeft></FaChevronLeft></button></div>
         
         <h1 id="bH1">Create Blog Page</h1><br></br>
     <form id="Bform" onSubmit={createNewPost}>
@@ -87,7 +94,7 @@ if(redirect){
     value={content} 
     onChange={setContent}/>
     
-    <button style={{marginTop:'60px',marginLeft:'30px'}} type="submit" className="create">create</button>
+    <button style={{marginTop:'60px',marginLeft:'30px'}} type="submit" className="Btncreate">create</button>
      </form>
      </body>
         </>

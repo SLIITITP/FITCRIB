@@ -18,7 +18,7 @@
     font-family: 'Poppins',serif;
 
 }
-.sub,#Binput,textarea,select{
+.sub,#Binput,#selectItems{
     margin-left: 30px;
     margin-bottom: 20px;
 }
@@ -44,7 +44,7 @@
 button{
   font-weight: bolder;
 }
-.create{
+.Btncreate{
   margin-left: 3px;
   padding: 3px 2px 10px 2px;
   font-size: 24;
@@ -62,12 +62,12 @@ button{
   border: 0;
 }
 
-.create:active{
+.Btncreate:active{
   background-color: rgb(0, 255, 85);
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
-.create:hover {
+.Btncreate:hover {
   background-position: right center; /* change the direction of the change here */
   color: black;
   background-color:  #3CA55C;
@@ -96,7 +96,7 @@ button{
   border-color: #3CA55C;
   height: 40px;
 }
-select:hover{
+#selectItems:hover{
   background-position: right center; /* change the direction of the change here */
   color: rgb(0, 0, 0);
   font-weight: 200;
@@ -107,7 +107,7 @@ select:hover{
   background-color: #0000;
   color:black;
 }
-.back{
+.Bback{
   margin-right: 10px;
 }
 #bOption

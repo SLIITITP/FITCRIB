@@ -1,0 +1,39 @@
+.ViewSalesReport .MReportPage{
+    border: 2px solid #14bf47;
+}
+.ViewSalesReport .MReportHeading{
+    color: chartreuse;
+    text-align: center;
+    margin-left: 5cm;
+    font-weight:600;
+}
+.ViewSalesReport .MReportHeading2{
+    color: rgb(210, 226, 176);
+    text-align: center;
+    font-weight:600;
+    margin-left: 5cm;
+    font-style: italic;
+}
+.ViewSalesReport .MReportHeading3{
+    color: rgb(225, 245, 220);
+    margin-left: 5cm;
+    text-align: center;
+}
+.ViewSalesReport .MSaveReportBTN{
+    margin-left: 27.1cm;
+    width: 5cm;
+}
+.ViewSalesReport .MReportTable{
+    margin-top: 0.5cm;
+    margin-left: 2cm;
+}
+.ViewSalesReport .MReportTableHeading{
+    color: antiquewhite;
+}
+.ViewSalesReport .MReportTableData{
+    color:azure;
+}
+.ViewSalesReport .SalesTable{
+    border: 2px solid #14bf47;
+    margin-left: 0cm;
+}

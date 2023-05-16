@@ -29,7 +29,7 @@
     font-size: 36;
     font-weight: 400;
 }
-h2{
+#head2{
     margin-left: 10px;
     padding-top: 5px;
     font-family: 'Poppins',sans-serif;
@@ -68,7 +68,7 @@ p{
     font-weight: 100;
 
 }
-.back{
+.Bback{
     position: absolute;
     margin-top: 10px;
     margin-left: 4px;

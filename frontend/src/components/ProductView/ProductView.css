@@ -1,0 +1,108 @@
+.ProductView .card-img-top{
+    width: 1cm;
+}
+.ProductView .MProductViewCard{
+    display: flex;
+}
+.ProductView .wrapper{
+    height: 0.7cm;
+    width: 3cm;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FFF;
+    border-radius: 8px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    margin-left: 12.5cm;
+    margin-top: -1.11cm;
+}
+.ProductView .wrapper span{
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    user-select: none;
+}
+.ProductView .wrapper span.num{
+    font-size: 20px;
+    border-right: 2px solid rgba(0,0,0,0.2);
+    border-left: 2px solid rgba(0,0,0,0.2);
+    pointer-events: none;
+}
+
+.ProductView .pdctVImg{
+    width: 9cm;
+    height: 8cm;
+    position: absolute;
+    margin-left: 30px;
+}
+.ProductView .PrdctVName{
+    color: #99FF33;
+    font-weight: 600;
+    font-size: 32px;
+    margin-left: 10cm;
+}
+.ProductView .PrdctVdata{
+    color:beige;
+    font-weight: 550;
+    font-size: 18px;
+    margin-left: 10cm;
+    margin-top: 0.5cm;
+}
+.ProductView #PrdctVdata1{
+    color: rgb(202, 13, 13);
+}
+.ProductView .PrdctStockdata{
+    color: #99FF33;
+    margin-left: 16cm;
+    margin-top: -0.7cm;
+}
+.ProductView .MpdctBuyBTN{
+    background-color: #99FF33;
+    color: black;
+    width: 4cm;
+    margin-left: 15cm;
+    margin-top: 0.5cm;
+}
+.ProductView .MpdctBuyBTN:hover{
+    background-color: #99FF33;
+    color: black;
+}
+.ProductView .MpdctCartBTN{
+    width: 4cm;
+    margin-left: 10cm;
+    margin-top: -1.8cm;
+}
+.ProductView .pdctAllInfo{
+    margin-left: 1cm;
+    margin-top: 0.5cm;
+}
+.ProductView #MPbackg1{
+    background-color: #2b3028;
+    padding-top: 1cm;
+    width: 22cm;
+    height: 10cm;
+}
+.ProductView #MPbackg2{
+    background-color: #2b3028;
+    width: 22cm;
+    height: 6cm;
+}
+.ProductView .pdctDescCard{
+    margin-top: -0.3cm;
+}
+.ProductView .PrdctMVDesc{
+    color: #99FF33;
+    font-size: 20px;
+    font-weight: 550;
+    padding-top: 0.7cm;
+    position:relative;
+    left: -25%;
+}
+.ProductView .PrdctMVDescData{
+    color: aliceblue;
+    position: relative;
+    left: -20%;
+    bottom: 5%;
+}

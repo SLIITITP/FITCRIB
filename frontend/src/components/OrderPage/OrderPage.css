@@ -1,0 +1,41 @@
+.OrderPage .MOrderPage{
+    color: aliceblue;
+}
+.OrderPage .MOrderHeading{
+    color: chartreuse;
+    text-align: center;
+    padding-top: 1cm;
+}
+.OrderPage .MOrderReportBTN{
+    margin-left: 29.65cm;
+    width: 5cm;
+}
+.OrderPage .MOrderTable{
+    margin-top: 1cm;
+    margin-left: 2.5cm;
+}
+.OrderPage .MOrderTableHeading{
+    color: antiquewhite;
+}
+.OrderPage .MOrderTableData{
+    color:azure;
+}
+.OrderPage .orderPgTitle{
+    color: chartreuse;
+    text-align: center;
+    padding-top: 1cm;
+    padding-bottom: 1cm;
+}
+.OrderPage .order-title{
+    font-size: 23px;
+    margin-top: -0.25cm;
+}
+.OrderPage .order-price{
+    margin-top: 0.5cm;
+}
+.OrderPage .order-qty{
+    margin-top: -0.3cm;
+}
+.OrderPage .order-date{
+    margin-top: -0.35cm;
+}

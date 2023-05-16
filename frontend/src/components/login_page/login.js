@@ -36,7 +36,7 @@ export default function Login(){
         if (result.Fullname) {
             localStorage.setItem('newUser', JSON.stringify(result))
             if (result.UserType === "Seller") {
-                history(`/seller_home/${result._id}`, { state: { id:result.Fullname } })
+                history(`/SellerHome/${result._id}`, { state: { id:result.Fullname } })
                 // window.location.href = `/seller_home/${result._id}`;
             }
             else if (result.UserType === "Registered User") {
@@ -85,7 +85,7 @@ export default function Login(){
                 <form action="POST">
                     <div>
                         <label for="UserType" className="loginheading">UserType: </label><br/>
-                        <select className="form-select form-select-lg" required={true} id="UserType" name="UserType" onChange={(e)=>{
+                        <select className="form-select-lg loginform-select" required={true} id="UserType" name="UserType" onChange={(e)=>{
                         setUserType(e.target.value)
                              }} value={UserType} style={{ backgroundColor: "aliceblue", fontWeight: "500" }}>
                             <option defaultValue >Select Type</option>
