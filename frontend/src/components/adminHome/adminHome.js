@@ -39,7 +39,7 @@ export default function AdminHome(){
                     <br/>
                     <button className="AdminButton" onClick={(e) => {
                                                                             e.preventDefault();
-                                                                            window.location.href=`#`;
+                                                                            window.location.href=`/bApprove`;
                                                                             }}>BLOG DATA</button>
                 </div>
                 <br/><br/>

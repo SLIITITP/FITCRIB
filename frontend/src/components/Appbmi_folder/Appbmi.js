@@ -1,5 +1,5 @@
 
-import './style_Appbmi.css';
+//import './style_Appbmi.css';
 import React from "react";
 import {useState} from "react";
 

@@ -65,7 +65,7 @@ return(<>
 <body id="BTbody">
 <div >
   
-<button className="back" onClick={()=>{history("/tBview")}}><FaChevronLeft></FaChevronLeft></button></div>
+<button className="Bback" onClick={()=>{history("/tBview")}}><FaChevronLeft></FaChevronLeft></button></div>
         <h1 className="h1">Educational Content Blog</h1>
         <br></br>
 

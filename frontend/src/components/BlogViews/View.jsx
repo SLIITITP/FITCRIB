@@ -75,7 +75,7 @@ return(
         <div key={k} id="Bcard" >
             <div key={k}className="Bcontainer" id="column" > <div onClick={()=>{history("/blog/"+B._id)}}>
                 <img id="imgCard" src={'http://localhost:8070/'+B.image} alt="P 1" width="100%"></img>
-                <h2 >{B.heading} </h2>
+                <h2 id="head2">{B.heading} </h2>
                 <p >Category: {B.category}</p>
                 <p >Date & Time: {Moment(B.createdAt).format(' d MMM yyyy - HH:MM')}</p>
                 </div>
