@@ -81,7 +81,6 @@ const handleDelete = async (Uname,ID)=>{
     catch(err){
        console.log(err)   
        }
-       
 }
 return(<>
 <body id="Bbody">
