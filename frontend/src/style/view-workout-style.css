@@ -1,0 +1,354 @@
+.workout-view-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 90%;
+    color: #131313;
+    border-radius: 15px;
+    height: 100%;
+    min-height: 68vh;
+    padding: 10px 20px;
+    box-sizing: border-box; 
+    margin-bottom: 40px;
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.767);
+}
+.workout-view-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box; 
+    margin-bottom: 30px;
+    margin-top: 20px;
+
+}
+.trainerDetails{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 20%;
+    height: 80px;
+    box-sizing: border-box; 
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+.trainerDetails-image{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    margin-right: 10px;
+    background-color: #47a31f;
+}
+.workout-view-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;  
+}
+.workout-view-body-top{
+    display: flex;
+    top: 10px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;  
+}
+.workout-view-body-top-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 50%;
+    height: 100%;
+    box-sizing: border-box;  
+}
+.workout-view-body-top-left-video-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;  
+}
+.workout-view-body-top-left-video{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 500px;
+    box-sizing: border-box;  
+}
+.ratings-wrapper{
+    height: 100px;
+    width: 95.5%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 30px;
+    background-color: #131313;
+    border-radius: 0px 0px 15px 15px;
+    color: #fff;
+}
+.workout-view-body-top-right{ 
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 50%;
+    height: 100%; 
+    box-sizing: border-box;  
+    background-color: #303030e3;
+    padding: 10px;
+    border-radius: 10px;
+}
+.workout-view-body-top-right-thumbnail{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center; 
+    height: 100%;
+    box-sizing: border-box;  
+    margin-bottom: 10px;
+}
+.workout-view-body-top-right-thumbnail-image{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%; 
+    max-width: 800px;
+    max-height: 800px;
+    border-radius: 1%;
+    box-sizing: border-box;
+    margin-right: 10px;
+    background-color: #47a31f;
+    transition: all ease-in-out 0.5s;
+    cursor: zoom-in;
+}
+.workout-view-body-top-right-thumbnail-image:hover{
+    transform: scale(1.1);
+    border-radius: 15px;
+}
+.workout-view-body-top-right-image-list{
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
+    grid-gap: 10px; 
+    width: 140px;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    justify-content: center; 
+    height: 100%;
+    box-sizing: border-box;  
+    margin-bottom: 10px;
+}
+.workout-view-body-top-right-image-list-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px; 
+    border-radius: 1%;
+    box-sizing: border-box;
+    margin-right: 10px;
+    background-color: #47a31f;
+}
+.tag{ 
+    width: fit-content;
+    height: 40px;
+    box-sizing: border-box;   
+    background-color: #42792c;
+    color: #fff;
+    font-size: 15px;
+    padding: 10px 30px;
+    border-radius: 50px;
+    margin-left: 10px;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+.workout-view-body-bottom{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.workout-view-body-bottom-left{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.workout-view-body-bottom-right{
+    margin-top: 20px;
+    background-color: #f5f5f5;
+    min-height: 45vh;
+    border-radius: 15px;
+    width: 50%;
+    position: relative;
+    padding-bottom: 80px;
+}
+.workout-view-body-bottom-right-comment-head{
+    background-color: #131313dc;
+    color: #fff;
+    height: 50px;
+    width:95%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 15px 15px 0px 0px;
+    justify-content: space-between;   
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.comment-count{
+    background-color: #a83c3c;
+    padding: 8px 8px;
+    border-radius: 100%;
+}
+.workout-view-body-bottom-right-comment-body{
+    height: 60%;
+}
+.workout-view-body-bottom-right-comment-footer{
+    background-color: #414141cc;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 97.5%;
+    height: 80px;
+    margin-top: 20px;
+    position: absolute;
+    bottom: 0;
+    border-radius: 0px 0px 15px 15px ;
+}
+.workout-view-body-bottom-right-comment-footer-input{
+    width: 90%;
+    height: 70%;
+    border-radius: 15px;
+    padding: 3px 5px;
+    border: 0;
+    background-color: #1313139a;
+    color: #fff;
+}
+.workout-view-body-bottom-right-comment-footer-button{
+    width: 10%;
+    height: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-left: 10px;
+    background-color: #42792c;
+    transition: all 0.3s ease-in-out;
+}
+.workout-view-body-bottom-right-comment-footer-button:hover{
+    background-color: #131313;
+}
+.comment-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    padding: 5px;
+    border-radius: 15px;
+    margin-right: 10px;
+    background-color: #d1d1d1;
+}
+.comment-pro-image{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+.comment-image{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+}
+.comment-user{
+    font-weight: 500;
+    font-size: 18px;
+    margin-bottom: 3px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.comment-button-edit{
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border: 0;
+    cursor: pointer;
+    margin-right: 10px;
+    background-color: #a4fa82;
+    transition: all 0.3s ease-in-out;
+}
+.comment-button-edit:hover{
+    transform: rotate('360deg');
+    background-image: linear-gradient(to bottom ,#a4fa82 ,#ffffff);
+}
+.comment-button-delete{
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    cursor: pointer;
+    background-color: #faa7a7;
+    transition: all 0.3s ease-in-out;
+    border: 0;
+}
+.comment-button-delete:hover{
+    transform: rotate('360deg');
+    background-image: linear-gradient(to bottom ,#faa7a7 ,#ffffff);
+}
+.comment-edit-textarea{
+    min-width: 33vw;
+    min-height: 70px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    border: 0;
+    border-radius: 15px;
+    padding: 5px 8px;
+}
+.comment{
+    width: 100%;
+}
+.workout-name-wrapper{
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+}
+.backward-navigation{
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+}
