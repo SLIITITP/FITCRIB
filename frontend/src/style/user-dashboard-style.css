@@ -1,0 +1,448 @@
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 58vh;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/dashboard-back.jpg');
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed; 
+    box-sizing: border-box;
+    color: #fff; 
+    padding: 0;
+    margin: 0;
+}
+.workout-image{
+    width: 100%;
+    border-radius: 15px;
+    height: 100%;
+    margin: 2px;
+}
+.see-more-button{
+    text-decoration: solid;
+    color: #156619;
+    padding:5px 8px;
+    border-radius: 5px;
+    border: #156619 1px solid;
+    cursor: pointer;
+}
+.sub-container {
+    background-color: #ffffff15;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 58vh;
+    width: 100%;
+    height: 100%; 
+    box-sizing: border-box;
+    padding-top: 3%;
+}
+.searchBar-wrap{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    box-sizing: border-box; 
+}
+.searchBar-em{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 50%;
+    box-sizing: border-box;
+    padding: 0 20px;
+    border-radius: 25px;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+    transition: all 0.3s ease-in-out;
+}
+.search-input-em{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 0 20px; 
+    border :0px;
+    font-size: 15px;
+    transition: all 0.3s ease-in-out;
+}
+.search-input-em:focus{
+    outline: none;
+}
+.search-button-em{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    width: 80px;
+    height: 40px;
+    box-sizing: border-box;
+    padding: 0 20px;
+    border :0px; 
+    cursor: pointer;
+    background-color: #ffffff;
+    border-radius: 25px;
+    transition: all 0.3s ease-in-out;
+}
+.user-dashboard-wrap{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 100%;
+    border-radius: 20px;
+    border: #3c8b1a 2px solid;
+    min-height: 40vh;
+    box-sizing: border-box; 
+    padding: 20px 20px;
+    margin-bottom: 20px;
+
+}
+.user-dashboard-items{
+    display: grid; 
+    grid-template-columns: repeat(3, 32.5%); 
+    grid-gap: 20px;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 0 20px;
+}
+.user-dashboard-item{
+    text-decoration: none;
+    display: flex;
+    color: #131313;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    height: 350px;
+    box-sizing: border-box; 
+    border-radius: 20px;
+    background-color: #fafafad5; 
+    transition: all 0.3s ease-in-out;
+    padding: 1%;
+}
+.user-dashboard-item:hover{
+    background-image: linear-gradient(to bottom right,#fff,#c5c5c5d8);
+}
+.user-dashboard-item-name{ 
+    color: #3c8b1a;
+    margin-left: 1%;
+    font-size: 18px;
+    font-weight: 600;
+}
+.user-dashboard-item-body{
+    display: flex;
+    text-decoration: none;
+    color: #131313;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 0 20px;
+}
+.user-dashboard-item-body-image{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #3c8b1a;
+    border-radius: 12px;
+    padding: 2px;
+    width: 40%;
+    height: 150px;
+    box-sizing: border-box; 
+}
+.user-dashboard-item-body-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 60%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 0 20px;
+}
+.user-dashboard-item-footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 10%;
+    padding-right: 10%;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box; 
+}
+.user-dashboard-item-footer-left{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 0 20px;
+}
+.user-dashboard-item-footer-right{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 40%;
+    height: 100%;
+    box-sizing: border-box; 
+}
+.user-dashboard-item-footer-right-button-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box; 
+    justify-content: space-evenly;
+    border :0px;
+    cursor: pointer; 
+    border-radius: 25px;
+    transition: all 0.3s ease-in-out;
+}
+.user-dashboard-item-footer-button-like{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 40px;
+    box-sizing: border-box; 
+    border :0px;
+    cursor: pointer; 
+    border-radius: 25px;
+    transition: all 0.3s ease-in-out;
+    margin-right:10px ;
+}
+
+.user-dashboard-item-footer-button-like:hover{ 
+    background-color: #a4ebee;
+    color: #ffffff;
+}
+
+.user-dashboard-item-footer-button-dislike:hover{ 
+    background-color: #eea4c6;
+    color: #ffffff;
+}
+
+.user-dashboard-item-footer-button-comment:hover{ 
+    background-color: #a4eecb;
+    color: #ffffff;
+}
+.user-dashboard-item-footer-button-dislike{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 40px;
+    box-sizing: border-box; 
+    border :0px;
+    cursor: pointer; 
+    border-radius: 25px;
+    margin-right:10px ;
+    transition: all 0.3s ease-in-out;
+}
+
+.user-dashboard-item-footer-button-comment{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 40px;
+    box-sizing: border-box; 
+    border :0px;
+    cursor: pointer; 
+    border-radius: 25px;
+    transition: all 0.3s ease-in-out;
+}
+#thumbs-up{
+    color: #8c1a46;
+    font-size: 30px;
+}
+.trainerButtons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; 
+    box-sizing: border-box; 
+    justify-content: space-evenly;
+    margin-left: 20px;
+}
+.trainerButton a{
+    text-decoration: none;
+    color: #fff;
+}
+.trainerButton{
+    display: flex;
+    text-decoration: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 40px;
+    box-sizing: border-box; 
+    background-color: #3c8b1a;
+    color: #fff;
+    border :0px;
+    cursor: pointer; 
+    border-radius: 25px;
+    transition: all 0.3s ease-in-out;
+    margin-right:10px ;
+}
+.trainerButton:hover{
+    background-color: #fff;
+    color: #3c8b1a;
+}
+.user-dashboard-item-feed-buttonList{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box; 
+    justify-content: space-evenly;
+    border :0px;
+    cursor: pointer; 
+    border-radius: 25px;
+    transition: all 0.3s ease-in-out;
+}
+.user-dashboard-item-feed-view{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 60px;
+    height: 40px;
+    box-sizing: border-box; 
+    border :0px;
+    cursor: pointer; 
+    border-radius: 25px;
+    transition: all 0.3s ease-in-out;
+    margin-right:10px ;
+}
+.user-dashboard-item-feed-view:hover{
+    background-color: #a4ebee;
+    width: 100px;
+    color: #131313;
+}
+.user-dashboard-item-feed-edit{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 40px;
+    box-sizing: border-box; 
+    border :0px;
+    cursor: pointer; 
+    border-radius: 25px;
+    transition: all 0.3s ease-in-out;
+    margin-right:10px ;
+}
+.user-dashboard-item-feed-edit:hover{
+    background-color: #a4eecb;
+    width: 100px;
+    color: #131313;
+}
+.user-dashboard-item-feed-delete{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 40px;
+    box-sizing: border-box; 
+    border :0px;
+    cursor: pointer; 
+    border-radius: 25px;
+    transition: all 0.3s ease-in-out;
+    margin-right:10px ;
+}
+.user-dashboard-item-feed-delete:hover{
+    background-color: #eea4c6;
+    width: 100px;
+    color: #131313;
+}
+.trainer-profile{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 400px;
+    box-sizing: border-box; 
+    justify-content: space-between;
+    padding-left: 8%;
+    padding-right: 8%;
+    border :0px;
+    cursor: pointer; 
+    border-radius: 25px;
+    transition: all 0.3s ease-in-out;
+    background-color: #f8f8f8e1;
+}
+.trainer-profile-image{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #131313;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius:100% ;
+    padding: 5px;
+    margin-right: 2%;
+}
+.trainer-profile-text{
+   font-size: 18px;
+   color: #131313;
+   width: 550px;
+   padding: 10px 20px;
+}
+.profile-image-edit{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    box-sizing: border-box; 
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border :0px;
+    cursor: pointer; 
+    border-radius: 25px;
+    transition: all 0.3s ease-in-out;
+    border-right: 1px solid #131313;
+    margin-right:10px ;
+}
+.profile-image-edit:hover{
+    transform: scale(1.1);
+    border-right: 1px solid #3c8b1a;
+    background-color: #d6ffc4;
+}
