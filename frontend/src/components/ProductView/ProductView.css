@@ -1,10 +1,10 @@
-.card-img-top{
+.ProductView .card-img-top{
     width: 1cm;
 }
-.MProductViewCard{
+.ProductView .MProductViewCard{
     display: flex;
 }
-.wrapper{
+.ProductView .wrapper{
     height: 0.7cm;
     width: 3cm;
     display: flex;
@@ -16,7 +16,7 @@
     margin-left: 12.5cm;
     margin-top: -1.11cm;
 }
-.wrapper span{
+.ProductView .wrapper span{
     width: 100%;
     text-align: center;
     font-size: 20px;
@@ -24,75 +24,75 @@
     cursor: pointer;
     user-select: none;
 }
-.wrapper span.num{
+.ProductView .wrapper span.num{
     font-size: 20px;
     border-right: 2px solid rgba(0,0,0,0.2);
     border-left: 2px solid rgba(0,0,0,0.2);
     pointer-events: none;
 }
 
-.pdctVImg{
+.ProductView .pdctVImg{
     width: 9cm;
     height: 8cm;
     position: absolute;
     margin-left: 30px;
 }
-.PrdctVName{
+.ProductView .PrdctVName{
     color: #99FF33;
     font-weight: 600;
     font-size: 32px;
     margin-left: 10cm;
 }
-.PrdctVdata{
+.ProductView .PrdctVdata{
     color:beige;
     font-weight: 550;
     font-size: 18px;
     margin-left: 10cm;
     margin-top: 0.5cm;
 }
-#PrdctVdata1{
+.ProductView #PrdctVdata1{
     color: rgb(202, 13, 13);
 }
-.PrdctStockdata{
+.ProductView .PrdctStockdata{
     color: #99FF33;
     margin-left: 16cm;
     margin-top: -0.7cm;
 }
-.MpdctBuyBTN{
+.ProductView .MpdctBuyBTN{
     background-color: #99FF33;
     color: black;
     width: 4cm;
     margin-left: 15cm;
     margin-top: 0.5cm;
 }
-.MpdctBuyBTN:hover{
+.ProductView .MpdctBuyBTN:hover{
     background-color: #99FF33;
     color: black;
 }
-.MpdctCartBTN{
+.ProductView .MpdctCartBTN{
     width: 4cm;
     margin-left: 10cm;
     margin-top: -1.8cm;
 }
-.pdctAllInfo{
+.ProductView .pdctAllInfo{
     margin-left: 1cm;
     margin-top: 0.5cm;
 }
-#MPbackg1{
+.ProductView #MPbackg1{
     background-color: #2b3028;
     padding-top: 1cm;
     width: 22cm;
     height: 10cm;
 }
-#MPbackg2{
+.ProductView #MPbackg2{
     background-color: #2b3028;
     width: 22cm;
     height: 6cm;
 }
-.pdctDescCard{
+.ProductView .pdctDescCard{
     margin-top: -0.3cm;
 }
-.PrdctMVDesc{
+.ProductView .PrdctMVDesc{
     color: #99FF33;
     font-size: 20px;
     font-weight: 550;
@@ -100,7 +100,7 @@
     position:relative;
     left: -25%;
 }
-.PrdctMVDescData{
+.ProductView .PrdctMVDescData{
     color: aliceblue;
     position: relative;
     left: -20%;
