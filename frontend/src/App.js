@@ -19,6 +19,7 @@ import Trainer_home from './components/Trainer_home_page/trainer_page';
 import Update from './components/Update_user/Update_user';
 import ViewProfile from './components/View_user/view_user';
 import Other_users from './components/Other_users/other_users';
+import Check_Other_User from './components/Check_Other_User/check_other_user'
 
 import All_users from './components/All_users/all_user';
 import Generate_Report from './components/Generate Report/generate_report';
@@ -140,6 +141,7 @@ function App() {
             <Route path='/adminHome' element={<AdminHome />} />
             <Route path='/allusers' element={<All_users />} />
             <Route path='/report' element={<Generate_Report />} />
+            <Route path='/otherUserProfile/:id' element={<Check_Other_User/>}/>
 
             {/* financial management */}
             <Route path='/finance' element={<FNDashboard />} />

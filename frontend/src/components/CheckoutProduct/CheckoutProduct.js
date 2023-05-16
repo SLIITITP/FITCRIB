@@ -1,11 +1,16 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import { Link, useNavigate, useParams, useLocation } from 'react-router-dom';
-
+import UserContext from '../ContextComponent/ContextComponent';
 import "../CheckoutProduct/CheckoutProduct.css";
 
 function CheckoutProduct() {
+
+    const { user } = useContext(UserContext);
+    const userID = user._id
+
+    const [sellerID, setSellerID] = useState("");
     const [recipientName, setRecipientName] = useState("");
     const [deliveryAddress, setDeliveryAddress] = useState("");
     const [name, setName] = useState("");
@@ -27,17 +32,20 @@ function CheckoutProduct() {
             const response = await axios.get(`http://localhost:8070/ad/get/${params.id}`);
             const result = response.data.advertisement;
             console.log(result);
+            setSellerID(result.userID);
             setName(result.name);
             setPrice(result.price);
         } catch (error) {
             console.error(error);
         }
     };
-
+    console.log(sellerID)
     const sendData = (e) => {
         e.preventDefault();
 
         const newOrder = {
+            userID,
+            sellerID,
             recipientName,
             deliveryAddress,
             name,

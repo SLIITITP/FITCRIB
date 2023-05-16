@@ -4,6 +4,16 @@ const Schema = mongoose.Schema;
         
 const orderSchema = new Schema({
 
+     userID : {
+        type : String,
+        required : true
+       
+   },
+   sellerID : {
+        type : String,
+        required : true
+       
+   },
    recipientname : {
         type : String,
         required : true
