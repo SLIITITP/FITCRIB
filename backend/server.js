@@ -10,6 +10,8 @@ const request = require('request');
 const fs = require('fs');
 const bcrypt = require("bcryptjs");
 const path = require("path")
+const multer = require('multer')
+const upload = multer({ dest: 'uploads/' })
 
 const jwt=require("jsonwebtoken");
 const JWT_SECRET= "kjjhjif565g5955dgdg()gsfsfsgdgh444545[][]47g"
@@ -117,3 +119,10 @@ app.use("/goal",goalRouter);
 const recipeRouter = require("./routes/recipes.js");
 
 app.use("/recipe",recipeRouter);
+
+
+//Marketplace management
+
+const adRouter = require("./routes/advertisements.js");
+
+app.use("/ad",adRouter);

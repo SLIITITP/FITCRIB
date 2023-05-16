@@ -45,13 +45,13 @@
     height: 40px;
     font-size: 20px;
 }
-.form-select{
+.loginform-select{
     width: 300px;
     border-radius: 10px;
     text-align: center;
     height: 45px;
     font-size: 20px;
-    margin-left: 50px;
+    margin-left: 4px;
 }
 .login_page{
    margin: 0;
