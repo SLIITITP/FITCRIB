@@ -73,7 +73,7 @@ console.log(totalStars)
 return(<>
 <body id="BTbody">
 <div >
-<button className="back" onClick={()=>{history("/Bview")}}><FaChevronLeft></FaChevronLeft></button></div>
+<button className="Bback" onClick={()=>{history("/Bview")}}><FaChevronLeft></FaChevronLeft></button></div>
         <h1 id="h1">Educational Content Blog</h1>
         <br></br>
 
@@ -81,16 +81,16 @@ return(<>
                 
                 <img src={'http://localhost:8070/'+blog.image} alt="P 1" width="100%"></img>
                <div className="contentView">
-                <h2 >{blog.heading} </h2>
+                <h2 id="head2" >{blog.heading} </h2>
                 <p >Category: {blog.category}</p>
                 <div dangerouslySetInnerHTML={{__html:blog.content}} className="content"/>
                  <br></br>
                 <p >Author : {blog.username}</p>
               
-                <br /><h2>Date</h2>
+                <br /><h2 id="head2">Date</h2>
                 <p>{Moment(blog.createdAt).format(' d MMM yyyy - HH:MM')}</p>
                 
-                <h2>Reviews & Ratings</h2>
+                <h2 id="head2">Reviews & Ratings</h2>
                 <p><Star stars={totalStars}>{review.BID}</Star></p>
                 <h2>{review.BID}</h2>
                 
