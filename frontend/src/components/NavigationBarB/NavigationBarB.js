@@ -75,7 +75,7 @@ export default function NavigationBarB(props) {
                                     <a className="nav-link" href="#">EXERCISES</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#">MARKETPLACE</a>
+                                    <a className="nav-link" href="/buyer">MARKETPLACE</a>
                                 </li>
                                 <li className="nav-item">
                                     <a className="nav-link" onClick={(e) => {
