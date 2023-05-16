@@ -45,10 +45,10 @@ export default function Trainer_home() {
                     <br/>
                     <h2 className="TrainerDivHeading"> Exercises Management </h2>
                     <p className="AdminDivPara">Trainers can access the exercises management system from here. They can view everything they post from here.</p> 
-                    <br/>
+                    
                     <button className="AdminButton" onClick={(e) => {
                                                                             e.preventDefault();
-                                                                            window.location.href=`#`;
+                                                                            window.location.href=`/trainerFeed`;
                                                                             }}>Exercises</button>
                 </div>
                 <br/><br/><br/><br/>
