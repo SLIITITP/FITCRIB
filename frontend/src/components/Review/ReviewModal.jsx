@@ -78,9 +78,9 @@ function Modal(props) {
                       <label className="Rtext">The Rating is {stars}</label><br></br>
                        
                         <label className="Rtext">Review</label><br></br>
-                        <textarea className="Rinput" name="comment" value={comment}  onChange={event=> setComment(event.target.value)}></textarea><br></br>
+                        <textarea className="RTextArea" name="comment" value={comment}  onChange={event=> setComment(event.target.value)}></textarea><br></br>
                                 
-                        <button type="submit" className="add">Add</button>
+                        <button type="submit" className="Badd">Add</button>
                         <br></br>
                         
                     <button  className="can" onClick={props.onClose}>cancel</button>

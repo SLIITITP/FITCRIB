@@ -3,10 +3,15 @@ import { FaChevronLeft } from "react-icons/fa"
 import React from "react"
 import axios from "axios"
 import { useNavigate  } from "react-router-dom"
-import { useEffect ,useState} from "react"
+import { useEffect ,useState,useContext} from "react"
 
+import UserContext from '../ContextComponent/ContextComponent';
 
 export const MyBlogs =()=>{
+    
+  const { user } = useContext(UserContext);
+  const userId = user._id
+
     let history = useNavigate()
     const [blog,setBlogs] = useState([])
    
@@ -18,8 +23,9 @@ const[redirect,setRedirect] = useState(false)
          
       },[])
       const loadBlogs = async()=>{
-        const result = await axios.get("http://localhost:8070/blog")
+        const result = await axios.get(`http://localhost:8070/blog/myBlogs/${userId}`)
         setBlogs(result.data)
+        console.log(result.data)
     }
 
 
@@ -42,19 +48,20 @@ const handleDelete = async (Id,Uname)=>{
        }
     
 }
-if(redirect){
-    return history.push("/myBlogs")
+if(redirect===true){
+    return history("/myBlogs")
 }
 
 return(<>
 <body className="Bbody">
 <div>
-<button className="back" onClick={()=>{history("/tBView")}}><FaChevronLeft></FaChevronLeft></button></div>
+<button className="Bback" onClick={()=>{history("/tBView")}}><FaChevronLeft></FaChevronLeft></button></div>
 <h1 id="h4">My Blogs</h1>
 <br></br>
  <div id="vCards">
-{blog.map((B,k)=>{
-return(
+{blog ?
+    blog.map((B,k)=>(
+
         <div key={k} id="card" >
             <div key={k}className="Bcontainer" id="column" > 
                 <img id="imgCard" src={'http://localhost:8070/'+B.image} alt="P 1" width="100%"></img>
@@ -71,8 +78,11 @@ return(
 
             </div>
         </div>
-)       
-})}
+      
+)): (
+    <p>Loading...</p>
+  )
+}
 </div>
 </body>
 </>

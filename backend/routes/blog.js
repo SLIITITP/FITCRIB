@@ -1,32 +1,26 @@
 const fs  = require('fs')
 const router = require("express").Router()
 const Post = require("../models/Blog")
+
 const multer = require('multer')
-const uploadMiddleware = multer({dest:'..images/'})
+const uploadMiddleware = multer({dest:'images/'})
 
 //create blog
-router.post("/",uploadMiddleware.single('file'),async(req,res)=>{
+router.post("/",async(req,res)=>{
     
-   const {originalname,path} = req.file
-   const changePath = path.replace(/\\/g, '/');
-  const parts = originalname.split('.')
- 
-const ext =parts[parts.length - 1]
-   const newPath = changePath +'.'+ ext
-   fs.renameSync(path,newPath)
-
    /*const{token} = req.cookies
    jwt.verify(token,secret,{},async(err,info)=>{
     if(err) throw err })*/
 
-    const{heading,username,email,content,category} = req.body
+    const{userId,username,heading,email,content,category,image} = req.body
    const blogDoc = await Post.create({
-    heading,
+    userId,
     username,
-    content,
+    heading,
     email,
+    content,
     category,
-    image:newPath,
+    image
    })
    res.json({blogDoc})
   
@@ -105,5 +99,20 @@ router.get("/",async (req,res)=>{
         }
     
 })
+
+
+router.get("/myBlogs/:userId",async (req,res)=>{
+    const userId = req.params.userId;
+  
+    try{
+      const allBlogs = await Post.find({userId : userId})
+      res.send(allBlogs)
+     }
+      catch(error){
+              res.status(404).json(error)
+          }
+      
+  })
+
 
 module.exports = router

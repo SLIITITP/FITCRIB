@@ -71,35 +71,35 @@ async function handleUpdate(event)
      }
 }
 if(redirect){
-  return history.push("/")
+  return history("/myBlogs")
   }
     
     return(<>
-    <body id="Bbody">
-    <div><button className="back" onClick={()=>{history("/tBView")}}><FaChevronLeft></FaChevronLeft></button></div>
+    <body id="BUbody" >
+    <div><button className="Bback" onClick={()=>{history("/tBView")}}><FaChevronLeft></FaChevronLeft></button></div>
         
-        <h1 className="bH1">Update Blog Page</h1><br></br>
+        <h1 id="bH1">Update Blog Page</h1><br></br>
         
     <form onSubmit={handleUpdate} id="Bform">
      <br></br> 
      
-    <label className="Blabel">BID</label>  <br></br>
+    <label id="Blabel">BID</label>  <br></br>
     <input type="text" id="Binput" value={id} readOnly/><br></br>
-    <label className="Blabel">Username</label>  <br></br>
+    <label id="Blabel">Username</label>  <br></br>
     <input type="username" id="Binput" placeholder={"Username"} value={username}  onChange={event=> setName(event.target.value)} /><br></br>
-    <label className="Blabel">Email</label> <br></br> 
+    <label id="Blabel">Email</label> <br></br> 
     <input type="email" id="Binput" placeholder={"Email"} value={email} onChange={event=> setEmail(event.target.value)} /><br></br>
-    <label className="Blabel">Heading</label>  <br></br>
+    <label id="Blabel">Heading</label>  <br></br>
     <input type="heading" id="Binput" placeholder={"Blog Heading"} value={heading}  onChange={event=> setHeading(event.target.value)} /><br></br>
     <br></br>
-    <label className="Blabel">Category</label>  <br></br>
-    <select name="category" placeholder="select category" onChange={event => setCategory(event.target.value)}>
-    <option value="Phisic">Phisic</option>
-    <option value="Health">Health</option>
-    <option value="Diet">Diet</option>
-    <option value="Exercises">Exercise</option>
+    <label id="Blabel">Category</label>  <br></br>
+    <select id="selectItems" name="category" placeholder="select category" onChange={event => setCategory(event.target.value)}>
+    <option id="bOption" value="Phisic">Phisic</option>
+    <option id="bOption" value="Health">Health</option>
+    <option id="bOption" value="Diet">Diet</option>
+    <option id="bOption" value="Exercises">Exercise</option>
   </select><br></br>
-    <label className="Blabel">Image</label><br></br>
+    <label id="Blabel">Image</label><br></br>
     {<img className="imgSize" alt="pic" src={'http://localhost:8070/'+image} width="20%" height="15%"></img>}
     <input type="file"  name="image" className="imgStyle2"
     onChange={ev => setFiles(ev.target.files)}/><br></br>
@@ -107,8 +107,8 @@ if(redirect){
     <Editor theme="snow" 
     onChange={setContent}  value={content}/>
     
-    <button className="update" type="submit">update</button>
-    <button className="cancel"  onClick={()=>{history.push("/")}}>Cancel</button>
+    <button className="Bupdate" type="submit">update</button>
+    <button className="Bcancel"  onClick={()=>{history("/myBlogs")}}>Cancel</button>
      </form>
      </body>
         </>

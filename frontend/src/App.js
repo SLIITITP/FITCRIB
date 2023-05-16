@@ -47,6 +47,7 @@ import TBlog from "./components/SingleBlog/Tblog"
 import UpdateBlogs from "./components/BlogUpdate/Update"
 import Modal from "./components/Review/ReviewModal"
 import Approve from "./components/ApproveBlog/appArticle"
+import BReport from "./components/BlogReport/BReport"
 
 //nutrition tracking
 
@@ -76,8 +77,6 @@ import UserContext from "./components/ContextComponent/ContextComponent";
 //Marketplace Management
 
 import AddAdvertisement from './components/AddAdvertisement/AddAdvertisment';
-import 'react-toastify/dist/ReactToastify.css';
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import ViewAdvertisement from './components/ViewAdvertisement/ViewAdvertisement';
 import UpdateAdvertisement from './components/UpdateAdvertisement/UpdateAdvertisement';
 import SearchAdvertisements from './components/SearchAdvertisements/SearchAdvertisements';
@@ -162,6 +161,7 @@ function App() {
             <Route exact path='/bReview/:id' element={<Modal />} />
             <Route exact path='/tBlog/:id' element={<TBlog />}/>
             <Route exact path='/bApprove' element={<Approve/>}/>
+            <Route exact path='/BReport' element={<BReport/>}/>
 
             {/*Nutrition tracking*/}
             <Route exact path='/addDietPlan' element={<NTAddDietPlan />} />
@@ -188,7 +188,7 @@ function App() {
             <Route path='/cart' element={<Cart/>}/>
             <Route path='/checkout/:id' element={<CheckoutProduct/>}/>
             <Route path='/getProduct/:id' element={<ProductView/>}/>
-            <Route path='/SellerHome' element={<ViewAdvertisement/>}/>
+            <Route path='/SellerHome/:id' element={<ViewAdvertisement/>}/>
             <Route path='/addAd' element={<AddAdvertisement/>}/>
             <Route path='/updateAd/:id' element={<UpdateAdvertisement/>}/>
             <Route path='/salesReport' element={<ViewSalesReport/>}/>
