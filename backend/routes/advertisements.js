@@ -40,6 +40,7 @@ router.route("/add").post(async (req, res) => {
     // const newPath = changePath + '.' + ext
     // fs.renameSync(path,newPath)
 
+    const userID = req.body.userID;
     const name = req.body.name;
     const category = req.body.category;
     // const image = req.body.image;
@@ -51,6 +52,7 @@ router.route("/add").post(async (req, res) => {
 
     const newAd = new Advertisement({
 
+        userID,
         name,
         category,
         // image : newPath,    
@@ -95,6 +97,19 @@ router.route("/buyer").get((req, res) => {
 router.route("/").get((req, res) => {
 
     Advertisement.find().then((ads) => {
+        res.json(ads)
+    }).catch((err) => {
+        console.log(err)
+    })
+
+})
+
+//---------------get all advertisements display for seller----------------------------------
+
+router.route("/:userID").get((req, res) => {
+    const userID = req.params.userID;
+
+    Advertisement.find({userID : userID}).then((ads) => {
         res.json(ads)
     }).catch((err) => {
         console.log(err)
@@ -172,15 +187,18 @@ router.route("/checkout/:id").get(async (req, res) => {
 
 router.route("/order").post(async (req, res) => {
 
+    const userID = req.body.userID;
+    const sellerID = req.body.sellerID;
     const recipientname = req.body.recipientName;
     const deliveryAddress = req.body.deliveryAddress;
     const name = req.body.name;
     const price = Number(req.body.price);
     const quantity = req.body.quantity;
     const date = new Date(req.body.date);
-    console.log(recipientname)
 
     const newOrder = new Order({
+        userID,
+        sellerID,
         recipientname,
         deliveryAddress,
         name,
@@ -208,31 +226,48 @@ router.route('/rec').get((req, res) => {
 
 
 
-//---------------get one advertisement to display------------------------
 
-router.route("/order/:id").get(async (req, res) => {
-    let userId = req.params.id;
-    const ad = await Order.findById(userId)
-        .then((order) => {
-            res.status(200).send({ status: "Produuct fetched", order })
-        }).catch((err) => {
-            console.log(err.message);
-            res.status(500).send({ status: "Error with fetching Product", error: err.message })
-        })
-})
+//---------------get one order to display------------------------
+
+// router.route("/order/:id").get(async (req, res) => {
+//     let userId = req.params.id;
+//     const ad = await Order.findById(userId)
+//         .then((order) => {
+//             res.status(200).send({ status: "Produuct fetched", order })
+//         }).catch((err) => {
+//             console.log(err.message);
+//             res.status(500).send({ status: "Error with fetching Product", error: err.message })
+//         })
+// })
 
 
 //---------------get all orders to display----------------------------------
 
-router.route("/orders").get((req, res) => {
+router.route("/orders/:userID").get((req, res) => {
+    const userID = req.params.userID;
 
-    Order.find().then((ads) => {
+    Order.find({userID : userID}).then((ads) => {
         res.json(ads)
     }).catch((err) => {
         console.log(err)
     })
 
 })
+
+//---------------get all orders to display for seller----------------------------------
+
+router.route("/orders/seller/:userID").get((req, res) => {
+    const userID = req.params.userID;
+
+    Order.find({sellerID : userID}).then((ads) => {
+        res.json(ads)
+    }).catch((err) => {
+        console.log(err)
+    })
+
+})
+
+//--------------- save report as pdf ----------------------------------
 
 router.route("/sales/:id").get(async (request, response) => {
     let userId = request.params.id;

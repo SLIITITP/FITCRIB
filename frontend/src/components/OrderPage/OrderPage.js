@@ -1,12 +1,15 @@
 import "./OrderPage.css";
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext} from 'react'
 import { Link } from 'react-router-dom'
 import axios from "axios";
 import moment from "moment";
 import { ToastContainer, toast } from 'react-toastify';
-
+import UserContext from '../ContextComponent/ContextComponent';
 
 const OrderPage = () => {
+
+    const { user } = useContext(UserContext);
+    const userID = user._id
 
     const [data, setData] = useState([]);
 
@@ -15,7 +18,7 @@ const OrderPage = () => {
     }, [])
 
     const getOrders = async () => {
-        const response = await axios.get("http://localhost:8070/ad/orders");
+        const response = await axios.get(`http://localhost:8070/ad/orders/${userID}`);
 
         if (response.status === 200) {
             setData(response.data);
@@ -26,8 +29,9 @@ const OrderPage = () => {
 
     return (
         <>
-            <div className="OrderPage">
+            <>
                 <body>
+
                     <div className="orderPgTitle">
                         <h1>Your Order History</h1>
                     </div>
@@ -71,9 +75,14 @@ const OrderPage = () => {
                             }
 
                         </div>
+
                     </div>
+
                 </body>
-            </div>
+
+
+            </>
+
         </>
     )
 }
