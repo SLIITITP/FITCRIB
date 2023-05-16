@@ -1,11 +1,16 @@
 import "./ViewAdvertisement.css";
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import { Link } from 'react-router-dom'
 import axios from "axios";
 import { ToastContainer, toast } from 'react-toastify';
+import UserContext from '../ContextComponent/ContextComponent';
+
 
 
 const ViewAdvertisement = () => {
+
+    const { user } = useContext(UserContext);
+    const userID = user._id
     const [data, setData] = useState([]);
 
     useEffect(() => {
@@ -13,7 +18,7 @@ const ViewAdvertisement = () => {
     }, [])
 
     const getAds = async () => {
-        const response = await axios.get("http://localhost:8070/ad/");
+        const response = await axios.get(`http://localhost:8070/ad/${userID}`);
         if (response.status === 200) {
             setData(response.data);
         }

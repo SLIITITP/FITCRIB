@@ -63,12 +63,7 @@ function SearchAdvertisements(props) {
                     onClick={handleSearch}
                 >Search</Button> */}
 
-            <button className="btn shopping-cart-btn" id="cart" onClick={(e) => {
-              e.preventDefault();
-              window.location.href = `/cart`;
-            }}>
-              <FaCartPlus />
-            </button>
+            
           </Box>
         </Stack>
         <div className="MBuyerViewcardSet">
