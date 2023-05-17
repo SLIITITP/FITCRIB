@@ -100,7 +100,7 @@ export default function NavigationBarB(props) {
                                 </li>
 
                                 <li>
-                                    <div className="NavigationBarB dropdown">
+                                    <div className="NavigationBarBarDropdown dropdown">
                                         <button className="NavigationBarB btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" >
                                             {user.Username}
                                         </button>

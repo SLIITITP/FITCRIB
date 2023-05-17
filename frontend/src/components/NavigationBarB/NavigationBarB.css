@@ -20,3 +20,6 @@
    .nav-item:required {
       padding: 8px;
    }
+   .NavigationBarBarDropdown{
+      margin-left: 150%;
+   } 
