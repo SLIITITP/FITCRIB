@@ -87,17 +87,16 @@ export default function Generate_Report() {
     return (
         <div className="generateReport_page">
 
-            <div className="background_Report_page">
+            <div className="backgroundBReport">
                 <br />
-
                 <h1 className="UserReportHeading">Report</h1>
                 <br />
-                <div className="UserChart" ref={divRef}>
-                    <h1 className="UserReportHeading1">Blog Report</h1>
-                    <h2 className="UserReportHeading2">--FitCrib--</h2>
-                    <h3 className="UserReportHeading3">blogadmin@FitCrib.com</h3>
+                <div className="BlogChart" ref={divRef}>
+                    <h1 className="BlogReportHeading1">Blog Report</h1>
+                    <h2 className="BlogReportHeading2">--FitCrib--</h2>
+                    <h3 className="BlogReportHeading3">blogadmin@FitCrib.com</h3>
                     <br/>
-                    <div className="UserPieChart">
+                    <div className="BlogPieChart">
                         <PieChart width={400} height={400} className="Userpie">
                             <Pie
                                 data={data1}
@@ -117,10 +116,10 @@ export default function Generate_Report() {
                             <Tooltip />
 
                         </PieChart>
-                        <p className="Rbox">∎ Phisic</p>
-                        <p className="Sbox">∎ Health</p>
-                        <p className="Tbox">∎ Diet</p>
-                        <p className="Ebox">∎ Exercise</p>
+                        <p className="Rbox">∎  Phisic</p>
+                        <p className="Sbox">∎  Health</p>
+                        <p className="Tbox">∎  Diet</p>
+                        <p className="Ebox">∎  Exercise</p>
                     </div>
 
                     <br />
@@ -149,13 +148,13 @@ export default function Generate_Report() {
                             <Tooltip />
                             <Legend />
                             <CartesianGrid strokeDasharray="3 3" />
-                            <Bar dataKey="blogs" fill="#ff0000" background={{ fill: "#edb9c0" }} />
+                            <Bar dataKey="blogs" fill="#CC0033" background={{ fill: "#edb9c0" }} />
                         </BarChart>
                     </div>
                     <br /><br />
                 </div>
                 <br/>
-                <button onClick={handleSave} className="UserPdfButton">Save as PDF</button>
+                <button onClick={handleSave} className="blogPDFBtn">Save as PDF</button>
                 <br/><br/>
             </div>
 
