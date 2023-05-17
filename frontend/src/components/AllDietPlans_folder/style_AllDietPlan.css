@@ -1,82 +1,79 @@
-.viewplan{
+.NT_viewplan {
    text-align: center;
-   background-color: #2b3028;
+   background-color: #e8e8e8;
    margin: 100px;
    height: auto;
    border-radius: 20px;
-   
-}
-.viewtext{
-color: #99ff33;
-}
-
-.AllDietPlansPageDiv{
+ }
+ 
+ .NT_viewtext {
+   color: #000000;
+   text-align: center;
+ }
+ 
+ .AllDietPlansPageDiv {
    height: auto;
-  
-}
-.btn-back{
+ }
+ 
+ .NT_btn-back {
    background-color: chartreuse;
-   
-}
-.containerdietplan{
-   
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+   border-radius: 15%;
+   padding: 10px 20px;
+   font-size: 16px;
+   color: rgb(17, 16, 16);
+   border: none;
+   cursor: pointer;
+   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+   transition: background-color 0.3s ease;
+ }
+ 
+ .NT_containerdietplan {
+   width: 1500px;
+ }
+ 
+ .NT_allbtnDt {
+   background-color: red;
+   color: #fff;
+   border: none;
+   padding: 8px 16px;
+   font-size: 1rem;
+   border-radius: 4px;
+   cursor: pointer;
+ }
+ 
+ .NT_allbtnDt:hover {
+   background-color: #ce0000;
+ }
+ 
+ .NT_Itemupdate {
+   background-color: #4e7400;
+   color: #fff;
+   border: none;
+   padding: 8px 16px;
+   font-size: 1rem;
+   border-radius: 4px;
+   cursor: pointer;
+ }
+ 
+ .NT_Itemupdate:hover {
+   background-color: #5d9100;
+ }
+ 
+ .NT_btnViewone {
+   background-color: green;
+   color: #fff;
+   border: none;
+   padding: 8px 16px;
+   font-size: 1rem;
+   border-radius: 4px;
+   cursor: pointer;
+ }
+ 
+ .NT_btnViewone:hover {
+   background-color: #5fb707;
+ }
+ 
+ .NT_Seachbar {
+   color: #000000;
+ }
+ 

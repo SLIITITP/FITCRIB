@@ -65,9 +65,9 @@ export default function Goalsetting(){
           />
   <div className="center goal-buttons">
   <Link to="/viewgoal/">
-    <button type="button" className="btn btn-success">View Goal</button>
+    <button type="button" className="NTbtn_Viewgoal">View Goal</button>
   </Link>
-  <button className="btn_setgoal" type="submit">Set Goal</button>
+  <button className="NTbtn_setgoal" type="submit">Set Goal</button>
 
 </div>
 
