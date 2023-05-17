@@ -18,6 +18,7 @@
 }
 .AddAdvertisment .M_AddFormDescInput{
     width: 19cm;
+    margin-left: -0.8cm;
 }
 .AddAdvertisment .MFormCancelBtn{
     width: 5cm;
@@ -25,7 +26,9 @@
 }
 .AddAdvertisment .MFormSubmitBtn{
     width: 5cm;
-    
+    height: 1.05cm;
+    margin-left: 14cm;
+    margin-top: -1.75cm;
 }
 .AddAdvertisment #MFormSubmitBtn{
     background-color: #99FF33 !important;

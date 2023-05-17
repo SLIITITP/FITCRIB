@@ -11,6 +11,7 @@ const ViewAdvertisement = () => {
 
     const { user } = useContext(UserContext);
     const userID = user._id
+    const userName = user.name
     const [data, setData] = useState([]);
 
     useEffect(() => {
@@ -50,7 +51,7 @@ const ViewAdvertisement = () => {
             <div className="ViewAdvertisement">
                 <body>
                     <div className='MSellerPageHeader1'>
-                        <h1>Hello, Mr. ............!</h1>
+                        <h1>Hello, {user.Fullname}</h1>
                     </div>
                     <div className='MSellerPageHeader2'>
                         <div>
@@ -79,12 +80,11 @@ const ViewAdvertisement = () => {
                                     return (
                                         <>
                                             <>
-
                                                 <div className='ViewCard'>
                                                     <div class="MproductVcard text-white">
 
                                                         <div>
-                                                            <img class="card-img" src="..." alt="Card image" />
+                                                            <img class="card-img" src="./_3.jpeg" alt="Card image" />
                                                             <h5 class="card-title">{item.name}</h5>
                                                             <p class="card-text">Weight: {item.weight}kg</p>
                                                             <p class="card-text card-price">Price: {item.price}.00 LKR</p>
@@ -101,10 +101,10 @@ const ViewAdvertisement = () => {
                                                     </div>
                                                 </div>
                                                 <div className="Viewcard-body" key={index}>
-                                                    <p className="card-number">{index + 1}</p>
+                                                    <p className="MPcard-number">{index + 1}</p>
                                                 </div>
 
-                                                <div class="vertical"></div>
+                                                {/* <div class="vertical"></div> */}
                                             </>
                                             <ToastContainer /></>
                                     )

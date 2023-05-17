@@ -214,7 +214,7 @@ function CheckoutProduct() {
                                                         }}>Cancel</button>
                                                     </div>
                                                 </div>
-                                                <div className='col-md-4'>
+                                                <div className='col-md-4 checkSubmitBTN'>
                                                     <div className='form-group text-end ml-3'>
                                                         <button type='button' className='btn btn-success form-control' onClick={sendData}>Place Order</button>
                                                     </div>
