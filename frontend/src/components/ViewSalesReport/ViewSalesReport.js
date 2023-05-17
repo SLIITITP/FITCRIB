@@ -88,7 +88,7 @@ function OrderPage() {
     return (
         <div className='ViewSalesReport'>
 
-            <button className="btn btn-success backto" onClick={(e) => { e.preventDefault(); window.location.href = `/SellerHome/${userID}`; }} >Back</button>
+            <button className="btn btn-success Vbackto" onClick={(e) => { e.preventDefault(); window.location.href = `/SellerHome/${userID}`; }} >Back</button>
 
             <div>
                 <div className='col-md-9 productTable'>
