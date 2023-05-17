@@ -1,0 +1,140 @@
+.container-fluid{
+    background-color: black;
+    height: 70px;
+}
+.home_page{
+    margin: 0;
+    padding: 0;
+ }
+ .navbar-brand{
+    color: white;
+    font-size: 50px ;
+    font-weight: 500;
+ }
+ .navbar-brand:hover{
+    color: #CCFF00;
+ }
+ .navbar-nav{
+    margin-left: 63px;
+ }
+ .nav-item{
+    padding: 8px;
+ }
+ .backgroundBReport{
+    background-color: #1F1F1F;
+    height: 100%;
+    
+}
+/* .chart{
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+} */
+.UserReportHeading{
+    font-family: 'Poppins',sans-serif;
+    color: #CCFF00;
+    font-size: 45px;
+    font-weight: bold;
+    margin-left: 46%;
+}
+.UserBarChart{
+    margin-left: 70px;
+    background-color: white;
+    width: 850px;
+    height: 570px;
+    border-radius: 5px;
+    border: 5px solid #CCFF00;
+    margin-bottom: 70px;
+}
+.BlogPieChart{
+    margin-left: 250px;
+    background-color: white;
+    width: 500px;
+    height: 300px;
+    border-radius: 5px;
+    border: 5px solid #d1e97b;
+}
+.Userpie{
+    margin-top: -70px;
+    margin-left: 10%;
+}
+.UserBar{
+    margin-left: 10%; 
+}
+.generateReport_page{
+    height: auto;
+}
+.Rbox{
+    margin-top: -80px;
+    margin-left: 35%;
+    color: #6150e4;
+}
+.Sbox{
+    margin-top: -40px;
+    margin-left: 15%;
+    color: #bd0f66;
+}
+.Tbox{
+    margin-top: -40px;
+    margin-left: 53%;
+    color: #78f168;
+}
+.Ebox{
+    margin-top: -40px;
+    margin-left: 70%;
+    color: #ff9b05;
+}
+.UserBiechartYaxis{
+    font-size: 15px;
+    margin-left: 15%;
+    color: rgb(0, 0, 0);
+}
+.BlogChart{
+    border-radius: 10px;
+    border: 5px solid #a2f04e;
+    width: 1000px;
+    margin-left: 230px;
+    background-color: #e7f5d8;
+}
+.BlogReportHeading1{
+    color: black;
+    text-align:start;
+    font-size: 50px;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-top: 10px;
+    font-family: 'Poppins',monospace;
+}
+.BlogReportHeading2{
+    color: rgb(37, 37, 37);
+    text-align: start;
+    font-size: 40px;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-top: 10px;
+    font-family: 'Secular One', sans-serif;
+}
+.BlogReportHeading3{
+    color: black;
+    text-align: start;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-top: 30px;
+    font-family: 'Secular One', sans-serif;
+}
+.blogPDFBtn{
+    align-items: center;
+    background-color: #99FF33;
+    color: #1F1F1F;
+    border-radius: 4px;
+    border-color: #0000;
+    width: 250px;
+    height: 70px;
+    transition: 1s;
+    margin-left: 650px;
+    font-size: 24px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}

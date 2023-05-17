@@ -82,87 +82,87 @@ export default function ViewProfile() {
 
                 <br /><br />
                 <div className="rectangle">
-                    <h1 className="user_page">User Account</h1>
+                    <h1 className="user_page_heading">User Account</h1>
                 </div>
 
                 <div className="user">
                     <div class="container py-5">
 
                         <div class="row">
-                            <div class="col-lg-4">
+                            <div class="col-lg-4 ViewUserImgCard">
                                 <div class="card mb-4">
-                                    <div class="card-body text-center">
+                                    <div class="card-body text-center #">
                                         <img src={Usericon} alt="avatar"
                                             class="rounded-circle img-fluid" />
                                         <h3 class="my-3">{data.user?.Fullname}</h3>
-                                        <p class="text-muted mb-4">{data.user?.UserType}</p>
+                                        <p class="text-muted mb-4" id="ViewUserImgDetails">{data.user?.UserType}</p>
                                     </div>
                                 </div>
 
                             </div>
-                            <div class="col-lg-8">
+                            <div class="col-lg-8 ViewUserDetailsCard">
                                 <div class="card mb-4">
                                     <div class="card-body">
                                         <div class="row">
                                             <div class="col-sm-3">
-                                                <p class="mb-0" id="view_heading">Full Name</p>
+                                                <p class="mb-0 ViewUserHeadingCard" id="view_User_heading">Full Name</p>
                                             </div>
                                             <div class="col-sm-9">
-                                                <p class="text-muted mb-0">{data.user?.Fullname}</p>
+                                                <p class="text-muted mb-0" id="view_User_details">{data.user?.Fullname}</p>
                                             </div>
                                         </div>
                                         <hr />
                                         <div class="row">
                                             <div class="col-sm-3">
-                                                <p class="mb-0" id="view_heading">Email</p>
+                                                <p class="mb-0" id="view_User_heading">Email</p>
                                             </div>
                                             <div class="col-sm-9">
-                                                <p class="text-muted mb-0">{data.user?.Email}</p>
+                                                <p class="text-muted mb-0" id="view_User_details">{data.user?.Email}</p>
                                             </div>
                                         </div>
                                         <hr />
                                         <div class="row">
                                             <div class="col-sm-3">
-                                                <p class="mb-0" id="view_heading">Address</p>
+                                                <p class="mb-0" id="view_User_heading">Address</p>
                                             </div>
                                             <div class="col-sm-9">
-                                                <p class="text-muted mb-0">{data.user?.Address}</p>
+                                                <p class="text-muted mb-0" id="view_User_details">{data.user?.Address}</p>
                                             </div>
                                         </div>
                                         <hr />
                                         <div class="row">
                                             <div class="col-sm-3">
-                                                <p class="mb-0" id="view_heading">Telephone Number</p>
+                                                <p class="mb-0" id="view_User_heading">Telephone Number</p>
                                             </div>
                                             <div class="col-sm-9">
-                                                <p class="text-muted mb-0">{data.user?.TelephoneNumber}</p>
+                                                <p class="text-muted mb-0" id="view_User_details">{data.user?.TelephoneNumber}</p>
                                             </div>
                                         </div>
                                         <hr />
                                         <div class="row">
                                             <div class="col-sm-3">
-                                                <p class="mb-0" id="view_heading">User Type</p>
+                                                <p class="mb-0" id="view_User_heading">User Type</p>
                                             </div>
                                             <div class="col-sm-9">
-                                                <p class="text-muted mb-0">{data.user?.UserType}</p>
+                                                <p class="text-muted mb-0" id="view_User_details">{data.user?.UserType}</p>
                                             </div>
                                         </div>
                                         <hr />
                                         <div class="row">
                                             <div class="col-sm-3">
-                                                <p class="mb-0" id="view_heading">Gender</p>
+                                                <p class="mb-0" id="view_User_heading">Gender</p>
                                             </div>
                                             <div class="col-sm-9">
-                                                <p class="text-muted mb-0">{data.user?.Gender}</p>
+                                                <p class="text-muted mb-0" id="view_User_details">{data.user?.Gender}</p>
                                             </div>
                                         </div>
                                         <hr />
                                         <div class="row">
                                             <div class="col-sm-3">
-                                                <p class="mb-0" id="view_heading">Username</p>
+                                                <p class="mb-0" id="view_User_heading">Username</p>
                                             </div>
                                             <div class="col-sm-9">
-                                                <p class="text-muted mb-0">{data.user?.Username}</p>
+                                                <p class="text-muted mb-0" id="view_User_details">{data.user?.Username}</p>
                                             </div>
                                         </div>
                                     </div>

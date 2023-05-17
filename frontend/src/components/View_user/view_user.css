@@ -52,9 +52,10 @@
 
 
 
- .user_page{
+ .user_page_heading{
     font-weight: bold;
     padding: 4px;
+    margin-left: 8%;
 }
 .rectangle{
     background-color: #CCFF00;
@@ -117,11 +118,25 @@
 .text-muted{
     font-size: 20px;
 }
-#view_heading{
+#view_User_heading{
     font-size: 20px;
     font-weight: bold;
 }
-
+#view_User_details{
+    margin-left: 40%;
+}
 .collection-item{
    width: 100%;
+}
+.ViewUserImgCard{
+    margin-top: -8%;
+}
+.ViewUserHeadingCard{
+    text-align: left;
+}
+.ViewUserDetailsCard{
+    width: 65%;
+}
+#ViewUserImgDetails{
+    margin-left: 30%;
 }
