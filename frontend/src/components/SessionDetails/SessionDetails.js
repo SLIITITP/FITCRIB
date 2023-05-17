@@ -3,7 +3,8 @@ import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
 import { Card, Button } from "react-bootstrap";
 import moment from "moment";
-import { PDFDownloadLink, Document, Page, Text } from "@react-pdf/renderer";
+import { PDFDownloadLink, Document, Page, Text, View, StyleSheet } from "@react-pdf/renderer";
+
 
 export default function SessionDetails() {
   const [workout, setWorkout] = useState(null);
@@ -50,26 +51,82 @@ export default function SessionDetails() {
 
   const navigate = new useNavigate();
 
+  const styles = StyleSheet.create({
+    body: {
+      padding: 20,
+    },
+    header: {
+      textAlign: 'center',
+      marginBottom: 20,
+    },
+    heading: {
+      fontSize: 24,
+      fontWeight: 'bold',
+      marginBottom: 10,
+    },
+    label: {
+      fontSize: 12,
+      fontWeight: 'bold',
+      marginBottom: 5,
+    },
+    value: {
+      fontSize: 12,
+      marginBottom: 10,
+    },
+  });
+  
   const SessionPDF = () => (
     <Document>
-      <Page className="DetailsPDF body">
-        <h1 className="center">Workout Session Information</h1>
-        <Text className="DetailsPDF h1">
-          Workout Name: {session[0].workoutName}
-        </Text>
-        <Text className="DetailsPDF p">Day: {session[0].day + 1}</Text>
-        <Text className="DetailsPDF p">
-          Session Number: {session[0].sessionNumber}
-        </Text>
-        <Text className="DetailsPDF p">
-          Comment: {session[0].sessionComment}
-        </Text>
-        <Text className="DetailsPDF p">
-          Date of the Session: {moment(session[0].date).format("YYYY-MM-DD")}
-        </Text>
+      <Page size="A4" style={styles.body}>
+        <View style={styles.header}>
+          <Text style={styles.heading}>Workout Session Information</Text>
+        </View>
+        <View>
+          <Text style={styles.label}>Workout Name:</Text>
+          <Text style={styles.value}>{session[0].workoutName}</Text>
+        </View>
+        <View>
+          <Text style={styles.label}>Day:</Text>
+          <Text style={styles.value}>{session[0].day + 1}</Text>
+        </View>
+        <View>
+          <Text style={styles.label}>Session Number:</Text>
+          <Text style={styles.value}>{session[0].sessionNumber}</Text>
+        </View>
+        <View>
+          <Text style={styles.label}>Comment:</Text>
+          <Text style={styles.value}>{session[0].sessionComment}</Text>
+        </View>
+        <View>
+          <Text style={styles.label}>Date of the Session:</Text>
+          <Text style={styles.value}>
+            {moment(session[0].date).format('YYYY-MM-DD')}
+          </Text>
+        </View>
       </Page>
     </Document>
   );
+
+  // const SessionPDF = () => (
+  //   <Document>
+  //     <Page className="DetailsPDF body">
+  //       <h1 className="center">Workout Session Information</h1>
+  //       <Text className="DetailsPDF h1">
+  //         Workout Name: {session[0].workoutName}
+  //       </Text>
+  //       <Text className="DetailsPDF p">Day: {session[0].day + 1}</Text>
+  //       <Text className="DetailsPDF p">
+  //         Session Number: {session[0].sessionNumber}
+  //       </Text>
+  //       <Text className="DetailsPDF p">
+  //         Comment: {session[0].sessionComment}
+  //       </Text>
+  //       <Text className="DetailsPDF p">
+  //         Date of the Session: {moment(session[0].date).format("YYYY-MM-DD")}
+  //       </Text>
+  //     </Page>
+  //   </Document>
+  // );
 
   return (
     <>
