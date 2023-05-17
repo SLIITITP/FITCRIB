@@ -118,20 +118,18 @@
 .text-muted{
     font-size: 20px;
 }
-#view_heading{
+#view_User_heading{
     font-size: 20px;
     font-weight: bold;
-    margin-left: -140%;
 }
 #view_User_details{
     margin-left: 40%;
-    margin-top: -6%;
 }
 .collection-item{
    width: 100%;
 }
 .ViewUserImgCard{
-    margin-top: -16.5%;
+    margin-top: -8%;
 }
 .ViewUserHeadingCard{
     text-align: left;
