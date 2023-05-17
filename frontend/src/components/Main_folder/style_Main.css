@@ -1,63 +1,61 @@
+.NThome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
 .NT_con {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  .NTmain_row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .NT_col-sm-3 {
-    margin: 10px;
-  }
-  
-  .NT_main {
-    background-color: #222222;
-  }
-  
-  .NT_txtindex {
-    color: #99ff33;
-    font-size: 48px;
-    text-align: center;
-    margin-top: 50px;
-  }
-  
-  .NTcard_main {
-    width: 400px;
-    height: 500px;
-    margin: 50px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #f8f9fa;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-    position: relative; /* added */
-  }
-  
-  .card-title_main {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  
-  .card-text_main {
-    font-size: 25px;
-    text-align: center;
-  }
-  
-  /* .btn45 {
-    position: absolute; 
-    bottom: 50%;
-    left: 50%; 
-    transform: translate(-50%, 50%); 
-    background-color: rgba(6, 123, 29, 0.776);
-  }
-   */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.NTmain_row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.NTmain_row_duplicate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.NT_col {
+  width: 30%;
+  margin: 10px;
+  height: 100%; /* Add this line */
+}
+
+.NTcard_main {
+  height: 60%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+
+.card-title_main {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.card-text_main {
+  font-size: 25px;
+  text-align: center;
+}
+
+.NT_txtindex {
+  color: #99ff33;
+  font-size: 48px;
+  text-align: center;
+  margin-top: 50px;
+}
