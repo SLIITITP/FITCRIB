@@ -105,7 +105,7 @@ export default function ViewProfile() {
                                     <div class="card-body">
                                         <div class="row">
                                             <div class="col-sm-3">
-                                                <p class="mb-0 ViewUserHeadingCard" id="view_heading">Full Name</p>
+                                                <p class="mb-0 ViewUserHeadingCard" id="view_User_heading">Full Name</p>
                                             </div>
                                             <div class="col-sm-9">
                                                 <p class="text-muted mb-0" id="view_User_details">{data.user?.Fullname}</p>
@@ -114,7 +114,7 @@ export default function ViewProfile() {
                                         <hr />
                                         <div class="row">
                                             <div class="col-sm-3">
-                                                <p class="mb-0" id="view_heading">Email</p>
+                                                <p class="mb-0" id="view_User_heading">Email</p>
                                             </div>
                                             <div class="col-sm-9">
                                                 <p class="text-muted mb-0" id="view_User_details">{data.user?.Email}</p>
@@ -123,7 +123,7 @@ export default function ViewProfile() {
                                         <hr />
                                         <div class="row">
                                             <div class="col-sm-3">
-                                                <p class="mb-0" id="view_heading">Address</p>
+                                                <p class="mb-0" id="view_User_heading">Address</p>
                                             </div>
                                             <div class="col-sm-9">
                                                 <p class="text-muted mb-0" id="view_User_details">{data.user?.Address}</p>
@@ -132,7 +132,7 @@ export default function ViewProfile() {
                                         <hr />
                                         <div class="row">
                                             <div class="col-sm-3">
-                                                <p class="mb-0" id="view_heading">Telephone Number</p>
+                                                <p class="mb-0" id="view_User_heading">Telephone Number</p>
                                             </div>
                                             <div class="col-sm-9">
                                                 <p class="text-muted mb-0" id="view_User_details">{data.user?.TelephoneNumber}</p>
@@ -141,7 +141,7 @@ export default function ViewProfile() {
                                         <hr />
                                         <div class="row">
                                             <div class="col-sm-3">
-                                                <p class="mb-0" id="view_heading">User Type</p>
+                                                <p class="mb-0" id="view_User_heading">User Type</p>
                                             </div>
                                             <div class="col-sm-9">
                                                 <p class="text-muted mb-0" id="view_User_details">{data.user?.UserType}</p>
@@ -150,7 +150,7 @@ export default function ViewProfile() {
                                         <hr />
                                         <div class="row">
                                             <div class="col-sm-3">
-                                                <p class="mb-0" id="view_heading">Gender</p>
+                                                <p class="mb-0" id="view_User_heading">Gender</p>
                                             </div>
                                             <div class="col-sm-9">
                                                 <p class="text-muted mb-0" id="view_User_details">{data.user?.Gender}</p>
@@ -159,7 +159,7 @@ export default function ViewProfile() {
                                         <hr />
                                         <div class="row">
                                             <div class="col-sm-3">
-                                                <p class="mb-0" id="view_heading">Username</p>
+                                                <p class="mb-0" id="view_User_heading">Username</p>
                                             </div>
                                             <div class="col-sm-9">
                                                 <p class="text-muted mb-0" id="view_User_details">{data.user?.Username}</p>
