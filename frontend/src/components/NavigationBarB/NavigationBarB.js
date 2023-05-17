@@ -72,7 +72,10 @@ export default function NavigationBarB(props) {
                                     }}>MY WORKOUTS</a>
                                 </li>
                                 <li className="NavigationBarB nav-item">
-                                    <a className="NavigationBarB nav-link" href="#">EXERCISES</a>
+                                    <a className="NavigationBarB nav-link" onClick={(e) => {
+                                        e.preventDefault();
+                                        window.location.href = `/userDashboard`
+                                    }}>EXERCISES</a>
                                 </li>
                                 <li className="NavigationBarB nav-item">
                                     <a className="NavigationBarB nav-link" href="/buyer">MARKETPLACE</a>

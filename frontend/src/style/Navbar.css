@@ -1,0 +1,91 @@
+.navBar{
+  background-color: #131313;
+  height: 180px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  justify-content: space-between;
+  display: flex; 
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.navBar-left{
+  display: flex;
+  align-items: center; 
+  width:15%;
+}
+.navbar-center{
+  display: flex;
+  width: 100%;  
+}
+.navBar-menu{
+  width: 100%;
+  display:flex; 
+  flex-direction: row;
+  justify-content: space-between;
+}
+.navBar-Right{
+  display: flex;
+  align-items: center; 
+  width:15%;
+}
+.Profile-Wrap{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  position: relative;
+  font-size: 20px;
+  color: #61de2a;
+  width: 80px;
+  height: 80px;
+  margin-left: 30%;
+  transition: all 0.3s ease-in-out;
+}
+.Profile-Wrap:hover{
+  background-color: #3c8b1a;
+  width: 80px;
+  height: 80px;
+  border-radius: 100%; 
+}
+.navBar-item{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%; 
+  color: #fff;
+}
+.navBar-item a{
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 300;
+  padding: 0 10px;
+  flex-wrap: wrap;
+  width: 200px;
+  margin-top: 20px;
+  padding-bottom: 40px;
+  transition: all 0.3s ease-in-out;
+}
+.navBar-item a:hover{
+  color: #61de2a;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 300;
+  padding: 0 10px;
+  padding-bottom: 20px;
+  flex-wrap: wrap;
+  width: 200px;
+  border-bottom: #61de2a 1px solid;
+}

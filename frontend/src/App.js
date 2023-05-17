@@ -87,6 +87,13 @@ import OrderPage from './components/OrderPage/OrderPage';
 import Cart from './components/Cart/Cart';
 import ViewSalesReport from './components/ViewSalesReport/ViewSalesReport';
 
+//exercise management
+import { UserDashboard } from './screen/user-dashboard';
+import {TrainerDashboard} from './screen/trainer-dashboard';
+import {TrainerFeed} from './screen/trainer-feed';
+import {AddWorkout} from './screen/add-workout';
+import {EditWorkout} from './screen/update-workout';
+import {ViewWorkout} from './screen/view-workout';
 
 
 function App() {
@@ -196,6 +203,14 @@ function App() {
             <Route path='/salesReport' element={<ViewSalesReport/>}/>
             <Route path='/AllOrders' element={<OrderPage/>}/>
             <Route path='/SalesReport' element={<ViewSalesReport/>}/>
+
+            {/* exercise management */}
+            <Route path="/userDashboard" element={<UserDashboard />} /> 
+            <Route path="/viewWorkout" element={<ViewWorkout />} /> 
+            <Route path="/trainerFeed" element={<TrainerFeed />} /> 
+            <Route path="/addWorkout" element={<AddWorkout />} />
+            <Route path="/editWorkout" element={<EditWorkout />} /> 
+
 
           </Routes>
           {user?.UserType === 'Admin' && <AdminFooter />}
