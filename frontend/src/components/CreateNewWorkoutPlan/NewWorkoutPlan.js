@@ -19,8 +19,10 @@ export default function NewWorkoutPlan() {
   
 
   const handleCreateWorkoutPlan = () => {
-    // console.log(exercises)
-    // console.log(workoutPlan)
+    if (!workoutName) {
+      alert("Please enter a workout name");
+      return;
+    }
 
     const newWorkoutPlan = {
       userID,
