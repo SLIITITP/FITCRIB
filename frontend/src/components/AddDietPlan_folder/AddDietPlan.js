@@ -35,15 +35,20 @@ export default function AddDietPlan(){
       mealplan
     };
 
-    axios.post("http://localhost:8070/dietplan/add",newDietplan).then(()=>{
-      alert("Your Dirt Plan  Is Added")
-      window.location.href("http://localhost:8070/dietplan/allDietPlans");
-
-    }).catch((err)=>{
-      alert(err)
-    });
+    if (!newDietplan.mealName || !newDietplan.dayofMeal) {
+      alert("Please provide both meal name and day of the meal.");
+    } else {
+      axios.post("http://localhost:8070/dietplan/add", newDietplan)
+        .then(() => {
+          alert("Your Diet Plan Is Added");
+          window.location.href = "/allDietPlans";
+        })
+        .catch((err) => {
+          alert(err);
+        });
+    }
   }
-
+  
   function addMeal(){
     setMealplan([...mealplan, {meal: "", size: "",calin: ""}]);
   }
@@ -59,16 +64,18 @@ export default function AddDietPlan(){
     setMealplan(updatedMealplan);
   }
   const handleSizeChange = (index, value) => {
-    if (!isNaN(value)) { // Check if the value is a number
+    // if (!isNaN(value)) {
+    //    // Check if the value is a number
       const updatedMealplan = [...mealplan];
       updatedMealplan[index].size = value;
       setMealplan(updatedMealplan);
-    }
+    // }
   };
 
 
   const handleCalinChange = (index, value) => {
-    if (!isNaN(value)) { // Check if the value is a number
+    if (!isNaN(value)) { 
+      // Check if the value is a number
       const updatedMealplan = [...mealplan];
       updatedMealplan[index].calin = value;
       setMealplan(updatedMealplan);
@@ -77,14 +84,14 @@ export default function AddDietPlan(){
   
 
   return (
-    <div className="create_box">
+    <div className="NTcreate_box">
       <form onSubmit={sendData}>
-        <div className="mb-3">
+        <div className="ntmb-3">
           <h1 className='NTtextheader'>Create Your Diet Plan</h1>
           <label htmlFor="mealName" className='NTtextheader'>Diet Plan Name</label>
           <input
             type="text"
-            className="form-control"
+            className="NTform-control"
             id="mealName"
             placeholder="Meal 1"
             onChange={(e) => {
@@ -93,11 +100,11 @@ export default function AddDietPlan(){
             required
           />
         </div>
-        <div className="mb-3">
+        <div className="ntmb-3">
           <label htmlFor="dayofMeal" className='NTtextheader'>Meal Of The Day</label>
           <input
             type="text"
-            className="form-control"
+            className="NTform-control"
             id="dayofMeal"
             placeholder="Breakfast"
             onChange={(e) => {
@@ -106,11 +113,11 @@ export default function AddDietPlan(){
             required
           />
         </div>
-        <div className="mb-3">
+        <div className="ntmb-3">
           <label htmlFor="goal" className='NTtextheader'>Duration (Week)</label>
           <input
             type="text"
-            className="form-control"
+            className="NTform-control"
             id="goal"
             placeholder=""
             onChange={(e) => {
@@ -125,7 +132,7 @@ export default function AddDietPlan(){
             <span className="input-group-text">
               <input
                 type="text"
-                className="form-control"
+                className="NTform-control"
                 placeholder="Rice"
                 value={meal.meal}
                 onChange={(e) => {
@@ -138,7 +145,7 @@ export default function AddDietPlan(){
             <span className="input-group-text">
               <input
                 type="text"
-                className="form-control"
+                className="NTform-control"
                 placeholder="4"
                 value={meal.size}
                 onChange={(e) => {
@@ -151,7 +158,7 @@ export default function AddDietPlan(){
             <span className="input-group-text">
               <input
                 type="text"
-                className="form-control"
+                className="NTform-control"
                 placeholder=""
                 value={meal.calin}
                 onChange={(e) => {
@@ -161,9 +168,9 @@ export default function AddDietPlan(){
             </span>
           </div>
         ))}
-        <div className="NTbutton-container">
+        <div className="button-container">
           <div>
-          <button type="button" className="meal_remove" onClick={removeMeal}>Remove</button>
+          <button type="button" className="NTmeal_remove" onClick={removeMeal}>Remove</button>
 
             <button type="button" className="NTbtn_Addmeal" onClick={addMeal}>Add Meal</button>
           </div>
