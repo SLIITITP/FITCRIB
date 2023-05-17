@@ -15,6 +15,9 @@
 .CheckoutProduct .checkCancelBTN{
     margin-left: 5.7cm;
 }
+.CheckoutProduct .checkSubmitBTN{
+    margin-top: 0.1cm;
+}
 .CheckoutProduct .checkInputF{
     margin-left: 0.8cm;
 }

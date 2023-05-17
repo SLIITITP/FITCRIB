@@ -98,11 +98,11 @@
     font-weight: 550;
     padding-top: 0.7cm;
     position:relative;
-    left: -25%;
+    left: 5%;
 }
 .ProductView .PrdctMVDescData{
     color: aliceblue;
     position: relative;
-    left: -20%;
+    left: 10%;
     bottom: 5%;
 }

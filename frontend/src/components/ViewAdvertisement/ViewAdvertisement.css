@@ -15,6 +15,7 @@ body{
 }
 .ViewAdvertisement .MSellerPageHeader2{
     margin-left: 9.1cm;
+    padding-bottom: 0.5cm;
 }
 .ViewAdvertisement .MVheader2Name{
     font-weight: 600;
@@ -47,15 +48,18 @@ body{
     padding-bottom: 1cm;
 }
 .ViewAdvertisement .Viewcard-body{
-    margin-top: -3.5cm;
+    margin-top: -5.5cm;
     margin-left: 8cm;
     color: #99FF33;
+    font-size: 20px;
+    font-weight: 800;
 }
 .ViewAdvertisement .vertical {
     border-right: 2px solid rgb(255, 255, 255);
-    height: 1000px;
-    position: absolute;
-    right: 80%;
+    height: 500px;
+    position: relative;
+    right: -450%;
+    top: -27%;
 }
 .ViewAdvertisement .card-title{
     color: black;
