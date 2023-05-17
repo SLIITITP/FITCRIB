@@ -25,6 +25,8 @@ export default function Goalsetting(){
       .post("http://localhost:8070/goal/create", { userID,targetCal, calin, time })
       .then((res) => {
         alert("Successful")
+        window.location.href = "/viewgoal/";
+
         console.log(res.data);
         // Clear input fields after successfully adding a goal
         setTargetCal("");

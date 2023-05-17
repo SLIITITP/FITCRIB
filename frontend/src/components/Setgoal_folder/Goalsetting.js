@@ -30,26 +30,26 @@ export default function Goalsetting(){
   };
 
   return (
-    <div className="background">
+    <div className="NT_backgroundgoal">
       <h2 className="goaltext">Add Goal Your Nutrition Goal</h2>
       <form onSubmit={handleSubmit}>
       <label className="goaltext">Target Calories:    (cal)    </label>
 
-          <input
+          <input className='NT_setgoal'
             type="number"
             value={targetCal}
             onChange={(event) => setTargetCal(event.target.value)} required
           />
         <label className="goaltext"> Calories In:  (cal) </label>
 
-          <input
+        <input className='NT_setgoal'
             type="number"
             value={calin}
             onChange={(event) => setCalin(event.target.value)} required
           />
         <label className="goaltext"> Time:(Week) </label>
 
-          <input
+        <input className='NT_setgoal'
           placeholder="3"
             type="number"
             value={time}

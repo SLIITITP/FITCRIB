@@ -140,7 +140,7 @@ export default function AllDietPlans() {
       </Typography>
     </CardContent>
     <CardActions className='NTaction' sx={{ justifyContent: 'space-between' }}>
-      <Button size="small"  color="primary"  className="NT_btnViewone" onClick={() => handleView(dietplan)}>View</Button>
+      <button  className="NT_btnViewone" onClick={() => handleView(dietplan)}>View</button>
   
           {editId === dietplan._id ? (
             <EditDietPlan
@@ -176,13 +176,13 @@ export default function AllDietPlans() {
         <div className='NT_box'><hr/>
           <h2 className='NT_viewtext'>{selectedDietplan.mealName}</h2><hr></hr>
          
-          <p  className='NT_viewtext'><strong>Meal Of The Day:</strong> {selectedDietplan.dayofMeal}</p>
-          <p className='NT_viewtext'><strong>Calorie amount:</strong>{selectedDietplan.calin}cal</p>
-          <p  className='NT_viewtext'><strong>Meal plan:</strong> {selectedDietplan.mealplan.map(meal => (
+          <h4  className='NT_viewtext'><strong>Meal Of The Day:</strong> {selectedDietplan.dayofMeal}</h4>
+          <h4 className='NT_viewtext'><strong>Calorie amount:</strong>{selectedDietplan.calin}cal</h4>
+          <h5  className='NT_viewtext'><strong>Meal plan:</strong> {selectedDietplan.mealplan.map(meal => (
             <p className='NT_viewtext' key={meal._id}>
-              <span>{meal.meal}</span> - <span>{meal.size} </span>
+              <span>{meal.meal}</span> - <span>{meal.size}</span>
             </p>
-          ))}</p>
+          ))}</h5>
           <hr/>
           <Button variant="contained" class="NT_btn-back" onClick={() => setSelectedDietplan(null)}>Back</Button>
           
