@@ -1,10 +1,15 @@
 import '../UpdateAdvertisement/UpdateAdvertisement.css'
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { useNavigate, useParams } from "react-router-dom";
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
+import UserContext from '../ContextComponent/ContextComponent';
+
 
 const UpdateAdvertisement = () => {
+
+  const { user } = useContext(UserContext);
+  const userID = user._id
 
   const [name, setName] = useState("");
   const [category, setCategory] = useState("");
@@ -70,7 +75,7 @@ const UpdateAdvertisement = () => {
 
     axios.put(`http://localhost:8070/ad/update/${params.id}`, updateAd).then(() => {
 
-      window.location.href = `/SellerHome`;
+      window.location.href = `/SellerHome/${userID}`;
       // navigate("../view",{replace: true});
 
     }).catch((err) => {
@@ -78,7 +83,7 @@ const UpdateAdvertisement = () => {
     })
 
     if (name || category || price || weight || stock) {
-      toast.success('Advertisement Added Successfully', {
+      toast.success('Advertisement Updated Successfully', {
         position: "top-right",
         autoClose: 2000,
         hideProgressBar: true,

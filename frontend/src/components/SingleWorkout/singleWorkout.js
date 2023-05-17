@@ -125,7 +125,7 @@ export default function SingleWorkout() {
             )}
           </div>
 
-          <div className="SingleWorkout col-md-3 col-lg-3 col-xl-3 overflow-auto mb-5 mt-5 sessionContainer cardoutline">
+          <div className="SingleWorkout col-md-3 col-lg-3 col-xl-3 overflow-auto mb-5 sessionContainer cardoutline">
             <div className="SingleWorkout card shadow">
               <div>
                 <h2>Satisfactory Sessions</h2>

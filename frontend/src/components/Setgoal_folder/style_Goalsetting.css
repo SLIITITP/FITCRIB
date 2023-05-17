@@ -1,7 +1,7 @@
 .goaltext{
     color: #99ff33;
 }
-.background{
+.NT_backgroundgoal{
    background-color: #2b3028;
     padding: 50px;
     border-radius: 20px;
@@ -24,5 +24,9 @@
   
   .goal-buttons button:hover {
     background-color: #9eb229;
-  }
   
+  
+  }
+  .NT_setgoal{
+    width: 80%;
+  }

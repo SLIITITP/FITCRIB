@@ -18,11 +18,6 @@ import UserContext from '../ContextComponent/ContextComponent';
 
 
 
-
-
-
-
-
 export default function AllDietPlans() {
   const [dietplans, setDietplans] = useState(null);
   const [deleteId, setDeleteId] = useState(null);
@@ -50,9 +45,9 @@ export default function AllDietPlans() {
 
   const handleDelete = (dietplanId) => {
     axios
-      .delete(`http://localhost:2080/dietplan/delete/${dietplanId}`)
+      .delete(`http://localhost:8070/dietplan/delete/${dietplanId}`)
       .then(() => {
-        window.confirm("Are You Sure To Delete The Diet Plan");
+        window.alert("Dietplan Deleted")
         window.location.reload("http://localhost:8070/dietplan/");
       })
       .catch((err) => {
@@ -69,7 +64,7 @@ export default function AllDietPlans() {
   const handleSave = (dietplan) => {
     const updatedDietplan = { ...editedDietplan };
     axios
-      .put(`http://localhost:2080/dietplan/update/${dietplan._id}`, updatedDietplan)
+      .put(`http://localhost:8070/dietplan/update/${dietplan._id}`, updatedDietplan)
       .then(() => {
         setSelectedDietplan(updatedDietplan);
         window.location.reload("http://localhost:8070/dietplan");
@@ -110,32 +105,32 @@ export default function AllDietPlans() {
 
   
   const renderDietPlanCard = (dietplan) => {
-    const handleGeneratePDF = () => {
-      axios
-        .get(`http://localhost:8070/dietplan/generate-pdf/${dietplan._id}`, {
-          responseType: "blob",
-        })
-        .then((res) => {
-          const url = window.URL.createObjectURL(new Blob([res.data]));
-          const link = document.createElement("a");
-          link.href = url;
-          link.setAttribute("download", `${dietplan.mealName}.pdf`);
-          document.body.appendChild(link);
-          link.click();
-          link.parentNode.removeChild(link);
-        })
-        .catch((err) => {
-          alert(err.message);
-        });
-    };
+  //   const handleGeneratePDF = () => {
+  //     axios
+  //       .get(`http://localhost:8070/dietplan/generate-pdf/${dietplan._id}`, {
+  //         responseType: "blob",
+  //       })
+  //       .then((res) => {
+  //         const url = window.URL.createObjectURL(new Blob([res.data]));
+  //         const link = document.createElement("a");
+  //         link.href = url;
+  //         link.setAttribute("download", `${dietplan.mealName}.pdf`);
+  //         document.body.appendChild(link);
+  //         link.click();
+  //         link.parentNode.removeChild(link);
+  //       })
+  //       .catch((err) => {
+  //         alert(err.message);
+  //       });
+  //   };
   
     return (
       
      
       
-      <Card className="containerdietplan">
+      <Card className="NT_containerdietplan">
      
-    <CardContent>
+    <CardContent className='NT_VView'>
       <Typography variant="h5" component="div">
         {dietplan.mealName}
       </Typography>
@@ -144,8 +139,8 @@ export default function AllDietPlans() {
           {format(new Date(dietplan.createdAt), "dd/MM/yyyy HH:mm:ss")}
       </Typography>
     </CardContent>
-    <CardActions sx={{ justifyContent: 'space-between' }}>
-      <Button size="small"  color="primary"  class="btn btn-success" onClick={() => handleView(dietplan)}>View</Button>
+    <CardActions className='NTaction' sx={{ justifyContent: 'space-between' }}>
+      <button  className="NT_btnViewone" onClick={() => handleView(dietplan)}>View</button>
   
           {editId === dietplan._id ? (
             <EditDietPlan
@@ -155,15 +150,11 @@ export default function AllDietPlans() {
             />
           ) : (
             <>
-             <IconButton size="small" onClick={() => handleEdit(dietplan)}>
-  <Edit />
-</IconButton>
-              <IconButton edge="end" aria-label="delete"  class="btn btn-outline-danger" onClick={() => handleDelete(dietplan._id)}>
-                <Delete />
-              </IconButton>
-              <Button size="small" color="success" onClick={handleGeneratePDF}>
+             <button className='NT_Itemupdate' onClick={() => handleEdit(dietplan)}>update</button>
+             <button type="button" class="NT_allbtnDt" onClick={() => handleDelete(dietplan._id)}>Delete </button>
+              {/* <Button size="small" color="success" onClick={handleGeneratePDF}>
           Generate Report
-        </Button>
+        </Button> */}
             </>
           )}
   
@@ -176,24 +167,24 @@ export default function AllDietPlans() {
 
   return (
   <div className='AllDietPlansPageDiv'>
-     <div>
-      <SearchBar />
+     {/* <div className='NT_Seachbar'>
+      <SearchBar /></div> */}
       
-    </div>
+     <SearchBar />
     
-      <div  className="viewplan" >  {selectedDietplan ? (
-        <div><hr/>
-          <h2 className='viewtext'>{selectedDietplan.mealName}</h2><hr></hr>
+      <div  className="NT_viewplan" >  {selectedDietplan ? (
+        <div className='NT_box'><hr/>
+          <h2 className='NT_viewtext'>{selectedDietplan.mealName}</h2><hr></hr>
          
-          <p  className='viewtext'><strong>Meal Of The Day:</strong> {selectedDietplan.dayofMeal}</p>
-          <p className='viewtext'><strong>Calorie amount:</strong>{selectedDietplan.calin}cal</p>
-          <p  className='viewtext'><strong>Meal plan:</strong> {selectedDietplan.mealplan.map(meal => (
-            <p key={meal._id}>
+          <h4  className='NT_viewtext'><strong>Meal Of The Day:</strong> {selectedDietplan.dayofMeal}</h4>
+          <h4 className='NT_viewtext'><strong>Calorie amount:</strong>{selectedDietplan.calin}cal</h4>
+          <h5  className='NT_viewtext'><strong>Meal plan:</strong> {selectedDietplan.mealplan.map(meal => (
+            <p className='NT_viewtext' key={meal._id}>
               <span>{meal.meal}</span> - <span>{meal.size}</span>
             </p>
-          ))}</p>
+          ))}</h5>
           <hr/>
-          <Button variant="contained" class="btn-back" onClick={() => setSelectedDietplan(null)}>Back</Button>
+          <Button variant="contained" class="NT_btn-back" onClick={() => setSelectedDietplan(null)}>Back</Button>
           
           <Link to="/update/:id"></Link>
 
@@ -219,3 +210,4 @@ export default function AllDietPlans() {
   );
   
 }
+  

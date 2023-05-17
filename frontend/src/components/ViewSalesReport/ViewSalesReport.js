@@ -1,14 +1,18 @@
 import '../ViewSalesReport/ViewSalesReport.css'
 import React from "react";
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useContext } from 'react'
 import { Link } from 'react-router-dom'
 import axios from "axios";
 import { ToastContainer, toast } from 'react-toastify';
 import moment from "moment";
 import jsPDF from "jspdf"
 import { red } from '@mui/material/colors';
+import UserContext from '../ContextComponent/ContextComponent';
 
 function OrderPage() {
+
+    const { user } = useContext(UserContext);
+    const userID = user._id
 
     const [data, setData] = useState([]);
 
@@ -17,7 +21,7 @@ function OrderPage() {
     }, [])
 
     const getOrders = async () => {
-        const response = await axios.get("http://localhost:8070/ad/orders");
+        const response = await axios.get(`http://localhost:8070/ad/orders/seller/${userID}`);
 
         if (response.status === 200) {
             setData(response.data);
@@ -84,7 +88,7 @@ function OrderPage() {
     return (
         <div className='ViewSalesReport'>
 
-            <button className="btn btn-success backto" onClick={(e) => { e.preventDefault(); window.location.href = `/SellerHome`; }} >Back</button>
+            <button className="btn btn-success backto" onClick={(e) => { e.preventDefault(); window.location.href = `/SellerHome/${userID}`; }} >Back</button>
 
             <div>
                 <div className='col-md-9 productTable'>

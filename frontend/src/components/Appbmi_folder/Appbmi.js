@@ -1,5 +1,5 @@
 
-//import './style_Appbmi.css';
+import './style_Appbmi.css';
 import React from "react";
 import {useState} from "react";
 
@@ -67,16 +67,16 @@ function Appbmi(){
           <h2 className="txth2">BMI Calculater</h2><hr></hr>
           <form onSubmit={Bmical}>
             <div>
-              <label className='labeltext'>Weight(lbs)</label>
+              <label className='txth2'>Weight(lbs)</label>
               <input className='number_input' type="number" value={weight} onChange={(event) => setWeight(event.target.value)} min="0" required/>
             </div>
             <div>
-              <label className='labeltext'>Height(in)</label>
-              <input className='input height' type="number" value={height} onChange={(event) => setHeight(event.target.value)} min="0" required/>
+              <label className='txth2'>Height(in)</label>
+              <input className='number_input' type="number" value={height} onChange={(event) => setHeight(event.target.value)} min="0" required/>
             </div>
             <div>
-              <button className="btn1" type="submit">Submit</button>
-              <button className="btn2" onClick={reload} type="submit">Re-Enter</button>
+              <button className="NTMBIbtn1" type="submit">Submit</button>
+              <button className="NTMBIbtn2" onClick={reload} type="submit">Re-Enter</button>
             </div>
           </form>
           <div className="view">

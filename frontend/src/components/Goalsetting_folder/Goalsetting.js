@@ -25,6 +25,8 @@ export default function Goalsetting(){
       .post("http://localhost:8070/goal/create", { userID,targetCal, calin, time })
       .then((res) => {
         alert("Successful")
+        window.location.href = "/viewgoal/";
+
         console.log(res.data);
         // Clear input fields after successfully adding a goal
         setTargetCal("");
@@ -65,9 +67,9 @@ export default function Goalsetting(){
           />
   <div className="center goal-buttons">
   <Link to="/viewgoal/">
-    <button type="button" className="btn btn-success">View Goal</button>
+    <button type="button" className="NTbtn_Viewgoal">View Goal</button>
   </Link>
-  <button className="btn_setgoal" type="submit">Set Goal</button>
+  <button className="NTbtn_setgoal" type="submit">Set Goal</button>
 
 </div>
 
