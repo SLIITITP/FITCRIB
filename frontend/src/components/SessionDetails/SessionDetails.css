@@ -20,3 +20,27 @@
   .DetailsPDF.center {
     text-align: center;
   }
+
+  .NewWorkoutPlan  .btn:hover {
+    background-color: #000;
+    color: #32cd32;
+    cursor: pointer;
+  }
+
+  .pdfBtnText{
+    text-decoration: none;
+    
+  }
+
+
+  .DetailsPDF .btn-primary  {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #32cd32;
+    border: none;
+    border-radius: 0;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+    
+  }
