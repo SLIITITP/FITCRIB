@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import style_SearchBar from './style_SearchBar .css';
 
 function SearchBar() {
   const [searchText, setSearchText] = useState('');
@@ -34,16 +35,24 @@ function SearchBar() {
   }, [searchText]);
 
   return (
-    <div className='containesearch' style={{background: "#ffffff"}}>
-      <div className="search-bar">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" onChange={handleInputChange} value={searchText} />
+    <body className='NT_Srarch_DIV'>
+    <div className="NTcontainesearch" style={{ background: "#ffffff" }}>
+      <div className="NTsearch-bar">
+        <input
+          className="form-control mr-sm-2"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+          onChange={handleInputChange}
+          value={searchText}
+        />
       </div>
       {error && <p>Error with searching diet plan</p>}
       {searchResults.map((dietplan) => (
-        <div className='center' key={dietplan._id}>
+        <div className="NTsearch-result" key={dietplan._id}>
           <h2>{dietplan.mealName}</h2>
           <p>{dietplan.dayofMeal}</p>
-          
+  
           <ul>
             {dietplan.mealplan.map((meal) => (
               <li key={meal._id}>
@@ -53,10 +62,12 @@ function SearchBar() {
           </ul>
         </div>
       ))}
-      
+  
       <ToastContainer />
     </div>
+    </body>
   );
+  
 }
 
 export default SearchBar;

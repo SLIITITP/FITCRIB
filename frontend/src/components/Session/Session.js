@@ -113,7 +113,7 @@ function WorkoutSession() {
           .post("http://localhost:8070/workoutSession/addSession", newSession)
           .then(() => {
             alert("Session Added");
-            navigate(`/MyWorkouts`);
+            navigate(-1);
           })
           .catch((err) => {
             alert(err);
