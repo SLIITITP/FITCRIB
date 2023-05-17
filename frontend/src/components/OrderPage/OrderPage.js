@@ -1,12 +1,15 @@
-import "./OrderPage.css";
-import React, { useState, useEffect, useContext} from 'react'
+import "../ViewAdvertisement/ViewAdvertisement.css";
+import "../OrderPage/OrderPage.css";
+import React, { useState, useEffect, useContext } from 'react'
 import { Link } from 'react-router-dom'
 import axios from "axios";
 import moment from "moment";
 import { ToastContainer, toast } from 'react-toastify';
 import UserContext from '../ContextComponent/ContextComponent';
 
-const OrderPage = () => {
+
+
+const ViewAdvertisement = () => {
 
     const { user } = useContext(UserContext);
     const userID = user._id
@@ -23,17 +26,22 @@ const OrderPage = () => {
         if (response.status === 200) {
             setData(response.data);
         }
-    }
+    }    
 
     console.log("data=>", data);
 
     return (
         <>
-            <>
+            <div className="ViewAdvertisement">
                 <body>
+                    <div className='MSellerPageHeader1'>
+                        <h1>Hello, {user.Fullname}</h1>
+                    </div>
+                    <div className='MSellerPageHeader2'>
+                        <div>
+                            <h4 className='MVheader2Name'>Ordered products</h4>
+                        </div>
 
-                    <div className="orderPgTitle">
-                        <h1>Your Order History</h1>
                     </div>
 
                     <div className='py-4 container'>
@@ -49,42 +57,36 @@ const OrderPage = () => {
                                                         <div>
                                                             <img class="card-img" src="..." alt="Card image" />
                                                             <h5 class="card-title order-title">{item.name}</h5>
-                                                            <p class="card-text card-price order-price">Price: {item.price}.00 LKR</p>
-                                                            <p class="card-text card-price order-qty">Quantity: {item.quantity}</p>
-                                                            <p class="card-text card-price order-date">{moment(item.date).format('YYYY-MM-DD')}</p>
+                                                            <p class="card-text card-price order-price">Price :<span id="orderCWeightnum"> {item.price}.00 LKR</span></p>
+                                                            <p class="card-text card-price order-qty">Quantity : <span id="orderCqtynum"> {item.quantity} </span></p>
+                                                            <p class="card-text card-price order-date">Order Date : {moment(item.date).format('YYYY-MM-DD')}</p>
                                                             <div className='MVDoubleBtn'>
                                                                 <a href="#" className="btn btn-success updateBTN" onClick={(e) => {
                                                                     e.preventDefault();
-                                                                    window.location.href = `/order/${item._id}`;
-                                                                }}>Update</a>
+                                                                    window.location.href = `/getProduct/${item._id}`;
+                                                                }}>View Product</a>
+
                                                             </div>
 
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div className="Viewcard-body" key={index}>
-                                                    <p className="card-number">{index + 1}</p>
+                                                    <p className="MPcard-number">{index + 1}</p>
                                                 </div>
 
-                                                <div class="vertical"></div>
+                                                {/* <div class="vertical"></div> */}
                                             </>
                                             <ToastContainer /></>
                                     )
                                 })
-
                             }
-
                         </div>
-
                     </div>
-
                 </body>
-
-
-            </>
-
+            </div>
         </>
     )
 }
 
-export default OrderPage
+export default ViewAdvertisement

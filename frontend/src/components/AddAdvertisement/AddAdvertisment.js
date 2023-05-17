@@ -191,7 +191,7 @@ export default function AddAdvertisement() {
                           <div className='col-md-12'>
                             <button type="button" class="MFormCancelBtn btn btn-secondary" onClick={(e) => {
                               e.preventDefault();
-                              window.location.href = `/SellerHome`;
+                              window.location.href = `/SellerHome/${userID}`;
                             }}>Cancel</button>
                             &nbsp;&nbsp;&nbsp;&nbsp;
                             <button type="submit" class="MFormSubmitBtn btn btn-primary" id="MFormSubmitBtn" onClick={notify}>Submit</button>

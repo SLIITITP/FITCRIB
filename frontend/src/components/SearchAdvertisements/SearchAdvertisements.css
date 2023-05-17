@@ -1,6 +1,7 @@
 .SearchAdvertisements .MPbackto{
-    margin-top: 1cm;
+    margin-top: 0.3cm;
     margin-left: 1cm;
+    width: 4cm;
 }
 .SearchAdvertisements .MBuyerViewcard{
     padding-bottom: 1cm;
@@ -19,7 +20,7 @@
 .SearchAdvertisements .MBuyerViewcardSet{
     display: flex;
     flex-wrap: wrap;
-    margin-left: 75px;
+    margin-left: -75px;
 }
 .SearchAdvertisements .MPcard1{
     height: 7cm;
@@ -35,15 +36,17 @@
 .SearchAdvertisements .MPsearchCName{
     font-weight: 600;
     font-size: 25px;
+    margin-left: 7cm;
 }
 .SearchAdvertisements .MPsearchCWeight{
-    text-align: center;
     font-weight: 600;
+    margin-left: 10.5cm;
 }
 .SearchAdvertisements .MPsearchCPrice{
     position: relative;
     bottom: 0.45cm;
     font-weight: 600;
+    margin-left: 10cm;
 }
 .SearchAdvertisements .MPsearchACart{
     width: 5cm;

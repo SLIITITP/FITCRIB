@@ -34,7 +34,6 @@ function SearchAdvertisements(props) {
     <>
       <div className="SearchAdvertisements">
         <button className="btn btn-success MPbackto" onClick={(e) => { e.preventDefault(); window.location.href = `/SellerHome`; }} >Back To Seller</button>
-        <button className="btn btn-success MPbackto" onClick={(e) => { e.preventDefault(); window.location.href = `/orders`; }} >Orders</button>
         <Stack alignItems={"center"} mt={"37px"} justifyContent={"center"} p={"20px"}>
           <Typography fontWeight={700} sx={{ fontSize: { LG: '44px', xs: '30px' } }} mb={"50px"} textAlign={"center"} color={"#99FF33"}>
             Equipments in The Marketplace
@@ -49,21 +48,8 @@ function SearchAdvertisements(props) {
                 borderRadius: '10px'
               }}
               height="76px" value={search} onChange={(e) => setSearch(e.target.value.toLowerCase())} placeholder='Search Equipments' type='text' />
-            {/* <Button className="search-btn"
-                    sx={{
-                        backgroundColor: '#FF2625',
-                        color: "#fff",
-                        textTransform: 'none',
-                        width: { lg: '175px', xs: '80px' },
-                        fontSize: { lg: '20px', xs: '14px' },
-                        height: '56px',
-                        position: "absolute",
-                        right: '0'
-                    }}
-                    onClick={handleSearch}
-                >Search</Button> */}
+            <button className="btn btn-success MPbackto" onClick={(e) => { e.preventDefault(); window.location.href = `/AllOrders`; }} >Your Orders</button>
 
-            
           </Box>
         </Stack>
         <div className="MBuyerViewcardSet">
