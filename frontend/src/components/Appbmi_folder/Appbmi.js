@@ -72,7 +72,7 @@ function Appbmi(){
             </div>
             <div>
               <label className='txth2'>Height(in)</label>
-              <input className='input height' type="number" value={height} onChange={(event) => setHeight(event.target.value)} min="0" required/>
+              <input className='number_input' type="number" value={height} onChange={(event) => setHeight(event.target.value)} min="0" required/>
             </div>
             <div>
               <button className="NTMBIbtn1" type="submit">Submit</button>

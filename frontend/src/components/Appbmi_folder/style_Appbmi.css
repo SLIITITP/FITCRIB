@@ -17,7 +17,7 @@
     
   }
   .Appbmi .containerbmi {
-    background-color: #e8e8e8;
+    background-color: #fefefe;
     padding: 50px;
     border-radius: 20px;
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
@@ -199,5 +199,7 @@ border-radius: 50px;
   font-size: 1.2rem;
   padding:8px 4px ;
   border-radius: 8px;
+  border-color: #99ff33;
+  border-width: 5px;
 }
 
