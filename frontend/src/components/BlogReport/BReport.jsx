@@ -63,7 +63,7 @@ export default function Generate_Report() {
         { name: "Exercises", blogs: Exercises }
     ];
 
-    const COLORS = ['#230be7', '#d50fbc', '#22fa07','#0722fa'];
+    const COLORS = ['#6150e4', '#bd0f66', '#78f168','#ff9b05'];
 
     const RADIAN = Math.PI / 180;
     const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, percent, index }) => {

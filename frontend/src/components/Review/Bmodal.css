@@ -38,10 +38,6 @@
     margin-left: 30px;
 }
 
-button{
-  font-weight: bolder;
-}
-
 .can:hover,.Badd:hover {
   color: black;
   background-position: right center; /* change the direction of the change here */

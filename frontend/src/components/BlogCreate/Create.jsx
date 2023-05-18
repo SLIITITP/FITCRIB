@@ -79,7 +79,7 @@ if(redirect){
     <input type="heading" id="Binput" value={heading} onChange={event=> setHeading(event.target.value)} required/><br></br>
     <label className="Blabel">Category</label>
     <br></br>
-    <select id="selectItems" name="category" placeholder="select category" onChange={event => setCategory(event.target.value)}>
+    <select id="selectItems" name="category" placeholder="select category" onChange={event => setCategory(event.target.value)} required>
     <option id="bOption" value="Phisic">Phisic</option>
     <option id="bOption" value="Health">Health</option>
     <option id="bOption" value="Diet">Diet</option>
