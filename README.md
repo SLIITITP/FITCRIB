@@ -9,7 +9,7 @@ Repository for the Fitness Management System built for Information Technology Pr
   <li>Imesh Attanayaka - Marketplace Management System</li>
   <li>Bihesha Dilshan - User Management System</li>
   <li>Teshan Jayakody - Financial Management System</li>
-  <li>Keshan Pathirana - Progress Tracking Management System</li>
+  <li>Janindu Pathirana - Progress Tracking Management System</li>
   <li>Rashmika Hettiarachchi - Educational Content Management System</li>
   <li>Heshan Senanayaka - Nutrition Tracking Management System</li>
   <li>Tharusha Sandeeptha - Exercise Management System</li>
